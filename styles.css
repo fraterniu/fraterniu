@@ -238,7 +238,7 @@ main{
 .header--title-container h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  /* line-height: 2.6rem; */
+  line-height: 2.8rem; 
   margin: 0 24px;
   color: var(--fraterni-yellow);
 }
@@ -252,10 +252,10 @@ main{
 
 
 .header--title-container p{
-  margin: 25px;
+  margin: 30px 25px 25px 25px;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8rem;
+  line-height: 2.7rem;
   color: var(--frat-grey);
 }
 
