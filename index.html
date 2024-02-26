@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icons/U.svg" type="image/x-icon">
     <title>FraterniU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500 display=swap" rel="stylesheet"/> 
+
+<!-- CSS STYLES & Media Queries   -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!--END CSS STYLES & Media Queries   -->
 </head>
 <body>
-    
+    <!-- Start Visual Content -->
+<section class="header--container">
+    <!-- 1. Header -->
+    <header class="header">
+    <!-- 1.1. logo vectore image -->
+        <div class="logo">
+            <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
+        </div>
+    <!-- End logo vectore image -->
+
+    <!--1.2. Menu -->
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="#">MENTE</a></li>
+                <li><a href="#">CUERPO</a></li>
+                <li><a href="#">RECURSOS</a></li>
+                <li><a href="#">VALOR</a></li>
+                <li><a href="#">ENTORNO</a></li>
+            </ul>
+        </nav>
+    <!--End Menu -->
+    <!--1.3. Mobile Menu Icon -->
+        <div id="menuToggle" class="mobile-menu-container--image">
+            <input id="checkbox" type="checkbox">
+            <label class="toggle" for="checkbox">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </label>
+        </div>
+
+    <nav class="mobile-menu-container">
+        <ul class="menu">
+            <li><a href="#">MENTE</a></li>
+            <li><a href="#">CUERPO</a></li>
+            <li><a href="#">RECURSOS</a></li>
+            <li><a href="#">VALOR</a></li>
+            <li><a href="#">ENTORNO</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--End Mobile Menu -->
+    <!--1. Header End -->
+    <hr id="header--hline" class="horizontal-line">
+</section>
+
+<script src="./js/fraterni.js"></script>
 </body>
 </html>
