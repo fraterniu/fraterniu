@@ -1,0 +1,57 @@
+/*Header*/
+.burger {
+    display: none; /* Oculta el símbolo en tabletas y laptops */
+  }
+
+  .menu {
+    /* Agrega estilos para tu menú completo en tabletas y laptops */
+    /* Por ejemplo, podrías usar flexbox para alinear los elementos de menú */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu-container{
+      display: flex;
+      list-style-type: none;
+      gap: 1rem;
+  }
+
+  .menu-container li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px;
+    font-family: 'Norwester';
+    font-size: 1.6rem;
+}
+
+  .mobile-menu-container{
+    display: none;
+  }
+
+  .mobile-menu-container--image{
+    display: none;
+  }
+/*Header End*/
+
+/*Header Container*/
+.header--title-container h1 {
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 3.6rem;
+}
+
+.header--title-container br {
+  display: none;
+}
+/*Header Container End*/
+
+
+/*Footer*/
+
+section.top ul {
+  grid-template-columns: repeat(4, 1fr);
+  padding-right: 0;
+}
+
+/*Footer End*/
