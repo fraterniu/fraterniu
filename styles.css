@@ -49,6 +49,7 @@ body {
     left: 0;
     position: fixed;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -187,10 +188,18 @@ body.menu-open {
 
 /* End Menu Icon & Navbar Styles */
 
+.header-line-container {
+  display: flex;
+  flex-direction: column; /* Aplicado para la línea amarilla */
+  align-items: center; /* Centrado verticalmente en el contenedor principal */
+  margin-top: 80px;
+}
+
 
 .horizontal-line {
-    border: none;
-    border-top: 5px solid var(--fraterni-yellow);
+  border: none;
+  border-top: 5px solid var(--fraterni-yellow);
+  width: 100%;
 }
 
 /* End Header  */
