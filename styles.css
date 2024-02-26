@@ -216,7 +216,7 @@ main{
   width: 100%;
   min-width: 288px;
   max-width: 900px;
-  height: 70vh;
+  height: 690px;
   text-align: center;
   align-self: center;
 }
@@ -264,7 +264,7 @@ main{
   left: calc(50% - 115px);
   top: 270px;
   display: block;
-  margin-top: 130px;
+  margin-top: 480px;
   padding: 15px;
   width: 229px;
   height: 48px;
