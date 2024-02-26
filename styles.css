@@ -215,7 +215,6 @@ main{
 .header--title-container {
   width: 100%;
   min-width: 288px;
-  max-width: 900px;
   height: 690px;
   text-align: center;
   align-self: center;
