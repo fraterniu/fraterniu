@@ -218,7 +218,7 @@ main{
 .header--title-container {
   width: 100%;
   min-width: 288px;
-  height: 370px;
+  height: 400px;
   text-align: center;
   align-self: center;
 }
@@ -264,7 +264,7 @@ main{
 .header--title-container .header--button {
   position: absolute;
   left: calc(50% - 115px);
-  top: 270px;
+  top: 300px;
   display: block;
   margin-top: 160px;
   padding: 15px;
