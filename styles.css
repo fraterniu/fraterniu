@@ -396,3 +396,143 @@ main{
 }
 
 /* End Main Areas Section */
+
+
+/* 2.3 Main Pilars Section */
+.pilars-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 320px;
+  height: 840px;
+  text-align: center;
+  background: var(--fraterni-green)
+}
+
+.pilars-container img{
+  width: 200px;
+  height: 200px;
+  margin-top: -70px;
+}
+
+.service-pilars--title p{
+  margin: 0 40px;
+  margin-top: -30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: #FFF;
+}
+
+
+.service-pilars--title h2 {
+  font-family: 'Norwester';
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #fff;
+}
+
+.scroll-indicator {
+  margin-top: -20px;
+  position: absolute;
+  left: calc(50% - 50px);
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
+}
+
+.banner {
+  position: absolute;
+  width: 140px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 70px);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  background-color: var(--fraterni-yellow);
+  border-radius: 8px;
+  color: #fff;
+}
+
+
+
+.pilars-container--slider {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px; 
+  height: 400px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+
+.pilars-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 300px;
+  margin: 50px 5px 0;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89,73,30, 0.16);
+  
+}
+
+.firstpilar{
+  margin-left: calc(50%);
+}
+
+.thirdpilar{
+  margin-right: calc(50%);
+}
+
+.pilars-card--title {
+  padding-top: 30px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #000;
+}
+
+.pilars-card-info {
+  padding-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--frat-grey);
+}
+
+.container-3d {
+  position: absolute;
+  min-width: 190px;
+  max-width: 100px;
+  height: 100px;
+  margin-left: calc(50% - 95px );
+  border: 5px solid transparent;
+  perspective: 140px;
+}
+
+/* Was Desactive but I like it for mobile */
+
+.floor {
+  position: absolute;
+  min-width: 190px;
+  max-width: 300px;
+  height: 110px;
+  background: rgba(209, 136, 7, 0.90);
+  border: 3px solid var(--fraterni-yellow);
+  border-radius: 4px;
+  left: calc(50% - 95px );
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+  margin-top: 200px;
+}
+/* End Main Pilars Section */
