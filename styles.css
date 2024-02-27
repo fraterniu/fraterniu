@@ -294,3 +294,105 @@ main{
   box-shadow: none;
   transform: translateY(5px);
 }
+
+
+/* 2.2. Main Areas Section */
+.main-service-detail {
+  position: inherit;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--fraterni-green);
+}
+
+.service-detail--title{
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.service-detail--title h2{
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #fff;
+}
+
+.service-detail--title p{
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #fff;
+}
+
+.service-detail--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  min-height: 150px;
+  margin: 15px auto;
+  padding: 15px;
+  /*background-color:var(--fraterni-yellow);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);*/
+}
+
+
+.service-detail--card .icon-card{
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mind {
+  background-image: url("./assets/icons/mind.svg");
+}
+
+.fbody {
+  background-image: url("./assets/icons/fbody.svg")
+}
+
+.link {
+  background-image: url("./assets/icons/link.svg");
+}
+
+.money {
+  background-image: url("./assets/icons/money.svg");
+}
+
+.place {
+  background-image: url("./assets/icons/place.svg");
+}
+
+.service--card-title {
+  font-family: 'Norwester';
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  color: #fff;
+}
+
+.service--card-body {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* End Main Areas Section */
