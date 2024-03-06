@@ -430,7 +430,7 @@ main{
 .service-pilars--title p{
   margin: 0 40px;
   margin-top: -30px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.8rem;
   color: #FFF;
@@ -441,7 +441,7 @@ main{
   font-family: 'Norwester';
   margin-top: 50px;
   margin-bottom: 15px;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   line-height: 3.2rem;
   color: #fff;
 }
@@ -532,7 +532,7 @@ main{
 
 /* Was Desactive but I like it for mobile */
 
-.floor {
+/* .floor {
   position: absolute;
   min-width: 190px;
   max-width: 300px;
@@ -544,5 +544,5 @@ main{
   transform-style: preserve-3d;
   transform: rotateX(45deg);
   margin-top: 200px;
-}
+} */
 /* End Main Pilars Section */
