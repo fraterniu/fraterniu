@@ -264,7 +264,7 @@ main{
 
 .header--title-container p{
   margin: 30px 25px 25px 25px;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.7rem;
   color: var(--frat-grey);
@@ -327,7 +327,7 @@ main{
 
 .service-detail--title h2{
   margin-bottom: 20px;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: bold;
   line-height: 2.6rem;
   color: #fff;
@@ -335,7 +335,7 @@ main{
 
 .service-detail--title p{
   margin-bottom: 20px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: #fff;
@@ -390,13 +390,14 @@ main{
 .service--card-title {
   font-family: 'Norwester';
   margin-bottom: 8px;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   line-height: 1.8rem;
   color: #fff;
 }
 
 .service--card-body {
-  font-size: 1.2rem;
+  padding-top: 24px;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: #fff;
