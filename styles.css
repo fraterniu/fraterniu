@@ -221,13 +221,13 @@ main{
 .header--title-container {
   width: 100%;
   min-width: 288px;
-  height: 650px;
+  height: 700px;
   text-align: center;
   align-self: center;
 }
 
 .first--cover-img img{
-  height: 230px;
+  height: 300px;
 
 
 }
@@ -243,7 +243,7 @@ main{
 }
 
 .header--title-container h1:first-of-type {
-  padding-top: 45px;
+  padding-top: 44px;
 }
 
 .header--title-container h1 {
@@ -273,7 +273,7 @@ main{
 .header--title-container .header--button {
   position: absolute;
   left: calc(50% - 115px);
-  top: 300px;
+  top: 350px;
   display: block;
   margin-top: 405px;
   padding: 15px;
