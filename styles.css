@@ -359,8 +359,8 @@ main{
 
 .service-detail--card .icon-card{
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 10px;
   background-size: cover;
   background-position: center;
