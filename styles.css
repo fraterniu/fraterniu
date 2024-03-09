@@ -336,7 +336,7 @@ main{
 .service-detail--title p{
   margin-bottom: 20px;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: lighter;
   line-height: 1.8rem;
   color: #fff;
 }
