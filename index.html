@@ -1,227 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/icons/U.svg" type="image/x-icon">
     <title>FraterniU</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500 display=swap" rel="stylesheet"/> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500 display=swap"
+        rel="stylesheet" />
 
-<!-- CSS STYLES & Media Queries   -->
+    <!-- CSS STYLES & Media Queries   -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<!--END CSS STYLES & Media Queries   -->
+    <!--END CSS STYLES & Media Queries   -->
 </head>
+
 <body>
     <!-- Start Visual Content -->
-<section class="header--container">
-    <!-- 1. Header -->
-    <header class="header">
-    <!-- 1.1. logo vectore image -->
-        <div class="logo">
+    <section class="header--container">
+        <!-- 1. Header -->
+        <header class="header">
+            <!-- 1.1. logo vectore image -->
+            <div class="logo">
+                <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
+            </div>
+            <!-- End logo vectore image -->
+
+            <!--1.2. Menu -->
+            <nav class="menu-container">
+                <ul class="menu">
+                    <li><a href="#">MENTE</a></li>
+                    <li><a href="#">CUERPO</a></li>
+                    <li><a href="#">RECURSOS</a></li>
+                    <li><a href="#">VALOR</a></li>
+                    <li><a href="#">ENTORNO</a></li>
+                </ul>
+            </nav>
+            <!--End Menu -->
+            <!--1.3. Mobile Menu Icon -->
+            <div id="menuToggle" class="mobile-menu-container--image">
+                <input id="checkbox" type="checkbox">
+                <label class="toggle" for="checkbox">
+                    <div class="bar bar--top"></div>
+                    <div class="bar bar--middle"></div>
+                    <div class="bar bar--bottom"></div>
+                </label>
+            </div>
+
+            <nav class="mobile-menu-container">
+                <ul class="menu">
+                    <li><a href="#">MENTE</a></li>
+                    <li><a href="#">CUERPO</a></li>
+                    <li><a href="#">RECURSOS</a></li>
+                    <li><a href="#">VALOR</a></li>
+                    <li><a href="#">ENTORNO</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--End Mobile Menu -->
+        <!--1. Header End -->
+    </section>
+
+    <main>
+        <section class="header--title-container">
+            <div class="header--container">
+
+                <h1>Desata tu potencial de aprendizaje con la</h1>
+                <h1>revolución</h1>
+                <h1>de la cual queremos que tú seas parte.</h1>
+
+                <p>En FraterniU esperamos ser ese acompañante que te guía y te motiva al cambio. Síguenos y forma parte
+                    de una comunidad apasionada por aprender y pensar diferente, para superarse cada día y cambiar
+                    vidas.</p>
+                <div class="first--cover-img">
+                    <img src="./assets/imgs/fraterniSketch.png" alt="">
+                </div>
+
+
+                <a href="#pilars" class="header--button">Conoce Nuestros Pilares<span></span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 2.2. Main Areas Section -->
+    <section class="main-service-detail">
+        <div class="service-detail--title">
+            <h2 id="areas">Buscamos brindarte apoyo en 5 áreas fundamentales.</h2>
+            <p>Las cuales creemos que son importantes para comprender y cuidar en nuestras vidas.</p>
+        </div>
+        <section class="service-cards--container">
+            <div class="row">
+                <article id="Mente" class="service-detail--card">
+                    <span class="icon-card mind"></span>
+                    <p class="service--card-title">MENTE</p>
+                    <p class="service--card-body">Justificar las distintas prioridades de nuestra cabeza, asegura
+                        decisiones informadas para obtener un bienestar en las decisiones que tomamos.</p>
+                </article>
+                <article id="Cuerpo" class="service-detail--card">
+                    <span class="icon-card fbody"></span>
+                    <p class="service--card-title">CUERPO</p>
+                    <p class="service--card-body">Mantenerse saludable permite enfrentar desafíos físicos y tener un
+                        balance con las distintas cosas que realizamos en nuestro día a día.</p>
+                </article>
+            </div>
+            <div class="row">
+                <article id="Recursos" class="service-detail--card">
+                    <span class="icon-card link"></span>
+                    <p class="service--card-title">RECURSOS</p>
+                    <p class="service--card-body">Gestionarlos responsablemente y comprender sus distintos beneficios
+                        nos permite estar un paso adelante de cada problema que se presente.</p>
+                </article>
+                <article id="Valor" class="service-detail--card">
+                    <span class="icon-card money"></span>
+                    <p class="service--card-title">VALOR</p>
+                    <p class="service--card-body">Entender las finanzas permite una planificación a largo plazo, con
+                        gestión efectiva y libertad económica para mayor tranquilidad en la vida.</p>
+                </article>
+            </div>
+
+            <article id="Entorno" class="service-detail--card">
+                <span class="icon-card place"></span>
+                <p class="service--card-title">ENTORNO</p>
+                <p class="service--card-body">Analizar lo que nos rodea, nos permite encontrar áreas de mejora para
+                    buscar alternativas para adaptarnos a nuestro tiempo y condiciones.</p>
+            </article>
+        </section>
+    </section>
+    <!-- End Main Areas Section -->
+
+
+    <!-- 2.3 Main Pilars Section -->
+    <section class="pilars-container">
+        <div>
+            <img src="./assets/icons/separetor.svg" alt="random yellow line">
+        </div>
+        <div class="service-pilars--title">
+            <p>Los pilares, a diferencia de las áreas, requieren de un balance equitativo. En las áreas siempre habrá
+                una o algunas que quieras potenciar más, porque se relacionan y funcionan mejor para alcanzar lo que tú
+                consideres éxito en tu vida.</p>
+            <h2 id="pilars">LOS 3 PILARES <br> QUE EXPLORAMOS:</h2>
+        </div>
+
+        <section class="pilars-container--slider">
+            <div class="container-3d">
+                <div class="floor"></div>
+            </div>
+
+            <div class="scroll-indicator">Desliza para ver más <button id="siguiente"> <i
+                        class="bi bi-arrow-right-short"></i></div>
+
+            <article class="pilars-container--card firstpilar">
+                <p class="banner">Pilar a Explorar #1</p>
+                <div>
+                    <h3 class="pilars-card--title">Autonomía
+                        y Autogestión</h3>
+                    <p class="pilars-card-info">La autonomía y autogestión son fundamentales para el desarrollo personal
+                        y profesional, capacitando a las personas para tomar control de sus decisiones, metas y
+                        responsabilidades, promoviendo un crecimiento independiente y sostenible.</p>
+                </div>
+            </article>
+
+            <article class="pilars-container--card secondpilar">
+                <p class="banner">Pilar a Explorar #2</p>
+                <div>
+                    <h3 class="pilars-card--title">Pensamiento
+                        Critico y Creativo</h3>
+                    <p class="pilars-card-info">El pensamiento crítico y creativo es crucial para abordar desafíos
+                        complejos, tomar decisiones informadas y fomentar la innovación, capacitando a las personas para
+                        adaptarse y contribuir de manera significativa a la sociedad.</p>
+                </div>
+            </article>
+
+            <article class="pilars-container--card thirdpilar">
+                <p class="banner">Pilar a Explorar #3</p>
+                <div>
+                    <h3 class="pilars-card--title">Habilidades Sociales</h3>
+                    <p class="pilars-card-info">Las habilidades sociales son esenciales para construir relaciones
+                        sólidas y colaborar eficazmente en equipo. Facilitan la comunicación efectiva, fomentan la
+                        empatía y fortalecen la cohesión social, contribuyendo al éxito interpersonal y a un entorno
+                        armonioso.</p>
+                </div>
+            </article>
+        </section>
+    </section>
+    <!-- End Main Pilars Section -->
+
+
+    <!--7.  Footer -->
+    <footer>
+        <section class="top">
             <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
-        </div>
-    <!-- End logo vectore image -->
-
-    <!--1.2. Menu -->
-        <nav class="menu-container">
-            <ul class="menu">
-                <li><a href="#">MENTE</a></li>
-                <li><a href="#">CUERPO</a></li>
-                <li><a href="#">RECURSOS</a></li>
-                <li><a href="#">VALOR</a></li>
-                <li><a href="#">ENTORNO</a></li>
+            <ul>
+                <li>
+                    <a>
+                        <h3>Pilares</h3>
+                    </a>
+                    <a> </a>
+                    <a>Autonomía y Autogestión</a>
+                    <a>Pensamiento crítico y Creativo</a>
+                    <a>Habilidades Sociales</a>
+                </li>
+                <li>
+                    <a>
+                        <h3>Áreas</h3>
+                    </a>
+                    <a> </a>
+                    <a>Mente</a>
+                    <a>Cuerpo</a>
+                    <a>Recursos</a>
+                    <a>Valor</a>
+                    <a>Entorno</a>
+                </li>
+                <li>
+                    <h3>Encuéntranos en:</h3>
+                    <a> </a>
+                    <a href="https://www.instagram.com/fraterniu/ " target="_blank" class="instagram redicon"><span
+                            class="icon-card Vector"></span>Instagram</a>
+                    <!-- <a href="" class="redicon tiktok"><span class="icon-card TikTok"></span>TikTok</a> -->
+                    <a href="" class="redicon youtube"><span class="icon-card Youtube"></span>YouTube</a>
+                    <a href="" class="facebook redicon"><span class="icon-card Facebook"></span>Facebook</a>
+                    <a href="" class="linkedin redicon"><span class="icon-card LinkedIn"></span>LinkedIn</a>
+                </li>
+                <li>
+                    <h3>Sobre nosotros</h3>
+                    <a> </a>
+                    <a href="">FraterniU Developers</a>
+                    <!-- <a>Juan José López</a>
+                    <a>Nicolás Castañeda</a>
+                    <a>Jaime Olarte</a>
+                    <a>Diego Suárez</a>
+                    <a>Oscar Vergara</a>
+                    <a>Julián Pulido</a> -->
+                </li>
+                <li>
             </ul>
-        </nav>
-    <!--End Menu -->
-    <!--1.3. Mobile Menu Icon -->
-        <div id="menuToggle" class="mobile-menu-container--image">
-            <input id="checkbox" type="checkbox">
-            <label class="toggle" for="checkbox">
-                <div class="bar bar--top"></div>
-                <div class="bar bar--middle"></div>
-                <div class="bar bar--bottom"></div>
-            </label>
-        </div>
+            <section class="contactoFooter">
+                <h2><span class="envelope conticon"></span>Contáctanos:</h2><br>
+                <a>CorreoEjemplo@FraterniU.com</a>
+            </section>
+        </section>
+        <section class="bottom">© 2024 FraterniU.com</section>
+    </footer>
+    <!-- End Footer -->
 
-    <nav class="mobile-menu-container">
-        <ul class="menu">
-            <li><a href="#">MENTE</a></li>
-            <li><a href="#">CUERPO</a></li>
-            <li><a href="#">RECURSOS</a></li>
-            <li><a href="#">VALOR</a></li>
-            <li><a href="#">ENTORNO</a></li>
-        </ul>
-    </nav>
-    </header>
-    <!--End Mobile Menu -->
-    <!--1. Header End -->
-</section>
-
-<main>
-    <section class="header--title-container">
-        <div class="header--container">
-            
-            <h1>Desata tu potencial de aprendizaje con la</h1>
-            <h1>revolución</h1>
-            <h1>de la cual queremos que tú seas parte.</h1>
-
-            <p>En FraterniU esperamos ser ese acompañante que te guía y te motiva al cambio. Síguenos y forma parte de una comunidad apasionada por aprender y pensar diferente, para superarse cada día y cambiar vidas.</p>
-            <div class="first--cover-img">
-                <img src="./assets/imgs/fraterniSketch.png" alt="">
-            </div>
-            
-            
-            <a href="#pilars" class="header--button"
-              >Conoce Nuestros Pilares<span></span>
-            </a>
-
-        </div>
-    </section>
-</main>
-
-<!-- 2.2. Main Areas Section -->
-<section class="main-service-detail">
-    <div class="service-detail--title">
-        <h2 id="areas">Buscamos brindarte apoyo en 5 áreas fundamentales.</h2>
-        <p>Las cuales creemos que son importantes para comprender y cuidar en nuestras vidas.</p>
-    </div>
-    <section class="service-cards--container">
-        <div class="row">
-            <article id="Mente" class="service-detail--card">
-            <span class="icon-card mind"></span>
-            <p class="service--card-title">MENTE</p>
-            <p class="service--card-body">Justificar las distintas prioridades de nuestra cabeza, asegura decisiones informadas para obtener un bienestar en las decisiones que tomamos.</p>
-        </article>
-        <article  id="Cuerpo" class="service-detail--card">
-            <span class="icon-card fbody"></span>
-            <p  class="service--card-title">CUERPO</p>
-            <p class="service--card-body">Mantenerse saludable permite enfrentar desafíos físicos y tener un balance con las distintas cosas que realizamos en nuestro día a día.</p>
-        </article>
-        </div>
-        <div class="row">
-             <article id="Recursos" class="service-detail--card">
-            <span class="icon-card link"></span>
-            <p  class="service--card-title">RECURSOS</p>
-            <p class="service--card-body">Gestionarlos responsablemente y comprender sus distintos beneficios nos permite estar un paso adelante de cada problema que se presente.</p>
-        </article>
-        <article id="Valor" class="service-detail--card">
-            <span class="icon-card money"></span>
-            <p   class="service--card-title">VALOR</p>
-            <p class="service--card-body">Entender las finanzas permite una planificación a largo plazo, con gestión efectiva y libertad económica para mayor tranquilidad en la vida.</p>
-        </article>
-        </div>
-       
-        <article id="Entorno" class="service-detail--card">
-            <span class="icon-card place"></span>
-            <p   class="service--card-title">ENTORNO</p>
-            <p class="service--card-body">Analizar lo que nos rodea, nos permite encontrar áreas de mejora para buscar alternativas para adaptarnos a nuestro tiempo y condiciones.</p>
-        </article>
-    </section>
-</section>
-<!-- End Main Areas Section -->
-
-
-<!-- 2.3 Main Pilars Section -->
-<section class="pilars-container">
-    <div>
-        <img src="./assets/icons/separetor.svg" alt="random yellow line">
-    </div>
-    <div class="service-pilars--title">
-        <p>Los pilares, a diferencia de las áreas, requieren de un balance equitativo. En las áreas siempre habrá una o algunas que quieras potenciar más, porque se relacionan y funcionan mejor para alcanzar lo que tú consideres éxito en tu vida.</p>
-        <h2 id="pilars">LOS 3 PILARES <br>  QUE EXPLORAMOS:</h2>
-    </div>
-    
-    <section class="pilars-container--slider">
-        <div class="container-3d">
-        <div class="floor"></div>
-        </div>
-
-        <div  class="scroll-indicator">Desliza para ver más <button id="siguiente"> <i class="bi bi-arrow-right-short"></i></div>
-
-        <article class="pilars-container--card firstpilar">
-            <p class="banner">Pilar a Explorar #1</p>
-            <div>
-                <h3 class="pilars-card--title">Autonomía 
-                    y Autogestión</h3>
-                <p class="pilars-card-info">La autonomía y autogestión son fundamentales para el desarrollo personal y profesional, capacitando a las personas para tomar control de sus decisiones, metas y responsabilidades, promoviendo un crecimiento independiente y sostenible.</p>
-            </div>
-        </article>
-
-        <article class="pilars-container--card secondpilar">
-            <p class="banner">Pilar a Explorar #2</p>
-            <div>
-                <h3 class="pilars-card--title">Pensamiento 
-                    Critico y Creativo</h3>
-                <p class="pilars-card-info">El pensamiento crítico y creativo es crucial para abordar desafíos complejos, tomar decisiones informadas y fomentar la innovación, capacitando a las personas para adaptarse y contribuir de manera significativa a la sociedad.</p>
-            </div>
-        </article>
-
-        <article class="pilars-container--card thirdpilar">
-            <p class="banner">Pilar a Explorar #3</p>
-            <div>
-                <h3 class="pilars-card--title">Habilidades Sociales</h3>
-                <p class="pilars-card-info">Las habilidades sociales son esenciales para construir relaciones sólidas y colaborar eficazmente en equipo. Facilitan la comunicación efectiva, fomentan la empatía y fortalecen la cohesión social, contribuyendo al éxito interpersonal y a un entorno armonioso.</p>
-            </div>
-        </article>
-    </section>
-</section>
-<!-- End Main Pilars Section -->
-
-
-<!--7.  Footer -->
-<footer>
-    <section class="top">
-    <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
-      <ul>
-        <li>
-          <a href="#areas"><h3>Áreas</h3></a>
-          <a> </a>
-          <a>Mente</a>
-          <a>Cuerpo</a>
-          <a>Recursos</a>
-          <a>Valor</a>
-          <a>Entorno</a>
-        </li>
-        <li>
-          <a href="#pilars"><h3>Pilares</h3></a>
-          <a> </a>
-          <a>Autonomía y Autogestión</a>
-          <a>Pensamiento crítico y Creativo</a>
-          <a>Habilidades Sociales</a>
-        </li>
-        <li>
-          <h3>FraterniU Developers</h3>
-          <a> </a>
-          <a>Juan José López</a>
-          <a>Nicolás Castañeda</a>
-          <a>Jaime Olarte</a>
-          <a>Diego Suárez</a>
-          <a>Oscar Vergara</a>
-          <a>Julián Pulido</a>
-        </li>  
-        <li>
-            <h3>Nuestras Redes Sociales</h3>
-            <a> </a>
-            <a href="https://www.instagram.com/fraterniu/ " target="_blank" class="instagram redicon"><span class="icon-card Vector"></span>Instagram</a>
-            <a href="" class="redicon tiktok"><span class="icon-card TikTok"></span>TikTok</a>
-            <a href="" class="redicon youtube"><span class="icon-card Youtube"></span>YouTube</a>
-            <a href="" class="facebook redicon"><span class="icon-card Facebook"></span>Facebook</a>
-            <a href="" class="linkedin redicon"><span class="icon-card LinkedIn"></span>LinkedIn</a>
-          </li>    
-      </ul>
-      <section class="contactoFooter">
-        <h2><span class="envelope conticon"></span>Contáctanos:</h2><br>
-        <a>CorreoEjemplo@FraterniU.com</a>
-    </section>
-    </section>
-    <section class="bottom">© 2024 FraterniU.com</section>
-  </footer>
-<!-- End Footer -->
-
-<script src="./js/fraterni.js"></script>
+    <script src="./js/fraterni.js"></script>
 </body>
+
 </html>
