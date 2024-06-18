@@ -416,7 +416,6 @@ main{
   justify-content: flex-start;
   width: 100%;
   min-width: 320px;
-  height: 840px;
   text-align: center;
   background: var(--fraterni-green)
 }
@@ -529,6 +528,120 @@ main{
   border: 5px solid transparent;
   perspective: 140px;
 }
+
+/*7. Footer*/
+
+footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 20px;
+  background: var(--fraterni-green);
+  border-top: 5px solid var(--fraterni-yellow);
+}
+
+
+footer section {
+  padding: 0 50px;
+}
+
+section.top {
+  padding-top: 25px;
+  margin-bottom: 15px;
+}
+
+section.top img {
+  display: block;
+  height: 30px;
+  margin: 0 0 30px;
+}
+
+section.top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section.top ul li a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+section.top h3 {
+  color: #c7c7c7;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+section.bottom {
+  padding-top: 5px;
+  border-top: 2px solid #d187072c;
+  color: #c7c7c7;
+  font-size: 13px;  
+} 
+.redicon span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;  
+  background-position: center;
+  vertical-align: middle;
+}
+
+.facebook{
+  background-image: url('./assets/icons/Facebook.svg');
+  background-repeat: no-repeat;
+}
+
+.instagram{
+  background-image: url('./assets/icons/Vector.svg');
+  background-repeat: no-repeat;
+}
+
+.tiktok{
+  background-image: url('./assets/icons/TikTok.svg');
+  background-repeat: no-repeat;
+}
+
+.linkedin{
+  background-image: url('./assets/icons/LinkedIn.svg');
+  background-repeat: no-repeat;
+}  
+
+.youtube{
+  background-image: url('./assets/icons/Youtube.svg');
+  background-repeat: no-repeat;
+}
+
+.envelope{
+  background-image: url('./assets/icons/envelope.svg');
+  background-repeat: no-repeat;
+}
+
+.conticon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;  
+  background-position: center;
+  vertical-align: middle;
+}
+
+.contactoFooter{
+  color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  text-align: center;   
+}
+
+
+/*End FOOTER*/
 
 /* Was Desactive but I like it for mobile */
 
