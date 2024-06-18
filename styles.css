@@ -356,6 +356,14 @@ main{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);*/
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
 
 .service-detail--card .icon-card{
   display: inline-block;
