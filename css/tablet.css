@@ -3,6 +3,11 @@
     display: none; /* Oculta el símbolo en tabletas y laptops */
   }
 
+.logo img{
+    width: auto;
+    height: 45px;
+}
+
   .menu {
     /* Agrega estilos para tu menú completo en tabletas y laptops */
     /* Por ejemplo, podrías usar flexbox para alinear los elementos de menú */
@@ -25,6 +30,17 @@
     font-size: 1.6rem;
 }
 
+
+.menu-container button {
+  text-decoration: none;
+  border-color: transparent;
+  color: white;
+  padding: 10px;
+  font-family: 'Norwester';
+  font-size: 1.6rem;
+  background-color: var(--fraterni-yellow);
+  border-radius: 16px;
+}
   .mobile-menu-container{
     display: none;
   }
