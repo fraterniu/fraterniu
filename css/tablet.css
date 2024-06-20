@@ -53,12 +53,19 @@
 /*Header Container*/
 .header--title-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: right;
   text-align: center;
   margin-top: 4rem;
 }
+
+.header--title-container .text-content {
+  flex: 1;
+  margin-right: 2rem; /* Espacio entre texto e imagen */
+}
+
+
+
 .header--title-container h1 {
   font-size: 3.4rem;
   font-weight: 900;
@@ -74,10 +81,6 @@
   line-height: 2.4rem;
   width: 600px;
   align-items: left;
-}
-
-.header--title-container img {
-  
 }
 
 .header--title-container br {
