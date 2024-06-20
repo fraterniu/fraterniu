@@ -51,10 +51,33 @@
 /*Header End*/
 
 /*Header Container*/
+.header--title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: right;
+  text-align: center;
+  margin-top: 4rem;
+}
 .header--title-container h1 {
   font-size: 3.4rem;
   font-weight: 900;
   line-height: 3.6rem;
+  width: 600px;
+ 
+  align-items: left;
+}
+
+.header--title-container p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  width: 600px;
+  align-items: left;
+}
+
+.header--title-container img {
+  
 }
 
 .header--title-container br {
