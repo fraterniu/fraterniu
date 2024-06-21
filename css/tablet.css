@@ -89,6 +89,10 @@
 /*Header Container End*/
 
 /*lo q hizo jaime(llamen esto como quieran)*/
+.header--title-container {
+  height: 700px;
+}
+
 .wrapper {
   margin: 2em auto;
 }
@@ -100,7 +104,12 @@
   }
   .first--cover-img{
     width: auto;
+    padding-top: 50px;
   }
+}
+
+.header--title-container .header--button {
+  top: 350px;
 }
 
 /*lo q hizo jaime(llamen esto como quieran) End*/
