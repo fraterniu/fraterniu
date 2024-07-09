@@ -544,12 +544,12 @@ main{
 
 
 
-.preparing-people {
+.members-section--container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70vh;
+  height: 800px;
   border-top: 20px solid var(--fraterni-yellow);
 }
 
@@ -558,15 +558,13 @@ main{
 }
 
 .U-Logo {
-  width: 60px;
-  height: 60px;
-  align-items: left;
+  height: 40px;
+  padding-bottom: 8px;
 }
 
 .U-LogoW {
-  width: 50px;
-  height: 50px;
-  align-items: top;
+  height: 40px;
+  padding-bottom: 8px;
 }
 
 .titulos {
@@ -576,9 +574,8 @@ main{
   text-align: center;
 }
 
-.container {
+.members-container {
   display: flex;
-  
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -623,11 +620,11 @@ main{
 }
 
 .card-partidarios h2 {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .card-fraternistas h2 {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 } 
 
 .rectangle-gray {
@@ -650,7 +647,7 @@ main{
   background-color: #C78207;
 }
 @media screen and (max-width: 600px) {
-  .Tisa-image {
+  .tisa-image {
     position: relative;
     width: 100%;
     max-width: 100%;
@@ -687,7 +684,7 @@ main{
     height: 100vh;
     border-top: 20px solid var(--fraterni-yellow);
   }
-  .container {
+  .members-container {
     display: flex;
     justify-content: center;
     align-items: center;
