@@ -114,6 +114,54 @@
 
 /*lo q hizo jaime(llamen esto como quieran) End*/
 
+.Tisa-image {
+  position: relative; /* Asegura que el texto se posicione relativamente al contenedor */
+  width: 100%;
+  height: 350px; /* Ajusta según sea necesario */
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+  object-fit: cover; /* Ajusta según el comportamiento deseado de la imagen */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; /* Ajusta según sea necesario */
+  left: 50%; /* Ajusta según sea necesario */
+  transform: translate(-50%, -50%); /* Centra el texto */
+  color: #414141; /* Ajusta el color del texto */
+  font-size: 24px; /* Ajusta el tamaño del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 10px; /* Añade padding para separar el texto del borde del fondo */
+  border-radius: 5px; /* Añade bordes redondeados */
+}
+
+
+.rectangle-gray {
+    position: absolute;
+    bottom: 7px; /* Ajusta la distancia desde abajo según tu diseño */
+    left: 50%; /* Ajusta el porcentaje para centrar el rectángulo gris */
+    transform: translateX(-50%);
+    width: 245px; /* Ajusta el ancho del rectángulo gris */
+    height: 20px;
+    background-color: #888888;
+  }
+
+  .rectangle-orange {
+    position: absolute;
+    bottom: -30px; /* Ajusta la distancia desde abajo según tu diseño */
+    left: 50%; /* Ajusta el porcentaje para centrar el rectángulo naranja */
+    transform: translateX(-50%);
+    width: 245px; /* Ajusta el ancho del rectángulo naranja */
+    height: 20px;
+    background-color: #C78207;
+  }
+
+
+
+
 /*Footer*/
 
 section.top ul {
