@@ -592,8 +592,57 @@ main {
   font-size: 2.4rem;
 }
 
+.pilars-container .slider-prev, 
+.pilars-container .slider-next {
+  display: none; /* Oculta los íconos por defecto */
+  position: absolute; /* Cambiado a absolute para limitarlos al contenedor */
+  top: 50%; /* Centra los íconos verticalmente */
+  transform: translateY(-150%); /* Asegura centrado vertical perfecto */
+  z-index: 10; /* Asegura que los íconos estén sobre otros elementos */
+  cursor: pointer; /* Cambia el cursor para indicar que son clickeables */
+  width: 30px; /* Ajusta el tamaño de los íconos */
+  height: 30px; /* Ajusta el tamaño de los íconos */
+}
 
-/* End Main Pilars Section */
+.pilars-container .slider-prev {
+  left: 10px; /* Posiciona el ícono "Anterior" a la izquierda */
+}
+
+.pilars-container .slider-next {
+  right: 10px; /* Posiciona el ícono "Siguiente" a la derecha */
+}
+
+@media (max-width: 750px) {
+  .pilars-container .slider-prev, 
+  .pilars-container .slider-next {
+    display: block; /* Solo muestra los íconos en pantallas pequeñas */
+  }
+}
+
+/*PILARS MEDIA QUERIES*/
+@media (max-width: 1024px) {
+  .pilars-container--slider {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .pilars-container--slider {
+    display: block; /* Cambia el diseño para mostrar un elemento a la vez */
+    overflow: hidden; /* Oculta los elementos que desborden el contenedor */
+  }
+
+  .pilars-container--card {
+    width: 100%; /* Asegura que cada tarjeta ocupe todo el ancho disponible */
+    display: none; /* Oculta todas las tarjetas inicialmente */
+
+  }
+
+  .slider-prev, .slider-next {
+    display: block; /* Solo muestra los íconos en pantallas pequeñas */
+  }
+}
+/*END PILARS MEDIA QUERIES*/
 
 /* members section mobile */
 
