@@ -3,6 +3,11 @@
     display: none; /* Oculta el símbolo en tabletas y laptops */
   }
 
+.logo img{
+    width: auto;
+    height: 45px;
+}
+
   .menu {
     /* Agrega estilos para tu menú completo en tabletas y laptops */
     /* Por ejemplo, podrías usar flexbox para alinear los elementos de menú */
@@ -25,6 +30,17 @@
     font-size: 1.6rem;
 }
 
+
+.menu-container button {
+  text-decoration: none;
+  border-color: transparent;
+  color: white;
+  padding: 10px;
+  font-family: 'Norwester';
+  font-size: 1.6rem;
+  background-color: var(--fraterni-yellow);
+  border-radius: 16px;
+}
   .mobile-menu-container{
     display: none;
   }
@@ -35,10 +51,36 @@
 /*Header End*/
 
 /*Header Container*/
+.header--title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.header--title-container .text-content {
+  flex: 1;
+  margin-right: 2rem; /* Espacio entre texto e imagen */
+}
+
+
+
 .header--title-container h1 {
   font-size: 3.4rem;
   font-weight: 900;
   line-height: 3.6rem;
+  width: 600px;
+ 
+  align-items: left;
+}
+
+.header--title-container p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  width: 600px;
+  align-items: left;
 }
 
 .header--title-container br {
@@ -46,6 +88,146 @@
 }
 /*Header Container End*/
 
+/*lo q hizo jaime(llamen esto como quieran)*/
+.header--title-container {
+  height: 700px;
+}
+
+.wrapper {
+  margin: 2em auto;
+}
+@media screen and (min-width: 980px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1%;
+  }
+  .first--cover-img{
+    width: auto;
+    padding-top: 50px;
+  }
+}
+
+.header--title-container .header--button {
+  top: 350px;
+}
+
+/*lo q hizo jaime(llamen esto como quieran) End*/
+
+/*Members Section (Esta es la nueva seccion */
+.members-section--container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 560px;
+  border-top: 20px solid var(--fraterni-yellow);
+}
+
+
+.tisa-image {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #414141;
+  font-size: 2.4vw;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.preparing-people {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  border-top: 20px solid var(--fraterni-yellow);
+}
+
+.members-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+  flex-direction: row;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Alinea los elementos horizontalmente */
+  margin: 40px; /* Espaciado entre cada card-container */
+}
+
+.card-fraternistas {
+  width: 250px;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--fraterni-green);
+  color: #fff;
+  padding-bottom: 61px;
+  padding-top: 30px;
+  position: relative;
+}
+
+
+.card-partidarios {
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #DFDFDF;
+  color: #333;
+  padding-top: 30px;
+  padding-bottom: 61px;
+  margin: 20px 0;
+  position: relative;
+  padding-bottom: -10px;
+}
+
+.rectangle-gray {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 20px;
+  background-color: #888888;
+}
+
+.rectangle-orange {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 245px;
+  height: 20px;
+  background-color: #C78207;
+}
+
+/*Members Section End*/
 
 /*Footer*/
 
