@@ -324,12 +324,37 @@ main{
   text-align: center;
 }
 
+.service-detail--description{
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+.service-detail--description p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #fff;
+}
+
+.service-detail--description h3{
+  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: #fff;
+
+}
 
 .service-detail--title h2{
+  font-family: 'Norwester';
   margin-bottom: 20px;
-  font-size: 2.8rem;
-  font-weight: bold;
-  line-height: 2.6rem;
+  font-size: 3.5rem;
+  font-weight:500;
+  line-height: 3.8rem;
   color: #fff;
 }
 
@@ -345,9 +370,9 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  min-width: 288px;
-  max-width: 400px;
+  width: 0%;
+  min-width: 250px;
+
   min-height: 150px;
   margin: 15px auto;
   padding: 15px;
@@ -357,6 +382,7 @@ main{
 }
 
 .row{
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -405,11 +431,10 @@ main{
 
 .service--card-body {
   padding-top: 16px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 1.8rem;
+  line-height: 2rem;
   color: #fff;
-  letter-spacing: 1px;
   text-align: center;
 }
 
@@ -431,7 +456,8 @@ main{
 .pilars-container img{
   width: 300px;
   height: 200px;
-  margin-top: -70px;
+  margin-top: -50px;
+  margin-bottom: -70px;
 }
 
 .service-pilars--title p{
@@ -478,15 +504,16 @@ main{
 }
 
 
-
 .pilars-container--slider {
-  margin-top: 20px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  gap: 50px; 
+  justify-content: center;
+  align-items: center;
+  gap: 100px;    
   height: 400px;
-  overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
 }
 
 
