@@ -5,6 +5,21 @@
   --fraterni-yellow: #D18807;
   --frat-grey: #504C49;
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
+    
+    /* Tamaños de fuente */
+    --font-size-base: 16px; /* Tamaño base para 1rem */
+    --font-size-heading: 3rem; /* Tamaño para encabezados */
+    --font-size-subheading: 2.4rem; /* Tamaño para subtítulos */
+    --font-size-body: 1.6rem; /* Tamaño para texto de cuerpo */
+    
+    /* Espaciado */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    
+    /* Bordes y sombras */
+    --border-radius: 4px; /* Radio de borde estándar */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra estándar */
 }
 
 /*End Design Main Styles */
@@ -256,7 +271,7 @@ main {
 }
 
 .header--title-container h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-heading);
   font-weight: 700;
   line-height: 2.8rem;
   margin: 0 24px;
@@ -273,7 +288,7 @@ main {
 
 .header--title-container p {
   margin: 30px 25px 25px 25px;
-  font-size: 1.6rem;
+  font-size: var(--font-size-body);
   font-weight: 500;
   line-height: 2.7rem;
   color: var(--frat-grey);
@@ -344,7 +359,7 @@ main {
 }
 
 .service-detail--description p{
-  font-size: 1.5rem;
+  font-size: var(--font-size-body);
   font-weight: 500;
   line-height: 1.8rem;
   color: #fff;
@@ -360,7 +375,6 @@ main {
 
 .service-detail--title h2 {
    font-family: 'Norwester';
-
   margin-bottom: 20px;
   font-size: 3.5rem;
   font-weight:500;
@@ -370,7 +384,7 @@ main {
 
 .service-detail--title p {
   margin-bottom: 20px;
-  font-size: 1.6rem;
+  font-size: var(--font-size-body);
   font-weight: lighter;
   line-height: 1.8rem;
   color: #fff;
@@ -434,7 +448,7 @@ main {
 .service--card-title {
   font-family: 'Norwester';
   margin-bottom: 8px;
-  font-size: 2.6rem;
+  font-size: var(--font-size-subheading);
   line-height: 1.8rem;
   color: #fff;
 }
@@ -468,12 +482,14 @@ main {
   height: 200px;
   margin-top: -50px;
   margin-bottom: -70px;
+  margin-top: -50px;
+  margin-bottom: -70px;
 }
 
 .service-pilars--title p {
   margin: 0 40px;
   margin-top: -30px;
-  font-size: 1.6rem;
+  font-size: var(--font-size-body);
   font-weight: bold;
   line-height: 1.8rem;
   color: #FFF;
@@ -542,24 +558,16 @@ main {
 
 }
 
-.firstpilar {
-  margin-left: calc(50%);
-}
-
-.thirdpilar {
-  margin-right: calc(50%);
-}
-
 .pilars-card--title {
   padding-top: 30px;
-  font-size: 1.8rem;
+  font-size: var(--font-size-subheading);
   line-height: 1.8rem;
   color: #000;
 }
 
 .pilars-card-info {
   padding-top: 30px;
-  font-size: 1.2rem;
+  font-size: var(--font-size-body);
   font-weight: 500;
   color: var(--frat-grey);
 }
@@ -589,7 +597,7 @@ main {
 
 .text-Vuca {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: var(--font-size-body);
 }
 
 .pilars-container .slider-prev, 
@@ -600,16 +608,18 @@ main {
   transform: translateY(-150%); /* Asegura centrado vertical perfecto */
   z-index: 10; /* Asegura que los íconos estén sobre otros elementos */
   cursor: pointer; /* Cambia el cursor para indicar que son clickeables */
-  width: 30px; /* Ajusta el tamaño de los íconos */
-  height: 30px; /* Ajusta el tamaño de los íconos */
+  width: 25px; /* Ajusta el tamaño de los íconos */
+  height: 25px; /* Ajusta el tamaño de los íconos */
 }
 
 .pilars-container .slider-prev {
   left: 10px; /* Posiciona el ícono "Anterior" a la izquierda */
+  transform: translateY(-50%); /* Ajusta la posición vertical */
 }
 
 .pilars-container .slider-next {
   right: 10px; /* Posiciona el ícono "Siguiente" a la derecha */
+  transform: translateY(-50%); /* Ajusta la posición vertical */
 }
 
 @media (max-width: 750px) {
@@ -676,8 +686,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #414141;
-  font-size: 2.4vw;
+  color: #acacac;
+  font-size: 8px;
   text-align: center;
   padding: 10px;
   border-radius: 5px;
@@ -730,11 +740,11 @@ main {
 
 .card-fraternistas h2{
   padding-bottom: 8px;
-  font-size: 20px
+  font-size: var(--font-size-body);
 }
 
 .card-fraternistas p {
-  font-size: 12px;
+  font-size: 1.4rem;
 }
 
 .card-partidarios {
@@ -752,11 +762,11 @@ main {
 
 .card-partidarios h2{
   padding-bottom: 8px;
-  font-size: 20px
+  font-size: var(--font-size-body);
 }
 
 .card-partidarios p {
-  font-size: 12px;
+  font-size: 1.4rem;
 }
 .rectangle-gray {
   position: absolute;
@@ -826,7 +836,7 @@ section.top ul li a {
 section.top h3 {
   color: #c7c7c7;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-body);
   letter-spacing: 1px;
 }
 
@@ -834,7 +844,7 @@ section.bottom {
   padding-top: 5px;
   border-top: 2px solid #d187072c;
   color: #c7c7c7;
-  font-size: 13px;
+  font-size: var(--font-size-body);
 }
 
 .redicon span {
