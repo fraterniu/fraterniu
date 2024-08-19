@@ -187,7 +187,7 @@ body.menu-open {
   max-width: 300px;
   margin: 0 auto 16px;
   text-align: center;
-  padding: 12px 16px;
+  padding: 8px 16px;
   background-color: var(--fraterni-yellow);
   border-radius: 8px;
 
@@ -262,3 +262,32 @@ main {
   line-height: 7rem;
   color: #ffffff;
 }
+
+.header--portrait-container .header--button {
+  position: absolute;
+  left: calc(50% - 115px);
+  top: 77vh;
+  display: block;
+  padding: 15px;
+  width: 238px;
+  height: 48px;
+  background-color: var(--fraterni-yellow);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  z-index: 10;
+}
+
+.header--button span{
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url('./assets/icons/whitearrow.svg');
+}
+
+/* 3.1 Fraternity? Container -
+3.1.1 Why a Fraternity? Container  */
