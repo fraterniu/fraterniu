@@ -426,23 +426,23 @@ main {
 }
 
 .mind {
-  background-image: url("./assets/icons/mind.svg");
+  background-image: url("./assets/icons/Mente.svg");
 }
 
 .fbody {
-  background-image: url("./assets/icons/fbody.svg")
+  background-image: url("./assets/icons/Cuerpo.svg")
 }
 
 .link {
-  background-image: url("./assets/icons/link.svg");
+  background-image: url("./assets/icons/Recursos.svg");
 }
 
 .money {
-  background-image: url("./assets/icons/money.svg");
+  background-image: url("./assets/icons/Valor.svg");
 }
 
 .place {
-  background-image: url("./assets/icons/place.svg");
+  background-image: url("./assets/icons/Entorno.svg");
 }
 
 .service--card-title {
