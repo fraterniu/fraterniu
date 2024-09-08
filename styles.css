@@ -215,22 +215,6 @@ body.menu-open {
 
 /* End Menu Icon & Navbar Styles */
 
-.header-line-container {
-  display: flex;
-  flex-direction: column;
-  /* Aplicado para la línea amarilla */
-  align-items: center;
-  /* Centrado verticalmente en el contenedor principal */
-  margin-top: 80px;
-}
-
-
-.horizontal-line {
-  border: none;
-  border-top: 5px solid var(--fraterni-yellow);
-  width: 100%;
-}
-
 /* End Header  */
 
 /* 2. Start Main */
@@ -241,49 +225,44 @@ main {
   background: linear-gradient(0deg,#2C502F  0%,#1F3521 100%);
 }
 
-/* 2.1 Header Image Container (#findme) */
+/* 2.1 Header Image Container */
 .header--portrait-container {
-  margin-top: 80px;
-  width: 100%;
-  min-width: 288px;
-  height: 80vh;
-  text-align: center;
-  position: relative; /* Ensure the container positions elements relative to it */
-  overflow: hidden;
+    width: 100%;
+    min-width: 288px;
+    height: 450px;
+    margin-top: 80px;
+    text-align: center;
+    align-self: center;
 }
 
 
 
-.header--portrait-container h4 {
-  margin-top: 24vh;
+.header--portrait-container h1 {
   font-family: 'Norwester', sans-serif;
   font-size: 5.6rem;
   font-weight: 500;
   line-height: 7rem;
+  padding-top: 100px;
+  padding-bottom: 40px;
   color: #ffffff;
 }
 
 .header--portrait-container .header--button {
-  position: absolute;
-  left: calc(50% - 115px);
-  top: 77vh;
-  display: block;
-  padding: 15px;
-  width: 238px;
-  height: 48px;
-  background-color: var(--fraterni-yellow);
-  border: none;
-  border-radius: 5px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  z-index: 10;
+    position: absolute;
+    left: calc(50% - 88px); /* Center the button horizontally */
+    top: 508px;
+    display: block;
+    padding: 16px 24px;
+    background-color: var(--fraterni-yellow);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
 }
 
 .header--button span{
   display: inline-block;
-  width: 13px;
+  width: 12px;
   height: 8px;
   margin-left: 10px;
   background-image: url('./assets/icons/whitearrow.svg');
