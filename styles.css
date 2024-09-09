@@ -243,7 +243,8 @@ main {
   margin-top: 80px;
   text-align: center;
   align-self: center;
-  background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 0.2%, rgba(32, 50, 33, 0) 2.5%); /* Suave desvanecimiento */
+  background: linear-gradient(to top, rgba(128, 132, 137, 1) 0%, rgba(169, 169, 175, 0.5) 0.2%, rgba(169, 169, 175, 0) 2.5%);
+  /*background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 0.2%, rgba(32, 50, 33, 0) 2.5%);  Suave desvanecimiento */
   z-index: 1;
 }
 
@@ -263,7 +264,8 @@ main {
 .bubble {
   position: absolute;
   bottom: -50px;
-  background-color: rgba(209, 136, 7, 0.25); /* Color con opacidad del 25% */
+  background-color: rgba(128, 132, 137, 1); 
+  /*background-color: rgba(209, 136, 7, 0.25);  Color con opacidad del 25% */
   border-radius: 50%;
   opacity: 0;
   animation: bubbleMove 10s infinite ease-in-out;
