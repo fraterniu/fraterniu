@@ -274,7 +274,7 @@ main {
 /* Animación de movimiento y desvanecimiento de las burbujas */
 @keyframes bubbleMove {
   0% {
-    transform: translateY(0) scale(0.35); /* Reducido tamaño al 35% */
+    transform: translateY(0) scale(0.25); /* Reducido tamaño al 35% */
     opacity: 0;
   }
   20% {
@@ -360,27 +360,27 @@ main {
 }
 
 .social-icons .social-link1:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: #808489;
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link2:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: #808489;
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link3:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: #808489;
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link4:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: #808489;
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link5:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: #808489;
   animation: bounce_613 0.4s linear;
 }
 
