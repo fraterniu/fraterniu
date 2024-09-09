@@ -244,7 +244,7 @@ main {
   margin-top: 80px;
   text-align: center;
   align-self: center;
-  background: linear-gradient(to top, rgba(128, 132, 137, 1) 0%, rgba(169, 169, 175, 0.5) 0.2%, rgba(169, 169, 175, 0) 2.5%);
+  background: linear-gradient(to top, rgba(3, 48, 31, 1) 0%, rgba(17, 86, 58, 0.5) 1%, rgba(18, 105, 69, 0) 3%);
   /*background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 0.2%, rgba(32, 50, 33, 0) 2.5%);  Suave desvanecimiento */
   z-index: 1;
 }
