@@ -263,7 +263,7 @@ main {
 .bubble {
   position: absolute;
   bottom: -50px;
-  background-color: rgba(209, 136, 7, 0.50); /* Color con opacidad del 45% */
+  background-color: rgba(209, 136, 7, 0.25); /* Color con opacidad del 25% */
   border-radius: 50%;
   opacity: 0;
   animation: bubbleMove 10s infinite ease-in-out;
