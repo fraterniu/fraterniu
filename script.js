@@ -44,3 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
   adjustCardVisibilityForWindowSize();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const bubbleSection = document.querySelector('.header--portrait-container');
+  const bubbleContainer = document.createElement('div');
+  bubbleContainer.classList.add('bubble-container');
+  bubbleSection.appendChild(bubbleContainer);
+
+  function createBubble() {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.width = `${Math.random() * 36 + 14}px`; // Tamaño reducido (antes 60+20px)
+    bubble.style.height = bubble.style.width;
+    bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Más tiempo de animación
+    bubbleContainer.appendChild(bubble);
+
+    bubble.addEventListener('animationend', () => {
+      bubble.remove();
+    });
+  }
+
+  setInterval(createBubble, Math.random() * 2000 + 3000); // Intervalo entre 3-5 segundos
+});
