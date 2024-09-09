@@ -3,7 +3,8 @@
   /*Colores*/
   --fraterni-green: #152517;
   --fraterni-yellow: #D18807;
-  --frat-grey: #504C49;
+  --frat-grey: #808489;
+  
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
     
     /* Tamaños de fuente */
@@ -274,22 +275,22 @@ main {
 /* Animación de movimiento y desvanecimiento de las burbujas */
 @keyframes bubbleMove {
   0% {
-    transform: translateY(0) scale(0.25); /* Reducido tamaño al 35% */
+    transform: translateY(0) scale(0.25); /* Reducido tamaño al 25% */
     opacity: 0;
   }
   20% {
-    opacity: 0.2;
+    opacity: 0.1;
   }
   50% {
     transform: translateY(-300px) scale(0.7); /* Ajuste del tamaño y movimiento */
-    opacity: 0.2;
+    opacity: 0.1;
   }
   70% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   80% {
     transform: translateY(-450px) scale(0.5);
-    opacity: 0.2; /* Fade out para evitar obstrucción del título */
+    opacity: 0.1; /* Fade out para evitar obstrucción del título */
   }
   100% {
     transform: translateY(-600px) scale(0.4);
@@ -360,27 +361,32 @@ main {
 }
 
 .social-icons .social-link1:hover {
-  background-color: #808489;
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link2:hover {
-  background-color: #808489;
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link3:hover {
-  background-color: #808489;
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link4:hover {
-  background-color: #808489;
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link5:hover {
-  background-color: #808489;
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
@@ -471,7 +477,7 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #f7f7f7;
+  background-color:#1f3521;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
