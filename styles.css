@@ -243,7 +243,7 @@ main {
   margin-top: 80px;
   text-align: center;
   align-self: center;
-  background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 1%, rgba(32, 50, 33, 0) 5%); /* Suave desvanecimiento */
+  background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 0.2%, rgba(32, 50, 33, 0) 2.5%); /* Suave desvanecimiento */
   z-index: 1;
 }
 
