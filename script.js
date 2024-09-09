@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ajusta la visibilidad de las tarjetas inicialmente en caso de que la ventana ya sea más ancha que 750px
   adjustCardVisibilityForWindowSize();
 });
+
