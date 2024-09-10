@@ -1,48 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.pilars-container--card');
-  let activeCardIndex = 0; // Índice de la tarjeta activa
-
-  // Función para actualizar la tarjeta visible
-  function updateActiveCard() {
-    cards.forEach((card, index) => {
-      card.style.display = index === activeCardIndex ? 'block' : 'none';
-    });
-  }
-
-  // Inicializa la primera tarjeta como visible
-  updateActiveCard();
-
-  // Evento para el botón "Anterior"
-  document.querySelector('.slider-prev').addEventListener('click', () => {
-    activeCardIndex = activeCardIndex > 0 ? activeCardIndex - 1 : cards.length - 1;
-    updateActiveCard();
-  });
-
-  // Evento para el botón "Siguiente"
-  document.querySelector('.slider-next').addEventListener('click', () => {
-    activeCardIndex = activeCardIndex < cards.length - 1 ? activeCardIndex + 1 : 0;
-    updateActiveCard();
-  });
-
-  // Función para ajustar la visibilidad de las tarjetas en el cambio de tamaño de la ventana
-  function adjustCardVisibilityForWindowSize() {
-    if (window.innerWidth > 750) {
-      // Muestra todas las tarjetas si la ventana es más ancha que 750px
-      cards.forEach(card => {
-        card.style.display = 'block';
-      });
+  const menuToggle = document.querySelector('#checkbox');
+  const languageToggle = document.querySelector('#languageToggle');
+  const mobileMenu = document.querySelector('.mobile-menu-container');
+  const mobileLangMenu = document.querySelector('.language-menu');
+  const body = document.body;
+  const langIcon = document.querySelector('#langIcon');
+  
+  // Mobile Menu Toggle
+  menuToggle.addEventListener('change', () => {
+    if (menuToggle.checked) {
+      body.classList.add('menu-open');
+      mobileMenu.style.bottom = '0';  // Ensure mobile menu slides up
     } else {
-      // Llama a updateActiveCard para asegurar que solo la tarjeta activa se muestre en pantallas pequeñas
-      updateActiveCard();
+      body.classList.remove('menu-open');
+      mobileMenu.style.bottom = '-100%';  // Hide mobile menu
     }
-  }
+  });
 
-  // Añade el escuchador de eventos de cambio de tamaño de la ventana
-  window.addEventListener('resize', adjustCardVisibilityForWindowSize);
+  // Language Menu Toggle
+  languageToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    mobileLangMenu.classList.toggle('active');
+    
+    if (mobileLangMenu.classList.contains('active')) {
+      body.classList.add('menu-open');
+      mobileLangMenu.style.bottom = '0';  // Slide the language menu up
+    } else {
+      body.classList.remove('menu-open');
+      mobileLangMenu.style.bottom = '-100%';  // Hide the language menu
+    }
+  });
 
-  // Ajusta la visibilidad de las tarjetas inicialmente en caso de que la ventana ya sea más ancha que 750px
-  adjustCardVisibilityForWindowSize();
+  // Language Selection Logic
+  const languageLinks = document.querySelectorAll('.language-menu a');
+  languageLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedLang = e.target.getAttribute('data-lang');
+
+      if (selectedLang === 'en') {
+        // Set English
+        langIcon.src = './assets/icons/enBtn.svg';
+      } else if (selectedLang === 'es') {
+        // Set Spanish
+        langIcon.src = './assets/icons/esBtn.svg'; // Assuming you have a Spanish icon
+      }
+
+      // Close the language menu after selection
+      mobileLangMenu.style.bottom = '-100%';
+      mobileLangMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
+  });
+
+  // Close Language Menu on Outside Click (Optional)
+  document.addEventListener('click', (e) => {
+    if (!languageToggle.contains(e.target) && !mobileLangMenu.contains(e.target)) {
+      mobileLangMenu.style.bottom = '-100%';
+      mobileLangMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+    }
+  });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const bubbleSection = document.querySelector('.header--portrait-container');

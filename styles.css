@@ -174,7 +174,7 @@ body.menu-open {
   /* Evita el desplazamiento del fondo cuando el menú está abierto */
 }
 
-/* Updated Mobile Menu Styles with Background Blur */
+/* Mobile Menu with Background Blur */
 .mobile-menu-container {
   position: fixed;
   bottom: -100%;
@@ -183,37 +183,13 @@ body.menu-open {
   height: 86%;
   background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
   backdrop-filter: blur(12px); /* Blur effect */
-  margin-top: 64.67px;
   transition: bottom 0.4s ease-in-out;
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
   padding-top: 32px;
+  z-index: 1000; /* Make sure it's above everything */
 }
 
-.mobile-menu-container ul.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu-container ul.menu li {
-  margin-bottom: 16px;
-}
-
-.mobile-menu-container ul.menu li a {
-  font-family: 'Norwester';
-  font-size: 1.8rem;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  padding: 8px 0;
-}
-
-.mobile-menu-container ul.menu li a:hover {
-  color: var(--fraterni-yellow); /* Hover effect without a background box */
-}
-
-/* Language Menu Styles */
+/* Language Menu with Background Blur */
 .language-menu {
   position: fixed;
   bottom: -100%;
@@ -222,15 +198,16 @@ body.menu-open {
   height: 40%;
   background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
   backdrop-filter: blur(12px); /* Blur effect */
-  margin-top: 64.67px;
   transition: bottom 0.4s ease-in-out;
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
   padding-top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1001; /* Above the navbar */
 }
 
+/* Language Menu Items */
 .language-menu a {
   font-family: 'Norwester';
   font-size: 2rem;
@@ -242,19 +219,24 @@ body.menu-open {
 }
 
 .language-menu a:hover {
-  color: var(--fraterni-yellow);
+  color: var(--fraterni-yellow); /* Hover effect */
 }
 
-/* Flag Icons Styling */
+/* Hide when not active */
+.language-menu.active {
+  display: block;
+}
+
+/* Flag Icons */
 .language-menu img {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Rounded flags */
+  border-radius: 50%;
   margin-right: 8px;
 }
 
 .language-menu a:hover img {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
 
