@@ -20,35 +20,21 @@
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--END CSS STYLES & Media Queries   -->
-
     <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <!-- Start Visual Content -->
+        <!-- Start Visual Content -->
     <section class="header--container">
-    <!-- 1. Header -->
-    <header class="header">
-    <!-- 1.1. logo vectore image -->
+        <!-- 1. Header -->
+        <header class="header">
+        <!-- 1.1. Logo -->
         <div class="logo">
             <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
         </div>
-    <!-- End logo vectore image -->
+        <!-- End logo -->
 
-    <!-- 1.2. Menu -->
-        <nav class="menu-container">
-            <ul class="menu">
-                <li><a href="#">OVERVIEW</a></li>
-                <li><a href="#">MEDIA</a></li>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SHOP</a></li>
-            </ul>
-            <button>GET INVOLVED</button>
-        </nav>
-    <!-- End Menu -->
-
-    <!-- 1.3. Mobile Menu Icon -->
+        <!-- 1.2. Mobile Menu Icon -->
         <div id="menuToggle" class="mobile-menu-container--image">
             <input id="checkbox" type="checkbox">
             <label class="toggle" for="checkbox">
@@ -57,18 +43,25 @@
             <div class="bar bar--bottom"></div>
             </label>
         </div>
+        </header>
 
-    <!-- Language Change Button -->
-        <div id="languageToggle" class="language-container">
-            <!-- <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon"> -->
-        </div>
+        <!-- Mobile Navbar -->
+        <nav class="mobile-menu-container" id="mobileNavbar">
+        <!-- Language Toggle Icon in Navbar -->
+        <ul class="menu">
+            <li id="languageToggle">
+            <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon">
+            <span id="currentLang">English</span>
+            </li>
 
-    <!-- Mobile Language Menu -->
-        <nav class="mobile-lang-menu-container" id="mobileLangMenu">
-            <ul class="lang-menu">
-                <li><a href="#" data-lang="en">English</a></li>
-                <li><a href="#" data-lang="es">Español</a></li>
-            </ul>
+            <!-- More Options -->
+            <li class="navbar-title">More</li>
+            <li><a href="#">OVERVIEW</a></li>
+            <li><a href="#">MEDIA</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SHOP</a></li>
+        </ul>
         </nav>
     </header>
         <!--End Mobile Menu -->

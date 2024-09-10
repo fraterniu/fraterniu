@@ -1,67 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('#checkbox');
-  const languageToggle = document.querySelector('#languageToggle');
   const mobileMenu = document.querySelector('.mobile-menu-container');
-  const mobileLangMenu = document.querySelector('.language-menu');
   const body = document.body;
   const langIcon = document.querySelector('#langIcon');
-  
+  const currentLang = document.querySelector('#currentLang');
+
   // Mobile Menu Toggle
   menuToggle.addEventListener('change', () => {
     if (menuToggle.checked) {
       body.classList.add('menu-open');
-      mobileMenu.style.bottom = '0';  // Ensure mobile menu slides up
+      mobileMenu.style.bottom = '0'; // Open the menu
     } else {
       body.classList.remove('menu-open');
-      mobileMenu.style.bottom = '-100%';  // Hide mobile menu
+      mobileMenu.style.bottom = '-100%'; // Close the menu
     }
   });
 
-  // Language Menu Toggle
+  // Language Toggle Logic
+  const languageToggle = document.querySelector('#languageToggle');
   languageToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    mobileLangMenu.classList.toggle('active');
+    const isEnglish = langIcon.src.includes('enBtn.svg');
     
-    if (mobileLangMenu.classList.contains('active')) {
-      body.classList.add('menu-open');
-      mobileLangMenu.style.bottom = '0';  // Slide the language menu up
+    if (isEnglish) {
+      langIcon.src = './assets/icons/esBtn.svg';
+      currentLang.textContent = 'Español';
     } else {
-      body.classList.remove('menu-open');
-      mobileLangMenu.style.bottom = '-100%';  // Hide the language menu
-    }
-  });
-
-  // Language Selection Logic
-  const languageLinks = document.querySelectorAll('.language-menu a');
-  languageLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const selectedLang = e.target.getAttribute('data-lang');
-
-      if (selectedLang === 'en') {
-        // Set English
-        langIcon.src = './assets/icons/enBtn.svg';
-      } else if (selectedLang === 'es') {
-        // Set Spanish
-        langIcon.src = './assets/icons/esBtn.svg'; // Assuming you have a Spanish icon
-      }
-
-      // Close the language menu after selection
-      mobileLangMenu.style.bottom = '-100%';
-      mobileLangMenu.classList.remove('active');
-      body.classList.remove('menu-open');
-    });
-  });
-
-  // Close Language Menu on Outside Click (Optional)
-  document.addEventListener('click', (e) => {
-    if (!languageToggle.contains(e.target) && !mobileLangMenu.contains(e.target)) {
-      mobileLangMenu.style.bottom = '-100%';
-      mobileLangMenu.classList.remove('active');
-      body.classList.remove('menu-open');
+      langIcon.src = './assets/icons/enBtn.svg';
+      currentLang.textContent = 'English';
     }
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,19 +40,25 @@ document.addEventListener('DOMContentLoaded', () => {
   bubbleContainer.classList.add('bubble-container');
   bubbleSection.appendChild(bubbleContainer);
 
-  function createBubble() {
-    const bubble = document.createElement('div');
-    bubble.classList.add('bubble');
-    bubble.style.left = `${Math.random() * 100}%`;
-    bubble.style.width = `${Math.random() * 36 + 14}px`; // Tamaño reducido (antes 60+20px)
-    bubble.style.height = bubble.style.width;
-    bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Más tiempo de animación
-    bubbleContainer.appendChild(bubble);
+  const maxBubbles = 25; // Limite de burbujas
 
-    bubble.addEventListener('animationend', () => {
-      bubble.remove();
-    });
+  function createBubble() {
+    // Verificar si hay más de maxBubbles
+    if (bubbleContainer.children.length < maxBubbles) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.width = `${Math.random() * 36 + 14}px`; // Tamaño reducido
+      bubble.style.height = bubble.style.width;
+      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Duración de animación
+      bubbleContainer.appendChild(bubble);
+
+      bubble.addEventListener('animationend', () => {
+        bubble.remove();
+      });
+    }
   }
 
   setInterval(createBubble, Math.random() * 2000 + 3000); // Intervalo entre 3-5 segundos
 });
+
