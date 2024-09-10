@@ -174,54 +174,119 @@ body.menu-open {
   /* Evita el desplazamiento del fondo cuando el menú está abierto */
 }
 
+/* Updated Mobile Menu Styles with Background Blur */
 .mobile-menu-container {
   position: fixed;
   bottom: -100%;
   left: 0;
   width: 100%;
   height: 86%;
-  background: linear-gradient(0deg, #1F3521 0%, #2C502F 100%);
+  background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+  backdrop-filter: blur(12px); /* Blur effect */
   margin-top: 64.67px;
   transition: bottom 0.4s ease-in-out;
   box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
   padding-top: 32px;
 }
 
+.mobile-menu-container ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-.mobile-menu-container a {
-  display: block;
+.mobile-menu-container ul.menu li {
+  margin-bottom: 16px;
+}
+
+.mobile-menu-container ul.menu li a {
   font-family: 'Norwester';
   font-size: 1.8rem;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 16px;
-  text-align: center;
-  padding: 8px 16px;
-  background-color: var(--fraterni-yellow);
-  border-radius: 8px;
-
   color: #fff;
   text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 8px 0;
 }
 
-.mobile-menu-container a:hover {
-  background-color: #fff;
+.mobile-menu-container ul.menu li a:hover {
+  color: var(--fraterni-yellow); /* Hover effect without a background box */
 }
 
-.mobile-menu-container.overlay {
+/* Language Menu Styles */
+.language-menu {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+  backdrop-filter: blur(12px); /* Blur effect */
+  margin-top: 64.67px;
+  transition: bottom 0.4s ease-in-out;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.language-menu a {
+  font-family: 'Norwester';
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 32px;
+  display: inline-block;
+  transition: color 0.2s ease-in-out;
+}
+
+.language-menu a:hover {
+  color: var(--fraterni-yellow);
+}
+
+/* Flag Icons Styling */
+.language-menu img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Rounded flags */
+  margin-right: 8px;
+}
+
+.language-menu a:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Overlay Styles for the Language Menu */
+.language-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  /* Fondo semitransparente */
-  z-index: 98;
-  display: none;
-  /* Oculta inicialmente el fondo */
+  background-color: rgba(0, 0, 0, 0.7); /* Translucent background */
+  z-index: 99;
+  display: none; /* Hidden initially */
 }
 
+/* Menu Open */
+body.menu-open .mobile-menu-container {
+  bottom: 0;
+}
+
+body.menu-open .language-menu {
+  bottom: 0;
+}
+
+body.menu-open .language-overlay {
+  display: block; /* Show when menu is open */
+}
+
+/* Disable scroll when the language or mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
 
 /* End Menu Icon & Navbar Styles */
 
@@ -449,6 +514,10 @@ main {
   width: 100%; /* Imagen ocupa todo el ancho */
   height: auto;
   border-radius: 8px; /* Esquinas redondeadas para un toque moderno */
+  mask-image: linear-gradient(
+    black 90%,
+    transparent
+  );
 }
 
 .fraternity-content {
@@ -464,6 +533,12 @@ main {
 }
 
 .fraternity-content p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.fraternity-content p2 {
   font-size: 1rem;
   color: #fff;
   margin-bottom: 20px;
