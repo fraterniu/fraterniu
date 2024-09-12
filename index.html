@@ -11,9 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500 display=swap"
         rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 
     <!-- CSS STYLES & Media Queries   -->
     <link rel="stylesheet" href="./styles.css">
@@ -24,46 +24,47 @@
 </head>
 
 <body>
-        <!-- Start Visual Content -->
+    <!-- Start Visual Content -->
     <section class="header--container">
         <!-- 1. Header -->
         <header class="header">
-        <!-- 1.1. Logo -->
-        <div class="logo">
-            <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
-        </div>
-        <!-- End logo -->
+            <!-- 1.1. Logo -->
+            <div class="logo">
+                <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
+            </div>
+            <!-- End logo -->
 
-        <!-- 1.2. Mobile Menu Icon -->
-        <div id="menuToggle" class="mobile-menu-container--image">
-            <input id="checkbox" type="checkbox">
-            <label class="toggle" for="checkbox">
-            <div class="bar bar--top"></div>
-            <div class="bar bar--middle"></div>
-            <div class="bar bar--bottom"></div>
-            </label>
-        </div>
+            <!-- 1.2. Mobile Menu Icon -->
+            <div id="menuToggle" class="mobile-menu-container--image">
+                <input id="checkbox" type="checkbox">
+                <label class="toggle" for="checkbox">
+                    <div class="bar bar--top"></div>
+                    <div class="bar bar--middle"></div>
+                    <div class="bar bar--bottom"></div>
+                </label>
+            </div>
         </header>
 
         <!-- Mobile Navbar -->
         <nav class="mobile-menu-container" id="mobileNavbar">
-        <!-- Language Toggle Icon in Navbar -->
-        <ul class="menu">
-            <li id="languageToggle">
-            <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon">
-            <span id="currentLang">English</span>
-            </li>
+            <!-- Language Toggle Icon in Navbar -->
+            <ul class="menu">
+                <li id="languageToggle">
+                    <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon">
+                    <span id="currentLang">English</span>
+                </li>
 
-            <!-- More Options -->
-            <li class="navbar-title">More</li>
-            <li><a href="#">OVERVIEW</a></li>
-            <li><a href="#">MEDIA</a></li>
-            <li><a href="#">FEATURES</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SHOP</a></li>
-        </ul>
+                <!-- More Options -->
+                <li class="navbar-title"><a href="#" class="translatable" data-en="MORE" data-es="MÁS">MORE</a></li>
+                <li><a href="#" class="translatable" data-en="OVERVIEW" data-es="GENERAL">OVERVIEW</a></li>
+                <li><a href="#" class="translatable" data-en="MEDIA" data-es="MEDIOS">MEDIA</a></li>
+                <li><a href="#" class="translatable" data-en="FEATURES" data-es="CARACTERÍSTICAS">FEATURES</a></li>
+                <li><a href="#" class="translatable" data-en="ABOUT" data-es="ACERCA DE">ABOUT</a></li>
+                <li><a href="#" class="translatable" data-en="SHOP" data-es="TIENDA">SHOP</a></li>
+
+            </ul>
         </nav>
-    </header>
+        </header>
         <!--End Mobile Menu -->
         <!--1. Header End -->
     </section>
@@ -74,14 +75,20 @@
         <section class="header--portrait-container">
             <div class="bubble-container"></div>
             <div class="overlay">
-                <h1>THIS IS <br> FRATERNIU</h1>
+                <h1 class="translatable" data-en="THIS IS <br> FRATERNIU" data-es="ESTO ES <br> FRATERNIU">THIS IS <br>
+                    FRATERNIU</h1>
 
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" class="social-icon social-link1"><img src="./assets/icons/Facebook.svg" alt="Facebook"></a>
-                    <a href="https://discord.com" class="social-icon social-link2"><img src="./assets/icons/Discord.svg" alt="Discord"></a>
-                    <a href="https://www.instagram.com/fraterniu/" class="social-icon social-link3"><img src="./assets/icons/instagram.svg" alt="Instagram"></a>
-                    <a href="https://tiktok.com" class="social-icon social-link4"><img src="./assets/icons/TikTok.svg" alt="Youtube"></a>
-                    <a href="https://youtube.com" class="social-icon social-link5"><img src="./assets/icons/yt.svg" alt="Youtube"></a>
+                    <a href="https://www.facebook.com" class="social-icon social-link1"><img
+                            src="./assets/icons/Facebook.svg" alt="Facebook"></a>
+                    <a href="https://discord.com" class="social-icon social-link2"><img src="./assets/icons/Discord.svg"
+                            alt="Discord"></a>
+                    <a href="https://www.instagram.com/fraterniu/" class="social-icon social-link3"><img
+                            src="./assets/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://tiktok.com" class="social-icon social-link4"><img src="./assets/icons/TikTok.svg"
+                            alt="Youtube"></a>
+                    <a href="https://youtube.com" class="social-icon social-link5"><img src="./assets/icons/yt.svg"
+                            alt="Youtube"></a>
                 </div>
             </div>
 
@@ -89,40 +96,58 @@
                 <img src="./assets/icons/chalkarrows.svg" alt="Chalk Arrows">
             </div>
 
-            <a href="#principles" class="header--button">KNOW OUR PRINCIPLES<span></span>
+            <a href="#principles" class="header--button translatable" data-en="KNOW OUR PRINCIPLES"
+                data-es="CONOCE NUESTROS PRINCIPIOS">KNOW OUR PRINCIPLES</a>
             </a>
         </section>
         <!-- End Header Image Container -->
     </main>
-<!-- 3.1 Fraternity? Container -->
-<!-- 2.1.1 Why a Fraternity? Container -->
+    <!-- 3.1 Fraternity? Container -->
+    <!-- 2.1.1 Why a Fraternity? Container -->
 
 
-    
+
 
     <section class="fraternity-section">
         <div class="fraternity-image">
             <img src="./assets/imgs/fraterniStudents.png" alt="Partners in a Fraternity">
         </div>
-            <div class="fraternity-content">
-                <h2>WHAT DO YOU KNOW ABOUT A FRATERNITY?</h2>
-                <p>A fraternity is a lifelong brotherhood built on shared values. It offers academic, social,
-                    and personal growth, emphasizing support, leadership, and service. Members forge
-                    lasting bonds, develop character, and strive to positively impact their community and the world beyond.</p>
-            
+        <div class="fraternity-content">
+            <h2>WHAT DO YOU KNOW ABOUT A FRATERNITY?</h2>
+            <p class="translatable"
+                data-en="A fraternity is a lifelong brotherhood built on shared values. It offers academic, social, and personal growth, emphasizing support, leadership, and service. Members forge lasting bonds, develop character, and strive to positively impact their community and the world beyond."
+                data-es="Una fraternidad es una hermandad para toda la vida basada en valores compartidos. Ofrece crecimiento académico, social y personal, enfatizando el apoyo, el liderazgo y el servicio. Los miembros forjan lazos duraderos, desarrollan su carácter y se esfuerzan por impactar positivamente a su comunidad y al mundo más allá.">
+                A fraternity is a lifelong brotherhood built on shared values. It offers academic, social, and personal
+                growth, emphasizing support, leadership, and service. Members forge lasting bonds, develop character,
+                and strive to positively impact their community and the world beyond.
+            </p>
+
             <div class="mission-vision">
                 <div class="mission">
                     <img src="./assets/icons/missionF.svg" alt="Misión">
-                    <p2>Our mission is to inspire and promote our ideals through media, creating a community that embodies brotherhood and personal growth. We provide tools and support for each member to develop their potential, facing the challenges of the VUCA world and leading with impact.</p2>
+                    <p2 class="translatable"
+                        data-en="Our mission is to inspire and promote our ideals through media, creating a community that embodies brotherhood and personal growth. We provide tools and support for each member to develop their potential, facing the challenges of the VUCA world and leading with impact."
+                        data-es="Nuestra misión es inspirar y promover nuestros ideales a través de los medios, creando una comunidad que encarna la hermandad y el crecimiento personal. Proporcionamos herramientas y apoyo para que cada miembro desarrolle su potencial, enfrentando los desafíos del mundo VUCA y liderando con impacto.">
+                        Our mission is to inspire and promote our ideals through media, creating a community that
+                        embodies brotherhood and personal growth. We provide tools and support for each member to
+                        develop their potential, facing the challenges of the VUCA world and leading with impact.
+                    </p2>
+
                 </div>
                 <div class="vision">
                     <img src="./assets/icons/visionf.svg" alt="Visión">
-                    <p2>Our vision is to transform education through technology and globalization,creating a dynamic virtual space that drives meaningful learning. We aspire to be the reference in promoting educational values, fostering creativity, and skills to succeed in a constantly changing world.</p2>
+                    <p2 class="translatable"
+                        data-en="Our vision is to transform education through technology and globalization,creating a dynamic virtual space that drives meaningful learning. We aspire to be the reference in promoting educational values, fostering creativity, and skills to succeed in a constantly changing world."
+                        data-es="Nuestra visión es transformar la educación a través de la tecnología y la globalización, creando un espacio virtual dinámico que impulse un aprendizaje significativo. Aspiramos a ser la referencia en la promoción de valores educativos, fomentando la creatividad y las habilidades para tener éxito en un mundo en constante cambio.">
+                        Our vision is to transform education through technology and globalization,creating a dynamic
+                        virtual space that drives meaningful learning. We aspire to be the reference in promoting
+                        educational values, fostering creativity, and skills to succeed in a constantly changing world.
+                    </p2>
                 </div>
             </div>
         </div>
     </section>
-<script src="./js/fraterni.js"></script>
+    <script src="./js/fraterni.js"></script>
 </body>
 
 </html>

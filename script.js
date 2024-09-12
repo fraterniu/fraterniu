@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('#checkbox');
   const mobileMenu = document.querySelector('.mobile-menu-container');
   const body = document.body;
-  const langIcon = document.querySelector('#langIcon');
-  const currentLang = document.querySelector('#currentLang');
 
   // Mobile Menu Toggle
   menuToggle.addEventListener('change', () => {
@@ -16,20 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Language Toggle Logic
-  const languageToggle = document.querySelector('#languageToggle');
-  languageToggle.addEventListener('click', (e) => {
+ // Language Toggle Logic
+const languageToggle = document.querySelector('#languageToggle');
+const elements = document.querySelectorAll('.translatable');
+const langIcon = document.querySelector('#langIcon');
+const currentLang = document.querySelector('#currentLang');
+
+languageToggle.addEventListener('click', (e) => {
     e.preventDefault();
     const isEnglish = langIcon.src.includes('enBtn.svg');
+    const newLang = isEnglish ? 'es' : 'en';
     
-    if (isEnglish) {
-      langIcon.src = './assets/icons/esBtn.svg';
-      currentLang.textContent = 'Español';
-    } else {
-      langIcon.src = './assets/icons/enBtn.svg';
-      currentLang.textContent = 'English';
-    }
-  });
+    // Cambiar el ícono de la bandera y el texto del idioma
+    langIcon.src = isEnglish ? './assets/icons/esBtn.svg' : './assets/icons/enBtn.svg';
+    currentLang.textContent = isEnglish ? 'Español' : 'English';
+    
+    // Cambiar el contenido de los elementos traducibles
+    elements.forEach(element => {
+        element.innerHTML = element.getAttribute(`data-${newLang}`);
+    });
+
+    // Cambiar el atributo de idioma del documento
+    document.documentElement.lang = newLang;
+});
+
 });
 
 
