@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/U.svg" type="image/x-icon">
+    <head>
+        <!-- Icono por defecto -->
+        <link id="theme-icon" rel="icon" href="./assets/icons/uLight.svg" type="image/x-icon">
+        <script>
+        function updateFavicon() {
+            const iconLink = document.getElementById('theme-icon');
+            // Detectar si el tema del sistema es oscuro
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              iconLink.href = './assets/icons/uLight.svg'; // Icono para tema oscuro
+            } else {
+              iconLink.href = './assets/icons/uDark.svg'; // Icono para tema claro
+            }
+        }
+    
+          // Actualizar el favicon al cargar la página
+        updateFavicon();
+    
+          // Escuchar cambios en el tema del sistema
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        </script>
+    </head>
+    
     <title>FraterniU</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,7 +153,9 @@
             <img src="./assets/icons/separetor.svg" alt="streak">
 
             <h2 class="translatable" data-en="FRATERNIU OVERVIEW"
-            data-es="¿QUÉ SABES DE LAS FRATERNIDADES?">FRATERNIU OVERVIEW</h2>
+            data-es="SOBRE FRATERNIU">FRATERNIU OVERVIEW</h2>
+            <p class="translatable" data-en="FraterniU is more than just a community—it's a movement. We believe in nurturing leadership, creativity, and personal growth through meaningful connections and shared values. Here, you'll find a place where innovation meets tradition, and where our principles guide every step of your journey toward becoming your best self."
+            data-es="FraterniU es más que una comunidad: es un movimiento. Creemos en promover el liderazgo, la creatividad y el crecimiento personal a través de conexiones significativas y valores compartidos. Aquí encontrarás un lugar donde la innovación se encuentra con la tradición y donde nuestros principios guían cada paso de tu camino hacia la transformación personal.">FraterniU is more than just a community—it's a movement. We believe in nurturing leadership, creativity, and personal growth through meaningful connections and shared values. Here, you'll find a place where innovation meets tradition, and where our principles guide every step of your journey toward becoming your best self.</p>
 
             <div class="mission-vision">
                 <div class="mission">
@@ -140,19 +163,25 @@
                     <p2 class="translatable"
                         data-en="Inspire and empower individuals who demonstrate leadership, cooperation, and personal growth by promoting our fraternity's key beliefs."
                         data-es="Inspirar y empoderar a las personas que demuestran liderazgo, cooperación y crecimiento personal promoviendo las creencias clave de nuestra fraternidad.">
-                        Inspire and empower individuals who demonstrate leadership, cooperation, and personal growth by promoting our fraternity's key beliefs.
+                    <strong>Inspire</strong> and empower individuals who demonstrate leadership, cooperation, and personal growth by promoting our fraternity's key beliefs.
                     </p2>
                 </div>
                 <div class="vision">
                     <img src="./assets/icons/visionf.svg" alt="Visión">
                     <p2 class="translatable"
-                        data-en="Create a virtual community that nurtures learning, creativity, and adaptability in the modern world"
-                        data-es="Crear una comunidad virtual que fomente el aprendizaje, la creatividad y la adaptabilidad en el mundo moderno.">
-                        Create a virtual community that nurtures learning, creativity, and adaptability in the modern world.
+                        data-en="<strong>Create</strong> a virtual community that nurtures learning, creativity, and adaptability in the modern world"
+                        data-es="<strong>Crear</strong> una comunidad virtual que fomente el aprendizaje, la creatividad y la adaptabilidad en el mundo moderno.">
+                        <strong>Create</strong> a virtual community that nurtures learning, creativity, and adaptability in the modern world.
                     </p2>
                 </div>
+                <p class="translatable" data-en="Ready to take the first step? Explore our core principles and discover how you can grow with us."
+                data-es="¿Estás listo para dar el primer paso? Explora nuestros principios y descubre cómo puedes crecer con nosotros.">Ready to take the first step? Explore our core principles and discover how you can grow with us.</p>
             </div>
-        </i>
+        </section>
+    </section>
+    <section class="fraternity-principles">
+        <h1 class="translatable" data-en="PRINCIPLES OF FRATERNIU"
+        data-es="PRINCIPIOS DE FRATERNIU">PRINCIPLES OF FRATERNIU</h1>
     </section>
     <script src="./js/fraterni.js"></script>
 </body>

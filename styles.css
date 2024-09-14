@@ -466,6 +466,7 @@ main {
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 20px;
+  text-wrap: pretty;
 }
 
 .fraternity-content img{
@@ -474,10 +475,22 @@ main {
   height: 200px;
 }
 
+.fraternity-content h2:nth-of-type(2){
+  font-family: 'Norwester';
+  color: var(--fraterni-yellow);
+}
+
 .fraternity-content p2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #fff;
+  padding: 0 16px;
   margin-bottom: 20px;
+  text-wrap: pretty;
+}
+
+.fraternity-content p2:last-child{
+  padding-top: 8px;
 }
 
 .mission-vision {
@@ -491,7 +504,7 @@ main {
   align-items: center;
   gap: 10px;
   background-color:#1f3521;
-  padding: 15px;
+  padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -510,3 +523,15 @@ main {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.fraternity-principles {
+  background-color: #f3ecd2;
+  padding: 20px;
+  text-align: center;
+}
+
+.fraternity-principles h1{
+  color: #623c25;
+  font-weight: bold;
+  font-size: 3.2rem;
+  font-family: 'Norwester';
+}
