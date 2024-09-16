@@ -70,3 +70,55 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(createBubble, Math.random() * 2000 + 3000); // Intervalo entre 3-5 segundos
 });
 
+// Función para cambiar el idioma
+function changeLanguage(lang) {
+  // Cambiamos el texto en todos los elementos con la clase 'translatable'
+  const translatableElements = document.querySelectorAll('.translatable');
+  translatableElements.forEach(element => {
+    const translation = element.getAttribute(`data-${lang}`);
+    if (translation) {
+      element.textContent = translation;
+    }
+  });
+
+  // Cambiamos la imagen y el texto principal
+  const displayImage = document.getElementById('principlesdisplayImage');
+  const displayText = document.getElementById('displayText');
+  
+  const currentButton = document.querySelector('.principles-grid-buttons button.active');
+  if (currentButton) {
+    const newImage = currentButton.getAttribute(`data-img-${lang}`);
+    const newText = currentButton.getAttribute(`data-text-${lang}`);
+
+    displayImage.src = newImage;
+    displayText.textContent = newText;
+  }
+}
+
+// Función para actualizar imagen y texto al hacer clic en un botón
+const buttons = document.querySelectorAll('.principles-grid-buttons button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const lang = document.documentElement.lang || 'en'; // Detectamos el idioma actual
+    const newImage = button.getAttribute(`data-img-${lang}`);
+    const newText = button.getAttribute(`data-text-${lang}`);
+
+    // Actualizamos la imagen y el texto
+    const displayImage = document.getElementById('principlesdisplayImage');
+    const displayText = document.getElementById('displayText');
+
+    displayImage.src = newImage;
+    displayText.textContent = newText;
+
+    // Añadimos la clase 'active' al botón seleccionado
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  });
+});
+
+// Ejemplo: Cambio de idioma cuando el usuario selecciona 'es' o 'en'
+document.getElementById('languageSwitcher').addEventListener('change', (event) => {
+  const selectedLanguage = event.target.value;
+  document.documentElement.lang = selectedLanguage; // Establecemos el idioma en el atributo lang del HTML
+  changeLanguage(selectedLanguage);
+});

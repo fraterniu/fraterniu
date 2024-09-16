@@ -523,15 +523,100 @@ main {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos actualizados para mobile */
+
+/* Sección principal de los principios */
 .fraternity-principles {
   background-color: #f3ecd2;
   padding: 20px;
   text-align: center;
 }
 
-.fraternity-principles h1{
+.fraternity-principles h1 {
   color: #623c25;
   font-weight: bold;
-  font-size: 3.2rem;
+  font-size: 2rem; /* Ajuste para mobile */
   font-family: 'Norwester';
+  margin-bottom: 20px;
 }
+
+.fraternity-principles p {
+  padding: 0px 8px;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 1.2rem; /* Ajuste para mobile */
+}
+
+/* Sección de la imagen y botones */
+.principles-grid-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.principles-grid-display {
+  width: 100%;
+  max-width: 280px; /* Ajuste para mobile */
+  margin-bottom: 15px;
+}
+
+.principles-image-display img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.principles-image-display figcaption {
+  font-size: 1rem; /* Ajuste para mobile */
+  color: #623c25;
+  margin-top: 8px;
+}
+
+/* Botones con íconos */
+.principles-grid-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.principles-grid-buttons ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Espaciado ajustado */
+  padding: 0;
+}
+
+.principles-grid-buttons li {
+  list-style: none;
+}
+
+.principles-grid-buttons button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.principles-grid-buttons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.principles-grid-buttons button:hover img,
+.principles-grid-buttons button:focus img {
+  transform: scale(1.2);
+}
+
+/* Efecto hover para la imagen */
+.principles-image-display img:hover {
+  transform: scale(1.05);
+}
+
+
+
