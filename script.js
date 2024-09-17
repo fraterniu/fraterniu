@@ -1,64 +1,100 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Elements and Variables
   const menuToggle = document.querySelector('#checkbox');
   const mobileMenu = document.querySelector('.mobile-menu-container');
   const body = document.body;
+  const languageToggle = document.querySelector('#languageToggle');
+  const elements = document.querySelectorAll('.translatable');
+  const langIcon = document.querySelector('#langIcon');
+  const currentLang = document.querySelector('#currentLang');
+  const bubbleSection = document.querySelector('.header--portrait-container');
+  const maxBubbles = 25; // Limit of bubbles
+  const bubbleContainer = document.createElement('div');
+  const buttons = document.querySelectorAll('.principles-grid-buttons button');
+  const displayImage = document.getElementById('principlesdisplayImage');
+  const displayText = document.getElementById('displayText');
 
-  // Mobile Menu Toggle
-  menuToggle.addEventListener('change', () => {
-    if (menuToggle.checked) {
-      body.classList.add('menu-open');
-      mobileMenu.style.bottom = '0'; // Open the menu
-    } else {
-      body.classList.remove('menu-open');
-      mobileMenu.style.bottom = '-100%'; // Close the menu
-    }
-  });
+  // Helper Functions
 
- // Language Toggle Logic
-const languageToggle = document.querySelector('#languageToggle');
-const elements = document.querySelectorAll('.translatable');
-const langIcon = document.querySelector('#langIcon');
-const currentLang = document.querySelector('#currentLang');
+  // Toggle the class for opening and closing the mobile menu
+  function toggleClass(element, className, condition) {
+    element.classList[condition ? 'add' : 'remove'](className);
+  }
 
-languageToggle.addEventListener('click', (e) => {
+  // Handles the mobile menu opening/closing
+  function toggleMobileMenu() {
+    const isOpen = menuToggle.checked;
+    toggleClass(body, 'menu-open', isOpen);
+    mobileMenu.style.bottom = isOpen ? '0' : '-100%';
+  }
+
+  // Switch language (English/Spanish) and update content accordingly
+  function switchLanguage(e) {
     e.preventDefault();
     const isEnglish = langIcon.src.includes('enBtn.svg');
     const newLang = isEnglish ? 'es' : 'en';
     
-    // Cambiar el ícono de la bandera y el texto del idioma
-    langIcon.src = isEnglish ? './assets/icons/esBtn.svg' : './assets/icons/enBtn.svg';
+    // Change flag icon and language text
+    langIcon.src = `./assets/icons/${newLang}Btn.svg`;
     currentLang.textContent = isEnglish ? 'Español' : 'English';
     
-    // Cambiar el contenido de los elementos traducibles
+    // Update the text content of translatable elements
     elements.forEach(element => {
-        element.innerHTML = element.getAttribute(`data-${newLang}`);
+      element.innerHTML = element.getAttribute(`data-${newLang}`);
     });
 
-    // Cambiar el atributo de idioma del documento
+    // Update the document language attribute
     document.documentElement.lang = newLang;
-});
 
-});
+    // Update the displayed image based on the current language
+    updateButtonImages(newLang);
+  }
 
+  // Get the correct image for the current screen size and language
+  function getImageForScreenSize(button, lang) {
+    const smallScreenImage = button.getAttribute(`data-img-${lang}`);
+    const largeScreenImage = button.getAttribute(`data-img-${lang}-large`);
+    
+    // Use the large image if screen is wider than 600px, otherwise use the small one
+    return window.matchMedia('(min-width: 600px)').matches ? largeScreenImage || smallScreenImage : smallScreenImage;
+  }
 
+  // Update button images dynamically (but not the icons) based on language and screen size
+  function updateButtonImages(lang) {
+    buttons.forEach(button => {
+      const newImage = getImageForScreenSize(button, lang);
+      
+      // Update the displayed image if the button is active
+      if (button.classList.contains('active')) {
+        displayImage.src = newImage;
+      }
+    });
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const bubbleSection = document.querySelector('.header--portrait-container');
-  const bubbleContainer = document.createElement('div');
-  bubbleContainer.classList.add('bubble-container');
-  bubbleSection.appendChild(bubbleContainer);
+  // Handle the visual update of the selected button and update the image displayed above
+  function updateDisplay(button) {
+    const lang = document.documentElement.lang || 'en';
+    const newImage = getImageForScreenSize(button, lang);
 
-  const maxBubbles = 25; // Limite de burbujas
+    // Update the main display image and text
+    displayImage.src = newImage;
+    displayText.textContent = button.getAttribute(`data-text-${lang}`);
 
+    // Set the active state for the clicked button
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+  }
+
+  // Create a floating bubble element and animate it
   function createBubble() {
-    // Verificar si hay más de maxBubbles
     if (bubbleContainer.children.length < maxBubbles) {
       const bubble = document.createElement('div');
       bubble.classList.add('bubble');
       bubble.style.left = `${Math.random() * 100}%`;
-      bubble.style.width = `${Math.random() * 36 + 14}px`; // Tamaño reducido
-      bubble.style.height = bubble.style.width;
-      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Duración de animación
+      const size = Math.random() * 36 + 14; // Size between 14px and 50px
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Animation duration between 8s and 13s
       bubbleContainer.appendChild(bubble);
 
       bubble.addEventListener('animationend', () => {
@@ -67,58 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  setInterval(createBubble, Math.random() * 2000 + 3000); // Intervalo entre 3-5 segundos
-});
+  // Event listeners and actions
 
-// Función para cambiar el idioma
-function changeLanguage(lang) {
-  // Cambiamos el texto en todos los elementos con la clase 'translatable'
-  const translatableElements = document.querySelectorAll('.translatable');
-  translatableElements.forEach(element => {
-    const translation = element.getAttribute(`data-${lang}`);
-    if (translation) {
-      element.textContent = translation;
-    }
+  // Mobile menu toggle
+  menuToggle.addEventListener('change', toggleMobileMenu);
+
+  // Language toggle
+  languageToggle.addEventListener('click', switchLanguage);
+
+  // Update display when a button is clicked
+  buttons.forEach(button => {
+    button.addEventListener('click', () => updateDisplay(button));
   });
 
-  // Cambiamos la imagen y el texto principal
-  const displayImage = document.getElementById('principlesdisplayImage');
-  const displayText = document.getElementById('displayText');
-  
-  const currentButton = document.querySelector('.principles-grid-buttons button.active');
-  if (currentButton) {
-    const newImage = currentButton.getAttribute(`data-img-${lang}`);
-    const newText = currentButton.getAttribute(`data-text-${lang}`);
-
-    displayImage.src = newImage;
-    displayText.textContent = newText;
-  }
-}
-
-// Función para actualizar imagen y texto al hacer clic en un botón
-const buttons = document.querySelectorAll('.principles-grid-buttons button');
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const lang = document.documentElement.lang || 'en'; // Detectamos el idioma actual
-    const newImage = button.getAttribute(`data-img-${lang}`);
-    const newText = button.getAttribute(`data-text-${lang}`);
-
-    // Actualizamos la imagen y el texto
-    const displayImage = document.getElementById('principlesdisplayImage');
-    const displayText = document.getElementById('displayText');
-
-    displayImage.src = newImage;
-    displayText.textContent = newText;
-
-    // Añadimos la clase 'active' al botón seleccionado
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+  // Adjust images on screen size change
+  const mediaQuery = window.matchMedia('(min-width: 600px)');
+  mediaQuery.addListener(() => {
+    const currentLang = document.documentElement.lang || 'en';
+    updateButtonImages(currentLang);
   });
-});
 
-// Ejemplo: Cambio de idioma cuando el usuario selecciona 'es' o 'en'
-document.getElementById('languageSwitcher').addEventListener('change', (event) => {
-  const selectedLanguage = event.target.value;
-  document.documentElement.lang = selectedLanguage; // Establecemos el idioma en el atributo lang del HTML
-  changeLanguage(selectedLanguage);
+  // Bubble animation
+  bubbleContainer.classList.add('bubble-container');
+  bubbleSection.appendChild(bubbleContainer);
+  setInterval(createBubble, Math.random() * 2000 + 3000); // Create bubbles at random intervals between 3s and 5s
 });

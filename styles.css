@@ -3,7 +3,7 @@
   /*Colores*/
   --fraterni-green: #152517;
   --fraterni-yellow: #D18807;
-  --frat-grey: #808489;
+  --frat-grey: #3b3c3e;
   
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
     
@@ -457,7 +457,7 @@ main {
 }
 
 .fraternity-content strong{
-  color: #d18807;
+  color: var(--fraterni-yellow);
   font-weight: 800;
 }
 
@@ -532,14 +532,11 @@ main {
   text-align: center;
 }
 
-.fraternity-principles-titles{
-  max-resolution: 20px;
-}
 
 .fraternity-principles h1 {
   color: #623c25;
   font-weight: bold;
-  font-size: 3rem; /* Ajuste para mobile */
+  font-size: 4rem; /* Ajuste para mobile */
   font-family: 'Norwester';
   margin-bottom: 20px;
 }
@@ -547,7 +544,7 @@ main {
 .fraternity-principles p {
   padding: 0px 8px;
   margin-bottom: 20px;
-  color: #000;
+  color: var(--frat-grey);
   font-size: 1.6rem; /* Ajuste para mobile */
 }
 
@@ -573,11 +570,12 @@ main {
 }
 
 .principles-image-display figcaption {
-  font-size: 1.2rem; /* Ajuste para mobile */
+  font-size: 4rem; /* Ajuste para mobile */
   color: #623c25;
-  margin-top: 16px;
+  margin-top: 8px;
   font-weight: bold;
   text-wrap: pretty;
+  font-family: 'Norwester';
 }
 
 /* Botones con íconos */
