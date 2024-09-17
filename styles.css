@@ -532,10 +532,14 @@ main {
   text-align: center;
 }
 
+.fraternity-principles-titles{
+  max-resolution: 20px;
+}
+
 .fraternity-principles h1 {
   color: #623c25;
   font-weight: bold;
-  font-size: 2rem; /* Ajuste para mobile */
+  font-size: 3rem; /* Ajuste para mobile */
   font-family: 'Norwester';
   margin-bottom: 20px;
 }
@@ -544,7 +548,7 @@ main {
   padding: 0px 8px;
   margin-bottom: 20px;
   color: #000;
-  font-size: 1.2rem; /* Ajuste para mobile */
+  font-size: 1.6rem; /* Ajuste para mobile */
 }
 
 /* Sección de la imagen y botones */
@@ -569,9 +573,11 @@ main {
 }
 
 .principles-image-display figcaption {
-  font-size: 1rem; /* Ajuste para mobile */
+  font-size: 1.2rem; /* Ajuste para mobile */
   color: #623c25;
-  margin-top: 8px;
+  margin-top: 16px;
+  font-weight: bold;
+  text-wrap: pretty;
 }
 
 /* Botones con íconos */
