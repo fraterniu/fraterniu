@@ -546,6 +546,7 @@ main {
   margin-bottom: 20px;
   color: var(--frat-grey);
   font-size: 1.6rem; /* Ajuste para mobile */
+  text-wrap: pretty;
 }
 
 /* Sección de la imagen y botones */

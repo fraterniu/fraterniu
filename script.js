@@ -14,6 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayImage = document.getElementById('principlesdisplayImage');
   const displayText = document.getElementById('displayText');
 
+  let activeButton = null; // Variable to track the active button
+  const defaultImages = { // Imágenes por defecto para la portada
+    en: './assets/imgs/areaF-en.png',
+    es: './assets/imgs/areaF-es.png'
+  };
+  const defaultText = { // Texto por defecto para la portada
+    en: '__________',
+    es: '__________'
+  };
+
   // Helper Functions
 
   // Toggle the class for opening and closing the mobile menu
@@ -46,8 +56,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update the document language attribute
     document.documentElement.lang = newLang;
 
-    // Update the displayed image based on the current language
-    updateButtonImages(newLang);
+    // Update the displayed image based on the current language and active button
+    updateMainImage(newLang);
+  }
+
+  // Función para actualizar la imagen principal según el idioma y el botón activo o imagen por defecto
+  function updateMainImage(lang) {
+    if (activeButton) {
+      // Si hay un botón activo, cambia la imagen según el botón
+      const newImage = getImageForScreenSize(activeButton, lang);
+      displayImage.src = newImage;
+      displayText.textContent = activeButton.getAttribute(`data-text-${lang}`);
+    } else {
+      // Si no hay un botón activo, mostrar la imagen y texto por defecto
+      displayImage.src = defaultImages[lang];
+      displayText.textContent = defaultText[lang];
+    }
+
+    // Aplicar filtro si corresponde a las imágenes de área E
+    if (displayImage.src.includes('areaE-en.png') || displayImage.src.includes('areaE-es.png')) {
+      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,.8))';
+    } else {
+      displayImage.style.filter = 'none';
+    }
   }
 
   // Get the correct image for the current screen size and language
@@ -76,13 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const lang = document.documentElement.lang || 'en';
     const newImage = getImageForScreenSize(button, lang);
 
-    // Update the main display image and text
+    // Actualizar la imagen principal con base en el botón clickeado
     displayImage.src = newImage;
     displayText.textContent = button.getAttribute(`data-text-${lang}`);
 
-    // Set the active state for the clicked button
+    // Aplicar filtro solo a las imágenes PNG específicas
+    if (newImage.includes('areaE-en.png') || newImage.includes('areaE-es.png')) {
+      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,.8))';
+    } else {
+      displayImage.style.filter = 'none';
+    }
+
+    // Cambiar el estado activo del botón y guardar el botón activo
     buttons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
+    activeButton = button; // Actualizamos el botón activo
   }
 
   // Create a floating bubble element and animate it
