@@ -350,31 +350,31 @@ main {
 }
 
 .social-icons .social-link1:hover {
-  background-color: var(--frat-grey);
+  background-color: var(--fraterni-yellow);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link2:hover {
-  background-color: var(--frat-grey);
+  background-color:var(--fraterni-yellow);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link3:hover {
-  background-color: var(--frat-grey);
+  background-color: var(--fraterni-yellow);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link4:hover {
-  background-color: var(--frat-grey);
+  background-color: var(--fraterni-yellow);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link5:hover {
-  background-color: var(--frat-grey);
+  background-color: var(--fraterni-yellow);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
