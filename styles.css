@@ -2,8 +2,8 @@
 :root {
   /*Colores*/
   --fraterni-green: #152517;
-  --fraterni-yellow: #D18807;
-  --frat-grey: #3b3c3e;
+  --fraterni-yellow: #c49102;
+  --frat-grey: #33353a;
   
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
     
@@ -221,7 +221,7 @@ main {
   margin-top: 80px;
   width: 100%;
   height: auto;
-  background: linear-gradient(0deg,#2C502F  0%,#1F3521 100%);
+  background: linear-gradient(0deg,#254027  0%,#152517 100%);
 }
 
 /* 2.1 Header Image Container */
@@ -233,8 +233,7 @@ main {
   margin-top: 80px;
   text-align: center;
   align-self: center;
-  background: linear-gradient(to top, rgba(3, 48, 31, 1) 0%, rgba(17, 86, 58, 0.5) 1%, rgba(18, 105, 69, 0) 3%);
-  /*background: linear-gradient(to top, rgba(209, 136, 7, 1) 0%, rgba(209, 136, 7, 0.5) 0.2%, rgba(32, 50, 33, 0) 2.5%);  Suave desvanecimiento */
+  background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
   z-index: 1;
 }
 
@@ -254,8 +253,7 @@ main {
 .bubble {
   position: absolute;
   bottom: -50px;
-  background-color: rgba(75, 126, 77, 1);
-  ;
+  background-color: #1a1f24;
   /* background-color: rgba(128, 132, 137, 0.25);  */
   /*background-color: rgba(209, 136, 7, 0.25);  Color con opacidad del 25% */
   border-radius: 50%;
@@ -352,31 +350,31 @@ main {
 }
 
 .social-icons .social-link1:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: var(--frat-grey);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link2:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: var(--frat-grey);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link3:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: var(--frat-grey);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link4:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: var(--frat-grey);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link5:hover {
-  background-color: var(--fraterni-yellow);
+  background-color: var(--frat-grey);
   /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
@@ -428,7 +426,7 @@ main {
 
 /* Mobile First Styling */
 .fraternity-section {
-  background-color:#03301f;
+  background-color: #152517;
   color: #000; /* Texto blanco para contraste */
   padding: 20px;
   text-align: center;
@@ -477,7 +475,6 @@ main {
 
 .fraternity-content h2:nth-of-type(2){
   font-family: 'Norwester';
-  color: var(--fraterni-yellow);
 }
 
 .fraternity-content p2 {
@@ -527,14 +524,14 @@ main {
 
 /* Sección principal de los principios */
 .fraternity-principles {
-  background-color: #f3ecd2;
+  background-color: #e4e6e9;
   padding: 20px;
   text-align: center;
 }
 
 
 .fraternity-principles h1 {
-  color: #623c25;
+  color: var(--frat-grey);
   font-weight: bold;
   font-size: 4rem; /* Ajuste para mobile */
   font-family: 'Norwester';
@@ -572,7 +569,7 @@ main {
 
 .principles-image-display figcaption {
   font-size: 4rem; /* Ajuste para mobile */
-  color: #623c25;
+  color: var(--frat-grey);
   margin-top: 8px;
   font-weight: bold;
   text-wrap: pretty;

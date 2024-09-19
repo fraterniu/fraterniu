@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Aplicar filtro solo a las imágenes PNG específicas
     if (newImage.includes('areaE-en.png') || newImage.includes('areaE-es.png')) {
-      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,.8))';
+      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,1))';
     } else {
       displayImage.style.filter = 'none';
     }
