@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         es: './assets/imgs/areaF-es.png'
     };
     const defaultText = { // Texto por defecto para la portada
-        en: '___',  // Cambia el texto si es necesario
-        es: '___'
+        en: '_',  // Cambia el texto si es necesario
+        es: '_'
     };
   
     let currentSlide = 0;
