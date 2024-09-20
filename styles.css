@@ -82,7 +82,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 95px; /* Set the height of the navbar */
+  height: 70px; /* Set the height of the navbar */
   background-color: #152517;
   border-bottom: 5px solid var(--fraterni-yellow);
   padding: 0 20px;
@@ -93,7 +93,7 @@ body {
 }
 
 .logo img {
-  height: 40px; /* Logo size */
+  height: 30px; /* Logo size */
 }
 
 .mobile-menu-container--image {
@@ -106,7 +106,7 @@ body {
   bottom: -100%;
   left: 0;
   width: 100%;
-  height: calc(100% - 90px); /* Cover everything except the navbar height */
+  height: calc(100% - 70px); /* Cover everything except the navbar height */
   background: rgba(17, 37, 10, 0.6); /* 60% opacity blur background */
   backdrop-filter: blur(12px); /* Blur effect */
   transition: bottom 0.4s ease-in-out;
@@ -219,7 +219,7 @@ ul.menu li.navbar-title {
 
 /* 2. Start Main */
 main {
-  margin-top: 80px;
+  margin-top: 70px;
   width: 100%;
   height: auto;
   background: linear-gradient(0deg,#254027  0%,#152517 100%);
