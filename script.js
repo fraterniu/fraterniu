@@ -4,166 +4,160 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu-container');
   const body = document.body;
   const languageToggle = document.querySelector('#languageToggle');
-  const elements = document.querySelectorAll('.translatable');
+  const elements = document.querySelectorAll('.translatable'); // Textos traducibles
   const langIcon = document.querySelector('#langIcon');
   const currentLang = document.querySelector('#currentLang');
   const bubbleSection = document.querySelector('.header--portrait-container');
-  const maxBubbles = 25; // Limit of bubbles
-  const bubbleContainer = document.createElement('div');
+  const maxBubbles = 25; // Límite de burbujas
   const buttons = document.querySelectorAll('.principles-grid-buttons button');
   const displayImage = document.getElementById('principlesdisplayImage');
   const displayText = document.getElementById('displayText');
+  const scrollContainer = document.querySelector(".principles-grid-buttons ul");
+  const dots = document.querySelectorAll(".dot");
 
-  let activeButton = null; // Variable to track the active button
+  let activeButton = null; // Variable para rastrear el botón activo
   const defaultImages = { // Imágenes por defecto para la portada
-    en: './assets/imgs/areaF-en.png',
-    es: './assets/imgs/areaF-es.png'
+      en: './assets/imgs/areaF-en.png',
+      es: './assets/imgs/areaF-es.png'
   };
   const defaultText = { // Texto por defecto para la portada
-    en: '__________',
-    es: '__________'
+      en: '___',  // Cambia el texto si es necesario
+      es: '___'
   };
+
+  let currentSlide = 0;
+  const totalSlides = buttons.length; // Total de botones
 
   // Helper Functions
 
   // Toggle the class for opening and closing the mobile menu
   function toggleClass(element, className, condition) {
-    element.classList[condition ? 'add' : 'remove'](className);
+      element.classList[condition ? 'add' : 'remove'](className);
   }
 
   // Handles the mobile menu opening/closing
   function toggleMobileMenu() {
-    const isOpen = menuToggle.checked;
-    toggleClass(body, 'menu-open', isOpen);
-    mobileMenu.style.bottom = isOpen ? '0' : '-100%';
+      const isOpen = menuToggle.checked;
+      toggleClass(body, 'menu-open', isOpen);
+      mobileMenu.style.bottom = isOpen ? '0' : '-100%';
   }
 
   // Switch language (English/Spanish) and update content accordingly
   function switchLanguage(e) {
-    e.preventDefault();
-    const isEnglish = langIcon.src.includes('enBtn.svg');
-    const newLang = isEnglish ? 'es' : 'en';
-    
-    // Change flag icon and language text
-    langIcon.src = `./assets/icons/${newLang}Btn.svg`;
-    currentLang.textContent = isEnglish ? 'Español' : 'English';
-    
-    // Update the text content of translatable elements
-    elements.forEach(element => {
-      element.innerHTML = element.getAttribute(`data-${newLang}`);
-    });
-
-    // Update the document language attribute
-    document.documentElement.lang = newLang;
-
-    // Update the displayed image based on the current language and active button
-    updateMainImage(newLang);
-  }
-
-  // Función para actualizar la imagen principal según el idioma y el botón activo o imagen por defecto
-  function updateMainImage(lang) {
-    if (activeButton) {
-      // Si hay un botón activo, cambia la imagen según el botón
-      const newImage = getImageForScreenSize(activeButton, lang);
-      displayImage.src = newImage;
-      displayText.textContent = activeButton.getAttribute(`data-text-${lang}`);
-    } else {
-      // Si no hay un botón activo, mostrar la imagen y texto por defecto
-      displayImage.src = defaultImages[lang];
-      displayText.textContent = defaultText[lang];
-    }
-
-    // Aplicar filtro si corresponde a las imágenes de área E
-    if (displayImage.src.includes('areaE-en.png') || displayImage.src.includes('areaE-es.png')) {
-      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,.8))';
-    } else {
-      displayImage.style.filter = 'none';
-    }
-  }
-
-  // Get the correct image for the current screen size and language
-  function getImageForScreenSize(button, lang) {
-    const smallScreenImage = button.getAttribute(`data-img-${lang}`);
-    const largeScreenImage = button.getAttribute(`data-img-${lang}-large`);
-    
-    // Use the large image if screen is wider than 600px, otherwise use the small one
-    return window.matchMedia('(min-width: 600px)').matches ? largeScreenImage || smallScreenImage : smallScreenImage;
-  }
-
-  // Update button images dynamically (but not the icons) based on language and screen size
-  function updateButtonImages(lang) {
-    buttons.forEach(button => {
-      const newImage = getImageForScreenSize(button, lang);
+      e.preventDefault();
+      const isEnglish = langIcon.src.includes('enBtn.svg');
+      const newLang = isEnglish ? 'es' : 'en';
       
-      // Update the displayed image if the button is active
-      if (button.classList.contains('active')) {
-        displayImage.src = newImage;
+      // Change flag icon and language text
+      langIcon.src = `./assets/icons/${newLang}Btn.svg`;
+      currentLang.textContent = isEnglish ? 'Español' : 'English';
+      
+      // Update the text content of translatable elements
+      elements.forEach(element => {
+          element.innerHTML = element.getAttribute(`data-${newLang}`);
+      });
+
+      // Update the document language attribute
+      document.documentElement.lang = newLang;
+
+      // Cambiar la portada según el nuevo idioma
+      if (!activeButton) {
+          displayImage.src = defaultImages[newLang]; // Actualizar imagen de portada
+          displayText.textContent = defaultText[newLang]; // Actualizar texto de portada
       }
-    });
   }
 
-  // Handle the visual update of the selected button and update the image displayed above
-  function updateDisplay(button) {
-    const lang = document.documentElement.lang || 'en';
-    const newImage = getImageForScreenSize(button, lang);
-
-    // Actualizar la imagen principal con base en el botón clickeado
-    displayImage.src = newImage;
-    displayText.textContent = button.getAttribute(`data-text-${lang}`);
-
-    // Aplicar filtro solo a las imágenes PNG específicas
-    if (newImage.includes('areaE-en.png') || newImage.includes('areaE-es.png')) {
-      displayImage.style.filter = 'drop-shadow(0 0 0 10px rgba(0,0,0,1))';
-    } else {
-      displayImage.style.filter = 'none';
-    }
-
-    // Cambiar el estado activo del botón y guardar el botón activo
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-    activeButton = button; // Actualizamos el botón activo
+  // Attach the language switch event
+  if (languageToggle) {
+      languageToggle.addEventListener('click', switchLanguage);
   }
 
-  // Create a floating bubble element and animate it
+  // Función para cambiar de slide
+  function changeSlide(index) {
+      const button = buttons[index];
+      const lang = document.documentElement.lang || "en";
+      const newImg = button.getAttribute(`data-img-${lang}`);
+      const newText = button.getAttribute(`data-text-${lang}`);
+
+      // Cambiar la imagen
+      displayImage.src = newImg;
+      displayText.innerHTML = newText; // innerHTML para soportar etiquetas HTML como <br>
+
+      // Actualizar los dots
+      updateDots(index);
+
+      // Mantener el estado del botón activo
+      activeButton = button;
+  }
+
+  // Actualizar el estado de los dots
+  function updateDots(index) {
+      dots.forEach((dot, idx) => {
+          if (idx === index + 1) {
+              dot.classList.add("active");
+          } else {
+              dot.classList.remove("active");
+          }
+      });
+  }
+
+  // Detectar scroll y actualizar el slide en consecuencia
+  function handleScroll() {
+      const scrollLeft = scrollContainer.scrollLeft;
+      const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      const scrollFraction = scrollLeft / scrollWidth;
+
+      const newSlide = Math.round(scrollFraction * (totalSlides - 1));
+
+      if (newSlide !== currentSlide) {
+          currentSlide = newSlide;
+          changeSlide(newSlide);
+      }
+  }
+
+  // Evento para cambiar slide al presionar un botón
+  buttons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+          currentSlide = index;
+          changeSlide(index);
+          scrollContainer.scrollLeft = button.offsetLeft - scrollContainer.offsetLeft;
+      });
+  });
+
+  // Añadir evento de scroll
+  scrollContainer.addEventListener("scroll", handleScroll);
+
+  // Inicializar el primer slide como portada
+  function initializeFirstSlide() {
+      const lang = document.documentElement.lang || "en";
+      displayImage.src = defaultImages[lang]; // Usar la imagen por defecto para la portada
+      displayText.textContent = defaultText[lang]; // Usar el texto por defecto para la portada
+      activeButton = null; // Asegurar que la portada sea tratada como "sin botón seleccionado"
+      dots[0].classList.add("invisible");
+      updateDots(0);
+  }
+
+  initializeFirstSlide();
+
+  // Función para crear burbujas animadas
   function createBubble() {
-    if (bubbleContainer.children.length < maxBubbles) {
-      const bubble = document.createElement('div');
-      bubble.classList.add('bubble');
+      if (!bubbleSection || document.querySelectorAll('.bubble').length >= maxBubbles) return;
+
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
       bubble.style.left = `${Math.random() * 100}%`;
-      const size = Math.random() * 36 + 14; // Size between 14px and 50px
+      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Animación entre 8 y 13 segundos
+      const size = Math.random() * 36 + 14; // Tamaño entre 14px y 50px
       bubble.style.width = `${size}px`;
       bubble.style.height = `${size}px`;
-      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Animation duration between 8s and 13s
-      bubbleContainer.appendChild(bubble);
 
-      bubble.addEventListener('animationend', () => {
-        bubble.remove();
+      bubbleSection.appendChild(bubble);
+
+      bubble.addEventListener("animationend", () => {
+          bubble.remove();
       });
-    }
   }
 
-  // Event listeners and actions
-
-  // Mobile menu toggle
-  menuToggle.addEventListener('change', toggleMobileMenu);
-
-  // Language toggle
-  languageToggle.addEventListener('click', switchLanguage);
-
-  // Update display when a button is clicked
-  buttons.forEach(button => {
-    button.addEventListener('click', () => updateDisplay(button));
-  });
-
-  // Adjust images on screen size change
-  const mediaQuery = window.matchMedia('(min-width: 600px)');
-  mediaQuery.addListener(() => {
-    const currentLang = document.documentElement.lang || 'en';
-    updateButtonImages(currentLang);
-  });
-
-  // Bubble animation
-  bubbleContainer.classList.add('bubble-container');
-  bubbleSection.appendChild(bubbleContainer);
-  setInterval(createBubble, Math.random() * 2000 + 3000); // Create bubbles at random intervals between 3s and 5s
+  // Crear burbujas cada 3-5 segundos
+  setInterval(createBubble, Math.random() * 2000 + 3000);
 });
