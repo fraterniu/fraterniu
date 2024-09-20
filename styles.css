@@ -230,7 +230,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 80vh;
+  height: 75vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -403,7 +403,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 77vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
@@ -465,7 +465,7 @@ main {
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 20px;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .fraternity-content img{
@@ -484,7 +484,7 @@ main {
   color: #fff;
   padding: 0 16px;
   margin-bottom: 20px;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .fraternity-content p2:last-child{
@@ -544,7 +544,7 @@ main {
   margin-bottom: 20px;
   color: var(--frat-grey);
   font-size: 1.6rem; /* Ajuste para mobile */
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 /* Sección de la imagen y botones */
@@ -573,7 +573,7 @@ main {
   color: var(--frat-grey);
   margin-top: 8px;
   font-weight: bold;
-  text-wrap: pretty;
+  text-wrap: balance;
   font-family: 'Norwester';
 }
 
