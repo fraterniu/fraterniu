@@ -4,20 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/U.svg" type="image/x-icon">
+    <head>
+        <!-- Icono por defecto -->
+        <link id="theme-icon" rel="icon" href="./assets/icons/uLight.svg" type="image/x-icon">
+        <script>
+        function updateFavicon() {
+            const iconLink = document.getElementById('theme-icon');
+            // Detectar si el tema del sistema es oscuro
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema oscuro
+            } else {
+              iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema claro
+            }
+        }
+    
+          // Actualizar el favicon al cargar la página
+        updateFavicon();
+    
+          // Escuchar cambios en el tema del sistema
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+        </script>
+    </head>
+    
     <title>FraterniU</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500 display=swap"
         rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 
     <!-- CSS STYLES & Media Queries   -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--END CSS STYLES & Media Queries   -->
-
     <script src="./script.js" defer></script>
 </head>
 
@@ -26,25 +49,13 @@
     <section class="header--container">
         <!-- 1. Header -->
         <header class="header">
-            <!-- 1.1. logo vectore image -->
+            <!-- 1.1. Logo -->
             <div class="logo">
                 <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
             </div>
-            <!-- End logo vectore image -->
+            <!-- End logo -->
 
-            <!--1.2. Menu -->
-            <nav class="menu-container">
-                <ul class="menu">
-                    <li><a href="#">MENTE</a></li>
-                    <li><a href="#">CUERPO</a></li>
-                    <li><a href="#">RECURSOS</a></li>
-                    <li><a href="#">VALOR</a></li>
-                    <li><a href="#">ENTORNO</a></li>
-                </ul>
-                <button>PILARES CENTRALES</button>
-            </nav>
-            <!--End Menu -->
-            <!--1.3. Mobile Menu Icon -->
+            <!-- 1.2. Mobile Menu Icon -->
             <div id="menuToggle" class="mobile-menu-container--image">
                 <input id="checkbox" type="checkbox">
                 <label class="toggle" for="checkbox">
@@ -53,252 +64,183 @@
                     <div class="bar bar--bottom"></div>
                 </label>
             </div>
+        </header>
 
-            <nav class="mobile-menu-container">
-                <ul class="menu">
-                    <li><a href="#">MENTE</a></li>
-                    <li><a href="#">CUERPO</a></li>
-                    <li><a href="#">RECURSOS</a></li>
-                    <li><a href="#">VALOR</a></li>
-                    <li><a href="#">ENTORNO</a></li>
-                </ul>
-            </nav>
+        <!-- Mobile Navbar -->
+        <nav class="mobile-menu-container" id="mobileNavbar">
+            <!-- Language Toggle Icon in Navbar -->
+            <ul class="menu">
+                <li id="languageToggle">
+                    <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon">
+                    <span id="currentLang">English</span>
+                </li>
+
+                <!-- More Options -->
+                <li class="navbar-title"><a href="#" class="translatable" data-en="MORE" data-es="MÁS">MORE</a></li>
+                <li><a href="#" class="translatable" data-en="OVERVIEW" data-es="GENERAL">OVERVIEW</a></li>
+                <li><a href="#" class="translatable" data-en="MEDIA" data-es="MEDIOS">MEDIA</a></li>
+                <li><a href="#" class="translatable" data-en="FEATURES" data-es="CARACTERÍSTICAS">FEATURES</a></li>
+                <li><a href="#" class="translatable" data-en="ABOUT" data-es="SOBRE NOSOTROS">ABOUT</a></li>
+                <li><a href="#" class="translatable" data-en="SHOP" data-es="TIENDA">SHOP</a></li>
+
+            </ul>
+        </nav>
         </header>
         <!--End Mobile Menu -->
         <!--1. Header End -->
     </section>
 
+    <!--2. Start Main -->
     <main>
-        <section class="header--title-container">
-            <div class="header--container">
-                <div class="wrapper">
-                    <div class="text-content">
-                        <h1>Desata tu potencial de aprendizaje con la</h1>
-                        <h1>revolución</h1>
-                        <h1>de la cual queremos que tú seas parte.</h1>
+        <!-- 2.1 Header Image Container (#findme) -->
+        <section class="header--portrait-container">
+            <div class="bubble-container"></div>
+            <div class="overlay">
+                <h1 class="translatable" data-en="THIS IS <br> FRATERNIU" data-es="ESTO ES <br> FRATERNIU">THIS IS <br>
+                    FRATERNIU</h1>
 
-                        <p>En FraterniU esperamos ser ese acompañante que te guía y te motiva al cambio. Síguenos y
-                            forma parte
-                            de una comunidad apasionada por aprender y pensar diferente, para superarse cada día y
-                            cambiar
-                            vidas.</p>
-                    </div>
-                    <div class="first--cover-img">
-                        <img src="./assets/imgs/fraterniSketch.png" alt="">
-                    </div>
-
-                    <a class="header--button">Conoce La Fraternidad<span></span>
-                    </a>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" class="social-icon social-link1"><img
+                            src="./assets/icons/Facebook.svg" alt="Facebook"></a>
+                    <a href="https://discord.com" class="social-icon social-link2"><img src="./assets/icons/Discord.svg"
+                            alt="Discord"></a>
+                    <a href="https://www.instagram.com/fraterniu/" class="social-icon social-link3"><img
+                            src="./assets/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="https://tiktok.com" class="social-icon social-link4"><img src="./assets/icons/TikTok.svg"
+                            alt="Youtube"></a>
+                    <a href="https://youtube.com" class="social-icon social-link5"><img src="./assets/icons/yt.svg"
+                            alt="Youtube"></a>
                 </div>
             </div>
+
+            <div class="professional-info">
+                <img src="./assets/icons/chalkarrows.svg" alt="Chalk Arrows">
+            </div>
+
+            <a href="#principles" class="header--button translatable" data-en="KNOW OUR PRINCIPLES"
+                data-es="CONOCE NUESTROS PRINCIPIOS">KNOW OUR PRINCIPLES</a>
+            </a>
         </section>
+        <!-- End Header Image Container -->
     </main>
+    <!-- 3.1 Fraternity? Container -->
+    <!-- 2.1.1 Why a Fraternity? Container -->
 
-    <!-- 2.2. Main Areas Section -->
-    <section class="main-service-detail">
-        <div class="service-detail--title">
-            <h2 id="areas">PRINCIPIOS DE FRATERNIU</h2>
-            <p>ESTA ES LA FILOSOFÍA QUE NOS GUÍA:</p>
 
-            <hr style="background-color: #D18807; height: 2px; border: none; width: 60%; margin: auto;">
-        </div>
-        <section class="service-cards--container">
-            <div class="service-detail--description">
-                <h3>Buscamos brindarte apoyo en 5 áreas fundamentales</h3>
-                <p>Las cuales creemos que son importantes para comprender y cuidar en nuestras vidas.</p>
+
+
+    <section class="fraternity-section">
+        <div class="fraternity-image">
+            <picture>
+                <source srcset="./assets/imgs/fraterniStudents-small.png" media="(max-width: 600px)">
+                <source srcset="./assets/imgs/fraterniStudents.png" media="(min-width: 601px)">
+                <img src="./assets/imgs/fraterniStudents.png" alt="Partners in a Fraternity">
+            </picture>
+        </div>        
+        <section class="fraternity-content">
+            <h2 class="translatable" data-en="WHAT DO YOU KNOW ABOUT A FRATERNITY?"
+            data-es="¿QUÉ SABES DE LAS FRATERNIDADES?">WHAT DO YOU KNOW ABOUT A FRATERNITY?</h2>
+                <p class="translatable" data-en="A fraternity is a community of shared beliefs, focused on mutual growth." data-es="Una fraternidad es una comunidad de creencias compartidas, enfocada en el crecimiento mutuo.">A fraternity is a community of shared beliefs, focused on mutual growth.</p>
+
+                <p class="translatable" data-en="Fraternities emphasize support, development, and leadership, creating lasting friendships built on trust and respect." data-es="Las fraternidades se centran en el apoyo, desarrollo y liderazgo, creando amistades duraderas basadas en la confianza y el respeto.">Fraternities emphasize support, development, and leadership, creating lasting friendships built on trust and respect.</p>
+
+                <p class="translatable" data-en="Fraternities cultivate skills beyond the classroom, preparing members to contribute to their communities and others' well-being." data-es="Las fraternidades fomentan habilidades más allá del aula, preparando a los miembros para contribuir a sus comunidades y al bienestar de los demás.">Fraternities cultivate skills beyond the classroom, preparing members to contribute to their communities and others' well-being.</p>
+
+                <img src="./assets/icons/separetor.svg" alt="streak">
+
+                <h2 class="translatable" data-en="FRATERNIU OVERVIEW" data-es="SOBRE FRATERNIU">FRATERNIU OVERVIEW</h2>
+
+                <p class="translatable" data-en="FraterniU is a movement fostering leadership, creativity, and growth through shared values and connections." data-es="FraterniU es un movimiento que promueve el liderazgo, la creatividad y el crecimiento a través de valores y conexiones compartidos.">FraterniU is a movement fostering leadership, creativity, and growth through shared values and connections.</p>
+
+            <div class="mission-vision">
+                <div class="mission">
+                    <img src="./assets/icons/missionF.svg" alt="Misión">
+                    <p2 class="translatable"
+                        data-en="<strong>Inspire</strong> and empower individuals who demonstrate leadership, cooperation, and personal growth by promoting our fraternity's key beliefs."
+                        data-es="<strong>Inspirar</strong> y empoderar a las personas que demuestran liderazgo, cooperación y crecimiento personal promoviendo las creencias clave de nuestra fraternidad.">
+                    <strong>Inspire</strong> and empower individuals who demonstrate leadership, cooperation, and personal growth by promoting our fraternity's key beliefs.
+                    </p2>
+                </div>
+                <div class="vision">
+                    <img src="./assets/icons/visionf.svg" alt="Visión">
+                    <p2 class="translatable"
+                        data-en="<strong>Create</strong> a virtual community that nurtures learning, creativity, and adaptability in the modern world"
+                        data-es="<strong>Crear</strong> una comunidad virtual que fomente el aprendizaje, la creatividad y la adaptabilidad en el mundo moderno.">
+                        <strong>Create</strong> a virtual community that nurtures learning, creativity, and adaptability in the modern world.
+                    </p2>
+                </div>
+                <p class="translatable" data-en="<strong>Ready to take the first step?</strong> Explore our core principles and discover how you can grow with us."
+                data-es="<strong>¿Estás listo para dar el primer paso?</strong> Explora nuestros principios y descubre cómo puedes crecer con nosotros."><strong>Ready to take the first step?</strong> Explore our core principles and discover how you can grow with us.</p>
             </div>
-
-            <div class="row">
-                <article id="Mente" class="service-detail--card">
-                    <span class="icon-card mind"></span>
-                    <p class="service--card-title">MENTE</p>
-                    <p class="service--card-body">Justificar las distintas prioridades de nuestra cabeza, asegura
-                        decisiones informadas para obtener un bienestar en las decisiones que tomamos.</p>
-                </article>
-                <article id="Cuerpo" class="service-detail--card">
-                    <span class="icon-card fbody"></span>
-                    <p class="service--card-title">CUERPO</p>
-                    <p class="service--card-body">Mantenerse saludable permite enfrentar desafíos físicos y tener un
-                        balance con las distintas cosas que realizamos en nuestro día a día.</p>
-                </article>
-                <article id="Recursos" class="service-detail--card">
-                    <span class="icon-card link"></span>
-                    <p class="service--card-title">RECURSOS</p>
-                    <p class="service--card-body">Gestionarlos responsablemente y comprender sus distintos beneficios
-                        nos permite estar un paso adelante de cada problema que se presente.</p>
-                </article>
-                <article id="Valor" class="service-detail--card">
-                    <span class="icon-card money"></span>
-                    <p class="service--card-title">VALOR</p>
-                    <p class="service--card-body">Entender las finanzas permite una planificación a largo plazo, con
-                        gestión efectiva y libertad económica para mayor tranquilidad en la vida.</p>
-                </article>
-                <article id="Entorno" class="service-detail--card">
-                    <span class="icon-card place"></span>
-                    <p class="service--card-title">ENTORNO</p>
-                    <p class="service--card-body">Analizar lo que nos rodea es la base que nos permite encontrar áreas
-                        de mejora para buscar alternativas a un ambiente sostenible y óptimo.</p>
-                </article>
-            </div>
-
         </section>
     </section>
-    <!-- End Main Areas Section -->
-
-
-    <!-- 2.3 Main Pilars Section -->
-    <section class="pilars-container">
-        <div>
-            <img src="./assets/icons/separetor.svg" alt="random yellow line">
-        </div>
-        <div class="service-detail--title">
-            <p>Los pilares, a diferencia de las áreas, requieren de un balance equitativo. En las áreas siempre habrá
-                una o algunas que quieras potenciar más, porque se relacionan y funcionan mejor para alcanzar lo que tú
-                consideres éxito en tu vida.</p>
-            <h2 id="pilars">LOS 3 PILARES <br> QUE EXPLORAMOS:</h2>
+    <section id="principles" class="fraternity-principles">
+        <div class="fraternity-principles-titles">
+            <h1 class="translatable" data-en="PRINCIPLES OF FRATERNIU"
+            data-es="PRINCIPIOS DE FRATERNIU">PRINCIPLES OF FRATERNIU</h1>
+            <p class="translatable" data-en="This is the philosophy that guides us:"
+            data-es="Esta es la filosofía que nos guía:">This is the philosophy that guides us:</p>
+            <p class="translatable" data-en="In order to accomplish complete growth, we focused on these <strong>five areas.</strong> Each of these areas aims to improve your capacity for decision-making, resource management, and situational flexibility."
+            data-es="Para lograr un crecimiento completo, nos centramos en estas <strong>cinco áreas</strong>. Cada una de ellas tiene como objetivo mejorar tu capacidad de toma de decisiones, gestión de recursos y flexibilidad situacional.">In order to accomplish complete growth, we focused on these <strong>five areas.</strong> Each of these areas aims to improve your capacity for decision-making, resource management, and situational flexibility.</p>
+            <p class="translatable" data-en="Analyze how you might improve your life in each area:"
+            data-es=" Analiza cómo podrías mejorar tu vida en cada área:">Analyze how you might improve your life in each area:</p>
         </div>
 
-        <section class="pilars-container--slider">
-
-
-            <article class="pilars-container--card firstpilar">
-                <p class="banner">Pilar a Explorar #1</p>
-                <div>
-                    <h3 class="pilars-card--title">Autonomía
-                        y Autogestión</h3>
-                    <p class="pilars-card-info">La autonomía y autogestión son fundamentales para el desarrollo personal
-                        y profesional, capacitando a las personas para tomar control de sus decisiones, metas y
-                        responsabilidades, promoviendo un crecimiento independiente y sostenible.</p>
-                </div>
-            </article>
-
-            <article class="pilars-container--card secondpilar">
-                <p class="banner">Pilar a Explorar #2</p>
-                <div>
-                    <h3 class="pilars-card--title">Pensamiento
-                        CCLE</h3>
-                    <p class="pilars-card-info">El pensamiento CCLE se centra en usar el pensamiento creativo, crítico,
-                        lógico y ético. Los cuales son cruciales para abordar desafíos complejos, tomar decisiones
-                        informadas, fomentar la innovación, y respetar a quienes nos rodean, capacitando a las personas
-                        para adaptarse y contribuir de manera significativa a la sociedad.</p>
-                </div>
-            </article>
-
-            <article class="pilars-container--card thirdpilar">
-                <p class="banner">Pilar a Explorar #3</p>
-                <div>
-                    <h3 class="pilars-card--title">Habilidades Sociales</h3>
-                    <p class="pilars-card-info">Las habilidades sociales son esenciales para construir relaciones
-                        sólidas y colaborar eficazmente en equipo. Facilitan la comunicación efectiva, fomentan la
-                        empatía y fortalecen la cohesión social, contribuyendo al éxito interpersonal y a un entorno
-                        armonioso.</p>
-                </div>
-            </article>
-            
-            <img src="./assets/icons/left-arrow.svg" alt="Anterior" class="slider-prev">
-                <img src="./assets/icons/right-arrow.svg" alt="Siguiente" class="slider-next">
-        </section>
-
-
-    </section>
-    <!-- End Main Pilars Section -->
-
-    <!-- 2.3 Image section -->
-    <section class="tisa-image">
-        <img src="./assets/imgs/pexels-didsss-2675047 5.jpg" alt="Imagen de tisa" class="responsive-image">
-        <div class="overlay-text">El cambio comienza cuando decides actuar:
-            tú defines cómo y cuándo mejorar.</div>
-    </section>
-    <!-- End Image section -->
-
-    <!--preparing the word Section -->
-    <section class="members-section--container">
-        <section class="titulos">
-            <h1 class="global"> COMUNIDAD GLOBAL </h1>
-            <h2 class="text-Vuca"> Preparando personas para los
-                desafíos del mundo VUCA</h2>
-        </section>
-
-        <div class="members-container">
-            <div class="card-container">
-                <div class="card-partidarios">
-                    <img src="./assets/icons/Logo Mark Only.svg" alt=" fraterniU-Logo" class="U-Logo">
-                    <h2>PARTIDARIOS</h2>
-                    <p>Personas que creen en nuestra fraternidad. Aunque no son miembros oficiales,
-                        muestran interés activo y participan en actividades. A medida que avanzamos,
-                        los partidarios podrán unirse y volverse fraternistas mediante retos y demas iniciativas.
-                    </p>
-                    <div class="rectangle-gray"></div>
-                </div>
-            </div>
-
-            <div class="card-container">
-                <div class="card-fraternistas">
-                    <img src="./assets/icons/Logo Mark Only white.svg" alt=" fraterniU-Logo" class="U-Logo">
-                    <h2>FRATERNISTAS</h2>
-                    <p>Miembros oficiales de la fraternidad, comprometidos con nuestros valores y misión.
-                        Forman parte integral de nuestra comunidad, participando activamente en todas nuestras
-                        iniciativas y
-                        desarrollando su potencial al máximo.</p>
-                    <div class="rectangle-orange"></div>
-                </div>
-            </div>
+        <div class="principles-grid-display">
+            <figure class="principles-image-display">
+                <!-- Imagen inicial que es la portada (Area F) -->
+                <img id="principlesdisplayImage" 
+                    data-img-en="./assets/imgs/areaF-en.png" 
+                    data-img-es="./assets/imgs/areaF-es.png" 
+                    src="./assets/imgs/areaF-en.png" 
+                    alt="Area Cover">
+                <!-- El texto debe cambiar dinámicamente -->
+                <figcaption id="displayText" class="translatable" data-en="_" data-es="_">_</figcaption>
+            </figure>
         </div>
 
-
-    </section>
-
-    <!--7.  Footer -->
-    <footer>
-        <section class="top">
-            <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
+        <!-- Indicadores del carrusel (dots) -->
+        <div class="carousel-indicators">
+            <!-- Span para el dot correspondiente a la portada (debe ser invisible) -->
+            <span class="dot invisible"></span> <!-- Este será el dot de la portada, invisible -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    
+        <!-- Botones para cambiar entre las áreas (5 botones para las 5 áreas) -->
+        <div class="principles-grid-buttons">
             <ul>
                 <li>
-                    <a>
-                        <h3>Pilares</h3>
-                    </a>
-                    <a> </a>
-                    <a>Autonomía y Autogestión</a>
-                    <a>Pensamiento crítico y Creativo</a>
-                    <a>Habilidades Sociales</a>
+                    <button data-img-en="./assets/imgs/areaM-en.png" data-img-es="./assets/imgs/areaM-es.png" data-text-en="MIND" data-text-es="MENTE">
+                        <img src="./assets/icons/mindGrey.svg" alt="Mind Icon"> <!-- Ícono fijo -->
+                    </button>
                 </li>
                 <li>
-                    <a>
-                        <h3>Áreas</h3>
-                    </a>
-                    <a> </a>
-                    <a>Mente</a>
-                    <a>Cuerpo</a>
-                    <a>Recursos</a>
-                    <a>Valor</a>
-                    <a>Entorno</a>
+                    <button data-img-en="./assets/imgs/areaB-en.png" data-img-es="./assets/imgs/areaB-es.png" data-text-en="BODY" data-text-es="CUERPO">
+                        <img src="./assets/icons/bodyGrey.svg" alt="Body Icon"> <!-- Ícono fijo -->
+                    </button>
                 </li>
                 <li>
-                    <h3>Encuéntranos en:</h3>
-                    <a> </a>
-                    <a href="https://www.instagram.com/fraterniu/ " target="_blank" class="instagram redicon"><span
-                            class="icon-card Vector"></span>Instagram</a>
-                    <!-- <a href="" class="redicon tiktok"><span class="icon-card TikTok"></span>TikTok</a> -->
-                    <a href="" class="redicon youtube"><span class="icon-card Youtube"></span>YouTube</a>
-                    <a href="" class="facebook redicon"><span class="icon-card Facebook"></span>Facebook</a>
-                    <a href="" class="linkedin redicon"><span class="icon-card LinkedIn"></span>LinkedIn</a>
+                    <button data-img-en="./assets/imgs/areaR-en.png" data-img-es="./assets/imgs/areaR-es.png" data-text-en="RESOURCES" data-text-es="RECURSOS">
+                        <img src="./assets/icons/resourcesGrey.svg" alt="Resources Icon"> <!-- Ícono fijo -->
+                    </button>
                 </li>
                 <li>
-                    <h3>Sobre nosotros</h3>
-                    <a> </a>
-                    <a href="">FraterniU Developers</a>
+                    <button data-img-en="./assets/imgs/areaV-en.png" data-img-es="./assets/imgs/areaV-es.png" data-text-en="VALUE" data-text-es="VALOR">
+                        <img src="./assets/icons/valorGrey.svg" alt="Value Icon">
+                    </button>
                 </li>
                 <li>
+                    <button data-img-en="./assets/imgs/areaE-en.png" data-img-es="./assets/imgs/areaE-es.png" data-text-en="ENVIRONMENT" data-text-es="ENTORNO">
+                        <img src="./assets/icons/environmentGrey.svg" alt="Environment Icon">
+                    </button>
+                </li>
             </ul>
-            <section class="contactoFooter">
-                <h2><span class="envelope conticon"></span>Contáctanos:</h2><br>
-                <a>CorreoEjemplo@FraterniU.com</a>
-            </section>
-        </section>
-        <section class="bottom">© 2024 FraterniU.com</section>
-    </footer>
-    <!-- End Footer -->
-
+        </div>
+    </section>
     <script src="./js/fraterni.js"></script>
 </body>
 
