@@ -162,7 +162,7 @@
                     </p2>
                 </div>
                 <div class="vision">
-                    <img src="./assets/icons/visionf.svg" alt="Visión">
+                    <img src="./assets/icons/vision.svg" alt="Visión">
                     <p2 class="translatable"
                         data-en="<strong>Create</strong> a virtual community that nurtures learning, creativity, and adaptability in the modern world"
                         data-es="<strong>Crear</strong> una comunidad virtual que fomente el aprendizaje, la creatividad y la adaptabilidad en el mundo moderno.">
@@ -186,62 +186,46 @@
             data-es=" Analiza cómo podrías mejorar tu vida en cada área:">Analyze how you might improve your life in each area:</p>
         </div>
 
-        <div class="principles-grid-display">
-            <figure class="principles-image-display">
-                <!-- Imagen inicial que es la portada (Area F) -->
-                <img id="principlesdisplayImage" 
-                    data-img-en="./assets/imgs/areaF-en.png" 
-                    data-img-es="./assets/imgs/areaF-es.png" 
-                    src="./assets/imgs/areaF-en.png" 
-                    alt="Area Cover">
-                <!-- El texto debe cambiar dinámicamente -->
-                <figcaption id="displayText" class="translatable" data-en="_" data-es="_">_</figcaption>
-            </figure>
+        <div class="principles-grid-section">
+            <div class="principles-grid-display">
+                <figure class="principles-image-display">
+                    <img id="principlesdisplayImage" data-img-en="./assets/imgs/areaF-en.png" data-img-es="./assets/imgs/areaF-es.png" src="./assets/imgs/areaF-en.png" alt="Area Preview">
+                    <figcaption id="displayText" class="translatable" data-en="__________"
+                    data-es="__________">__________</figcaption>
+                </figure>
+            </div>
+        
+            <div class="principles-grid-buttons">
+                    <ul>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaM-en.png" data-img-es="./assets/imgs/areaM-es.png" data-text-en="MIND" data-text-es="MENTE">
+                                <img src="./assets/icons/mindGrey.svg" alt="Mind Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaB-en.png" data-img-es="./assets/imgs/areaB-es.png" data-text-en="BODY" data-text-es="CUERPO">
+                                <img src="./assets/icons/bodyGrey.svg" alt="Body Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaR-en.png" data-img-es="./assets/imgs/areaR-es.png" data-text-en="RESOURCES" data-text-es="RECURSOS">
+                                <img src="./assets/icons/resourcesGrey.svg" alt="Resources Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaV-en.png" data-img-es="./assets/imgs/areaV-es.png" data-text-en="VALUE" data-text-es="VALOR">
+                                <img src="./assets/icons/valorGrey.svg" alt="Value">
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaE-en.png" data-img-es="./assets/imgs/areaE-es.png" data-text-en="ENVIRONMENT" data-text-es="ENTORNO">
+                                <img src="./assets/icons/environmentGrey.svg" alt="Environment">
+                            </button>
+                        </li>
+                    </ul>
+            </div>
         </div>
-
-        <!-- Indicadores del carrusel (dots) -->
-        <div class="carousel-indicators">
-            <!-- Span para el dot correspondiente a la portada (debe ser invisible) -->
-            <span class="dot invisible"></span> <!-- Este será el dot de la portada, invisible -->
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    
-        <!-- Botones para cambiar entre las áreas (5 botones para las 5 áreas) -->
-        <div class="principles-grid-buttons">
-            <ul>
-                <li>
-                    <button data-img-en="./assets/imgs/areaM-en.png" data-img-es="./assets/imgs/areaM-es.png" data-text-en="MIND" data-text-es="MENTE">
-                        <img src="./assets/icons/mindGrey.svg" alt="Mind Icon"> <!-- Ícono fijo -->
-                    </button>
-                </li>
-                <li>
-                    <button data-img-en="./assets/imgs/areaB-en.png" data-img-es="./assets/imgs/areaB-es.png" data-text-en="BODY" data-text-es="CUERPO">
-                        <img src="./assets/icons/bodyGrey.svg" alt="Body Icon"> <!-- Ícono fijo -->
-                    </button>
-                </li>
-                <li>
-                    <button data-img-en="./assets/imgs/areaR-en.png" data-img-es="./assets/imgs/areaR-es.png" data-text-en="RESOURCES" data-text-es="RECURSOS">
-                        <img src="./assets/icons/resourcesGrey.svg" alt="Resources Icon"> <!-- Ícono fijo -->
-                    </button>
-                </li>
-                <li>
-                    <button data-img-en="./assets/imgs/areaV-en.png" data-img-es="./assets/imgs/areaV-es.png" data-text-en="VALUE" data-text-es="VALOR">
-                        <img src="./assets/icons/valorGrey.svg" alt="Value Icon">
-                    </button>
-                </li>
-                <li>
-                    <button data-img-en="./assets/imgs/areaE-en.png" data-img-es="./assets/imgs/areaE-es.png" data-text-en="ENVIRONMENT" data-text-es="ENTORNO">
-                        <img src="./assets/icons/environmentGrey.svg" alt="Environment Icon">
-                    </button>
-                </li>
-            </ul>
-        </div>
-
-        <div></div>
+        
     </section>
     <script src="./js/fraterni.js"></script>
 </body>
