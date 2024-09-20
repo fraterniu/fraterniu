@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
       es: './assets/imgs/areaF-es.png'
     };
     const defaultText = { // Texto por defecto para la portada
-      en: '__________',
-      es: '__________'
+      en: '',
+      es: ''
     };
   
     // Helper Functions
