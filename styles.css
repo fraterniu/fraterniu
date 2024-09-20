@@ -308,7 +308,17 @@ main {
 }
 
 .header--portrait-container .harrows{
-  margin-top: -16px;
+  margin-top: -8px;
+  animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-32px);
+  }
 }
 
 /* 2.1.2 Social Icons */
