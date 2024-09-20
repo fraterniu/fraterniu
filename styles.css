@@ -317,7 +317,7 @@ main {
       transform: translateY(0);
   }
   50% {
-      transform: translateY(-32px);
+      transform: translateY(24px);
   }
 }
 
