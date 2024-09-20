@@ -48,6 +48,7 @@ body {
   padding: 0;
   overflow: auto;
   overflow-x: hidden;
+  background-color: var(--fraterni-green);
 }
 
 /* End HTML Selector */
@@ -229,7 +230,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 80vh;
+  height: 75vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -402,7 +403,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 77vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
