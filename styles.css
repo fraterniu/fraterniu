@@ -48,7 +48,6 @@ body {
   padding: 0;
   overflow: auto;
   overflow-x: hidden;
-  background-color: var(--fraterni-green);
 }
 
 /* End HTML Selector */
@@ -230,7 +229,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 75vh;
+  height: 80vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -403,7 +402,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 77vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
@@ -466,7 +465,6 @@ main {
   color: #fff;
   margin-bottom: 20px;
   text-wrap: pretty;
-  text-wrap: balance;
 }
 
 .fraternity-content img{
@@ -486,7 +484,6 @@ main {
   padding: 0 16px;
   margin-bottom: 20px;
   text-wrap: pretty;
-  text-wrap: balance;
 }
 
 .fraternity-content p2:last-child{
@@ -547,17 +544,24 @@ main {
   color: var(--frat-grey);
   font-size: 1.6rem; /* Ajuste para mobile */
   text-wrap: pretty;
-  text-wrap: balance;
 }
 
+/* Sección de la imagen y botones */
+.principles-grid-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .principles-grid-display {
-  width: 100%; /* Ajuste para mobile */
+  width: 100%;
+  max-width: 280px; /* Ajuste para mobile */
   margin-bottom: 15px;
 }
 
 .principles-image-display img {
-  width: 75%;
+  width: 100%;
   border-radius: 8px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -568,8 +572,8 @@ main {
   color: var(--frat-grey);
   margin-top: 8px;
   font-weight: bold;
+  text-wrap: pretty;
   font-family: 'Norwester';
-  text-align: center;
 }
 
 /* Botones con íconos */
@@ -577,14 +581,6 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow-x: auto; /* Scroll horizontal */
-  scroll-behavior: smooth; /* Desplazamiento suave */
-  -ms-overflow-style: none;  /* Eliminar scrollbar en IE y Edge */
-  scrollbar-width: none;  /* Eliminar scrollbar en Firefox */
-}
-
-.principles-grid-buttons::-webkit-scrollbar {
-  display: none;  /* Eliminar scrollbar en Chrome, Safari y Opera */
 }
 
 .principles-grid-buttons ul {
@@ -619,39 +615,7 @@ main {
   transform: scale(1.2);
 }
 
-/* Indicadores de scroll (puntos) */
-.carousel-indicators {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  gap: 10px; /* Espaciado entre los puntos */
-  width: 100%; /* Asegura que los puntos ocupen el ancho completo del contenedor */
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #717171;
-}
-
-/* Hacemos el dot de la portada invisible */
-.dot.invisible {
-  visibility: hidden; /* No se mostrará el dot de la portada */
-}
-
-/* Asegurar que los puntos estén centrados */
-.carousel-indicators {
-  position: relative;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  left: -10px;
+/* Efecto hover para la imagen */
+.principles-image-display img:hover {
+  transform: scale(1.05);
 }
