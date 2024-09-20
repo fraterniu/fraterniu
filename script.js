@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayText = document.getElementById('displayText');
     const scrollContainer = document.querySelector(".principles-grid-buttons ul");
     const dots = document.querySelectorAll(".dot");
-  
+
     let activeButton = null; // Variable para rastrear el botón activo
     const defaultImages = { // Imágenes por defecto para la portada
         en: './assets/imgs/areaF-en.png',
@@ -24,24 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
         en: '_',  // Cambia el texto si es necesario
         es: '_'
     };
-  
+
     let currentSlide = 0;
     const totalSlides = buttons.length; // Total de botones
-  
+
     // Helper Functions
-  
+
     // Toggle the class for opening and closing the mobile menu
     function toggleClass(element, className, condition) {
         element.classList[condition ? 'add' : 'remove'](className);
     }
-  
+
     // Handles the mobile menu opening/closing
     function toggleMobileMenu() {
         const isOpen = menuToggle.checked;
         toggleClass(body, 'menu-open', isOpen);
         mobileMenu.style.bottom = isOpen ? '0' : '-100%';
     }
-  
+
     // Switch language (English/Spanish) and update content accordingly
     function switchLanguage(e) {
         e.preventDefault();
@@ -56,40 +56,40 @@ document.addEventListener('DOMContentLoaded', () => {
         elements.forEach(element => {
             element.innerHTML = element.getAttribute(`data-${newLang}`);
         });
-  
+
         // Update the document language attribute
         document.documentElement.lang = newLang;
-  
+
         // Cambiar la portada según el nuevo idioma
         if (!activeButton) {
             displayImage.src = defaultImages[newLang]; // Actualizar imagen de portada
             displayText.textContent = defaultText[newLang]; // Actualizar texto de portada
         }
     }
-  
+
     // Attach the language switch event
     if (languageToggle) {
         languageToggle.addEventListener('click', switchLanguage);
     }
-  
+
     // Función para cambiar de slide
     function changeSlide(index) {
         const button = buttons[index];
         const lang = document.documentElement.lang || "en";
         const newImg = button.getAttribute(`data-img-${lang}`);
         const newText = button.getAttribute(`data-text-${lang}`);
-  
+
         // Cambiar la imagen
         displayImage.src = newImg;
         displayText.innerHTML = newText; // innerHTML para soportar etiquetas HTML como <br>
-  
+
         // Actualizar los dots
         updateDots(index);
-  
+
         // Mantener el estado del botón activo
         activeButton = button;
     }
-  
+
     // Actualizar el estado de los dots
     function updateDots(index) {
         dots.forEach((dot, idx) => {
@@ -100,21 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-  
+
     // Detectar scroll y actualizar el slide en consecuencia
     function handleScroll() {
         const scrollLeft = scrollContainer.scrollLeft;
         const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
         const scrollFraction = scrollLeft / scrollWidth;
-  
+
         const newSlide = Math.round(scrollFraction * (totalSlides - 1));
-  
+
         if (newSlide !== currentSlide) {
             currentSlide = newSlide;
             changeSlide(newSlide);
         }
     }
-  
+
     // Evento para cambiar slide al presionar un botón
     buttons.forEach((button, index) => {
         button.addEventListener("click", () => {
@@ -123,10 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollContainer.scrollLeft = button.offsetLeft - scrollContainer.offsetLeft;
         });
     });
-  
+
     // Añadir evento de scroll
     scrollContainer.addEventListener("scroll", handleScroll);
-  
+
     // Inicializar el primer slide como portada
     function initializeFirstSlide() {
         const lang = document.documentElement.lang || "en";
