@@ -48,6 +48,7 @@ body {
   padding: 0;
   overflow: auto;
   overflow-x: hidden;
+  background-color: var(--fraterni-green);
 }
 
 /* End HTML Selector */
