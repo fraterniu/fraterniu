@@ -1,9 +1,10 @@
 /* Design Main Styles */
 :root {
   /*Colores*/
-  --fraterni-green: #133C18;
-  --fraterni-yellow: #D18807;
-  --frat-grey: #504C49;
+  --fraterni-green: #152517;
+  --fraterni-yellow: #c49102;
+  --frat-grey: #33353a;
+  
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
     
     /* Tamaños de fuente */
@@ -46,6 +47,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 /* End HTML Selector */
@@ -58,866 +60,597 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Nerko One", system-ui;
+  src: url('./assets/fonts/NerkoOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 /* End of Norwester Font *Dont touch! (It doesnt support the  <meta charset="UTF-8"> */
 
-/* 1. Header  */
+/* General Header and Menu Styles */
 
-.header {
-  top: 0;
-  left: 0;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-width: 320px;
-  height: 95px;
-  background-color: #133C18;
-  padding: 30px;
-  z-index: 1000;
-  border-bottom: 5px solid var(--fraterni-yellow);
-  /* Puedes ajustar el ancho y color del borde según tus preferencias */
-}
-
-
-
-.logo img {
-  width: auto;
-  height: 35px;
-}
-
-
-/* Menu Icon & Navbar Styles */
 #checkbox {
   display: none;
 }
 
-.toggle {
-  position: relative;
-  width: 40px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px; /* Set the height of the navbar */
+  background-color: #152517;
+  border-bottom: 5px solid var(--fraterni-yellow);
+  padding: 0 20px;
+  position: fixed;
+  top: 0; /* Stick it to the top */
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px; /* Logo size */
+}
+
+.mobile-menu-container--image {
   cursor: pointer;
-  margin: auto;
-  display: block;
-  height: calc(4px * 3 + 11px * 2);
 }
 
-.bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: calc(4px / 2);
-  background: #ffffff;
-  color: inherit;
-  opacity: 1;
-  transition: none 0.35s cubic-bezier(.5, -0.35, .35, 1.5) 0s;
-}
-
-/***** Collapse Animation *****/
-
-.bar--top {
-  bottom: calc(50% + 7px + 4px/ 2);
-  transition-property: bottom, margin, transform;
-  transition-delay: calc(0s + 0.35s), 0s, 0s;
-}
-
-.bar--middle {
-  top: calc(50% - 4px/ 2);
-  transition-property: top, opacity;
-  transition-duration: 0.35s, 0s;
-  transition-delay: calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
-}
-
-.bar--bottom {
-  top: calc(50% + 7px + 4px/ 2);
-  transition-property: top, transform;
-  transition-delay: 0s;
-}
-
-#checkbox:checked+.toggle .bar--top {
-  bottom: calc(50% - 11px - 4px);
-  margin-bottom: calc(11px + 4px/ 2);
-  transform: rotate(45deg);
-  transition-delay: calc(0s + 0.35s * .3), calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
-}
-
-#checkbox:checked+.toggle .bar--middle {
-  top: calc(50% + 11px);
-  opacity: 0;
-  transition-duration: 0.35s, 0s;
-  transition-delay: 0s, calc(0s + 0.35s);
-}
-
-#checkbox:checked+.toggle .bar--bottom {
-  top: calc(50% - 4px/ 2);
-  transform: rotate(-45deg);
-  transition-delay: calc(0s + 0.35s * 1.3), calc(0s + 0.35s * 1.3);
-}
-
-.menu-container {
-  display: none;
-}
-
-body.menu-open {
-  overflow: hidden;
-  /* Evita el desplazamiento del fondo cuando el menú está abierto */
-}
-
+/* Mobile Menu */
 .mobile-menu-container {
   position: fixed;
   bottom: -100%;
   left: 0;
   width: 100%;
-  height: 86%;
-  background-color: var(--fraterni-green);
-  margin-top: 64.67px;
+  height: calc(100% - 90px); /* Cover everything except the navbar height */
+  background: rgba(17, 37, 10, 0.6); /* 60% opacity blur background */
+  backdrop-filter: blur(12px); /* Blur effect */
   transition: bottom 0.4s ease-in-out;
-  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  padding-top: 32px;
+  padding-top: 50px; /* Padding from top */
+  z-index: 999; /* Ensure it is above everything */
 }
 
+/* Show Menu when Open */
+body.menu-open .mobile-menu-container {
+  bottom: 0;
+}
 
-.mobile-menu-container a {
-  display: block;
-  font-family: 'Norwester';
-  font-size: 1.8rem;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 16px;
-  text-align: center;
-  padding: 12px 16px;
-  background-color: var(--fraterni-yellow);
-  border-radius: 8px;
+/* Menu Items */
+ul.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 32px;
+}
 
+ul.menu li {
+  margin: 20px 0;
+}
+
+ul.menu li a {
+  font-size: 1.6rem;
   color: #fff;
   text-decoration: none;
 }
 
-.mobile-menu-container a:hover {
-  background-color: #fff;
+ul.menu li.navbar-title {
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
-.mobile-menu-container.overlay {
-  position: fixed;
+/* Language Icon and Text */
+.language-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+#currentLang {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+/* Mobile Menu Icon (Hamburger) */
+.toggle {
+  display: block;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  display: block;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar--top {
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  /* Fondo semitransparente */
-  z-index: 98;
-  display: none;
-  /* Oculta inicialmente el fondo */
 }
 
-
-/* End Menu Icon & Navbar Styles */
-
-.header-line-container {
-  display: flex;
-  flex-direction: column;
-  /* Aplicado para la línea amarilla */
-  align-items: center;
-  /* Centrado verticalmente en el contenedor principal */
-  margin-top: 80px;
+.bar--middle {
+  top: 9px;
 }
 
-
-.horizontal-line {
-  border: none;
-  border-top: 5px solid var(--fraterni-yellow);
-  width: 100%;
+.bar--bottom {
+  top: 18px;
 }
 
-/* End Header  */
+#checkbox:checked + .toggle .bar--top {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+#checkbox:checked + .toggle .bar--top {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
 
 /* 2. Start Main */
 main {
   margin-top: 80px;
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background: linear-gradient(0deg,#254027  0%,#152517 100%);
 }
 
-/* 2.1 Header Title Container  */
-.header--title-container {
+/* 2.1 Header Image Container */
+.header--portrait-container {
+  position: relative;
   width: 100%;
   min-width: 288px;
-  height: 700px;
+  height: 80vh;
+  margin-top: 80px;
   text-align: center;
   align-self: center;
+  background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
+  z-index: 1;
 }
 
-.first--cover-img img {
-  height: 300px;
-
-
-}
-
-.header--container {
+/* Contenedor de burbujas */
+.bubble-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  --color: #E1E1E1;
-  background-color: #F3F3F3;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
-    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
-  background-size: 55px 55px;
+  overflow: hidden;
+  z-index: 1; /* Colocamos las burbujas detrás del contenido */
+  pointer-events: none;
 }
 
-.header--title-container h1:first-of-type {
-  padding-top: 44px;
+/* Estilo de las burbujas */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  background-color: #1a1f24;
+  /* background-color: rgba(128, 132, 137, 0.25);  */
+  /*background-color: rgba(209, 136, 7, 0.25);  Color con opacidad del 25% */
+  border-radius: 50%;
+  opacity: 0;
+  animation: bubbleMove 10s infinite ease-in-out;
 }
 
-.header--title-container h1 {
-  font-size: var(--font-size-heading);
-  font-weight: 700;
-  line-height: 2.8rem;
-  margin: 0 24px;
-  color: var(--fraterni-yellow);
+/* Animación de movimiento y desvanecimiento de las burbujas */
+@keyframes bubbleMove {
+  0% {
+    transform: translateY(0) scale(0.25); /* Reducido tamaño al 25% */
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-300px) scale(0.7); /* Ajuste del tamaño y movimiento */
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    transform: translateY(-450px) scale(0.5);
+    opacity: 0.1; /* Fade out para evitar obstrucción del título */
+  }
+  100% {
+    transform: translateY(-600px) scale(0.4);
+    opacity: 0;
+  }
 }
 
-@media screen and (min-width: 425px) {
+.header--portrait-container .overlay, 
+.header--portrait-container .social-icons, .header--portrait-container .professional-info {
+  position: relative;
+  z-index: 2; /* Aseguramos que el texto y los íconos estén sobre las burbujas */
+}
 
-  .header--title-container h1 {
-    font-size: 2.6rem;
+
+
+.header--portrait-container h1 {
+  font-family: 'Norwester', sans-serif;
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 7rem;
+  padding-top: 100px;
+  padding-bottom: 8px;
+  color: #ffffff;
+  z-index: 10;
+}
+
+/* 2.1.2 Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center; /* Centra los iconos verticalmente */
+  height: 55px;
+  width: 100%; /* Asegúrate de que el contenedor ocupe el 100% del ancho disponible */
+  margin: 0 auto; /* Centra el contenedor dentro de su sección padre */
+}
+
+.social-icons .social-link1,
+.social-icons .social-link2,
+.social-icons .social-link3,
+.social-icons .social-link4, 
+.social-icons .social-link5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Asegúrate de que los enlaces tengan suficiente espacio */
+  height: 50px; /* Ajusta la altura para que sean círculos perfectos */
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50%; /* Haz que los iconos sean completamente redondos */
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  z-index: 3;
+}
+
+.social-icon img {
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  padding: 0.25rem;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.social-icons .social-link1:hover {
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link2:hover {
+  background-color:var(--fraterni-yellow);
+  /* background-color: #808489; */
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link3:hover {
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link4:hover {
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link5:hover {
+  background-color: var(--fraterni-yellow);
+  /* background-color: #808489; */
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+      transform: scale(1.4);
+  }
+
+  60% {
+      transform: scale(0.8);
+  }
+
+  80% {
+      transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
   }
 }
 
 
-.header--title-container p {
-  margin: 30px 25px 25px 25px;
-  font-size: var(--font-size-body);
-  font-weight: 500;
-  line-height: 2.7rem;
-  color: var(--frat-grey);
-}
-
-.header--title-container .header--button {
+.header--portrait-container .header--button {
   position: absolute;
-  left: calc(50% - 115px);
-  top: 350px;
-  display: block;
-  margin-top: 405px;
-  padding: 15px;
-  width: 229px;
-  height: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 77vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  padding: 16px 24px;
   background-color: var(--fraterni-yellow);
-
-  /* Sombra */
-  box-shadow: 0px 5px 0 #A66C05;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
   color: #fff;
+  font-family: 'Norwester';
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.07rem;
+  z-index: 3; /* Asegura que el botón esté por encima de todo */
 }
 
-.header--button span {
+.header--button span{
   display: inline-block;
-  width: 13px;
+  width: 12px;
   height: 8px;
   margin-left: 10px;
   background-image: url('./assets/icons/whitearrow.svg');
 }
 
-.header--button:active {
-  box-shadow: none;
-  transform: translateY(5px);
-}
+/* 3.1 Fraternity? Container -
+3.1.1 Why a Fraternity? Container  */
 
-
-/* 2.2. Main Areas Section */
-.main-service-detail {
-  position: inherit;
-  width: 100%;
-  min-width: 320px;
-  height: auto;
-  padding: 20px 10px;
-  background-color: var(--fraterni-green);
-}
-
-.service-detail--title {
-  width: 90%;
-  min-width: 288px;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 50px;
+/* Mobile First Styling */
+.fraternity-section {
+  background-color: #152517;
+  color: #000; /* Texto blanco para contraste */
+  padding: 20px;
   text-align: center;
 }
 
-.service-detail--description{
-  width: 90%;
-  min-width: 288px;
+.fraternity-image img {
+  width: 100%; /* Imagen ocupa todo el ancho */
   height: auto;
-  margin: 0 auto;
+  border-radius: 8px; /* Esquinas redondeadas para un toque moderno */
+  mask-image: linear-gradient(
+    black 90%,
+    transparent
+  );
+}
+
+.fraternity-content {
   margin-top: 20px;
-  text-align: center;
-
+  color: #333333;
 }
 
-.service-detail--description p{
-  font-size: var(--font-size-body);
-  font-weight: 500;
-  line-height: 1.8rem;
+.fraternity-content h2 {
+  font-size: 2.4rem;
   color: #fff;
-}
-
-.service-detail--description h3{
-  margin-bottom: 20px;
-  font-size: 2rem;
-  line-height: 3.2rem;
-  color: #fff;
-
-}
-
-.service-detail--title h2 {
-   font-family: 'Norwester';
-  margin-bottom: 20px;
-  font-size: 3.5rem;
-  font-weight:500;
-  line-height: 3.8rem;
-  color: #fff;
-}
-
-.service-detail--title p {
-  margin-bottom: 20px;
-  font-size: var(--font-size-body);
-  font-weight: lighter;
-  line-height: 1.8rem;
-  color: #fff;
-}
-
-.service-detail--card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 0%;
-  min-width: 250px;
-
-  min-height: 150px;
-  margin: 15px auto;
-  padding: 15px;
-  /*background-color:var(--fraterni-yellow);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);*/
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 32px;
-}
-
-
-.service-detail--card .icon-card {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
   margin-bottom: 10px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: 'Nerko One';
 }
 
-.mind {
-  background-image: url("./assets/icons/Mente.svg");
+.fraternity-content strong{
+  color: var(--fraterni-yellow);
+  font-weight: 800;
 }
 
-.fbody {
-  background-image: url("./assets/icons/Cuerpo.svg")
-}
-
-.link {
-  background-image: url("./assets/icons/Recursos.svg");
-}
-
-.money {
-  background-image: url("./assets/icons/Valor.svg");
-}
-
-.place {
-  background-image: url("./assets/icons/Entorno.svg");
-}
-
-.service--card-title {
-  font-family: 'Norwester';
-  margin-bottom: 8px;
-  font-size: var(--font-size-subheading);
-  line-height: 1.8rem;
+.fraternity-content p {
+  padding: 0px 8px;
+  font-size: 1.6rem;
   color: #fff;
+  margin-bottom: 20px;
+  text-wrap: pretty;
+  text-wrap: balance;
 }
 
-.service--card-body {
-  padding-top: 16px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2rem;
-  color: #fff;
-  text-align: center;
-}
-
-/* End Main Areas Section */
-
-
-/* 2.3 Main Pilars Section */
-.pilars-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  min-width: 320px;
-  text-align: center;
-  background: var(--fraterni-green)
-}
-
-.pilars-container img {
-  width: 300px;
+.fraternity-content img{
+  margin: -50px 0px;
+  width: 320px;
   height: 200px;
-  margin-top: -50px;
-  margin-bottom: -70px;
-  margin-top: -50px;
-  margin-bottom: -70px;
 }
 
-.service-pilars--title p {
-  margin: 0 40px;
-  margin-top: -30px;
-  font-size: var(--font-size-body);
-  font-weight: bold;
-  line-height: 1.8rem;
-  color: #FFF;
-}
-
-
-.service-pilars--title h2 {
+.fraternity-content h2:nth-of-type(2){
   font-family: 'Norwester';
-  margin-top: 50px;
-  margin-bottom: 15px;
-  font-size: 2.8rem;
-  line-height: 3.2rem;
-  color: #fff;
 }
 
-.scroll-indicator {
-  margin-top: -20px;
-  position: absolute;
-  left: calc(50% - 50px);
-  transform: translateY(-50%);
-  color: #fff;
-  cursor: pointer;
-}
-
-.banner {
-  position: absolute;
-  width: 140px;
-  height: 31px;
-  padding: 6px;
-  top: -15px;
-  left: calc(50% - 70px);
+.fraternity-content p2 {
   font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  background-color: var(--fraterni-yellow);
-  border-radius: 8px;
+  font-weight: 700;
   color: #fff;
-}
-
-
-.pilars-container--slider {
-  margin-top: -20px;
+  padding: 0 16px;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;    
-  height: 400px;
+  text-wrap: pretty;
+  text-wrap: balance;
 }
 
-
-.pilars-container--card {
-  position: relative;
-  scroll-snap-align: center;
-  width: 70%;
-  min-width: 190px;
-  max-width: 300px;
-  height: 300px;
-  margin: 50px 5px 0;
-  padding: 0 15px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
-
+.fraternity-content p2:last-child{
+  padding-top: 8px;
 }
 
-.pilars-card--title {
-  padding-top: 30px;
-  font-size: var(--font-size-subheading);
-  line-height: 1.8rem;
-  color: #000;
-}
-
-.pilars-card-info {
-  padding-top: 30px;
-  font-size: var(--font-size-body);
-  font-weight: 500;
-  color: var(--frat-grey);
-}
-
-.container-3d {
-  position: absolute;
-  min-width: 190px;
-  max-width: 100px;
-  height: 100px;
-  margin-left: calc(50% - 95px);
-  border: 5px solid transparent;
-  perspective: 140px;
-}
-
-
-
-.titulos {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px; 
-}
-
-.global {
-  text-align: center;
-  color: #A2A2A2;
-}
-
-.text-Vuca {
-  text-align: center;
-  font-size: var(--font-size-body);
-}
-
-.pilars-container .slider-prev, 
-.pilars-container .slider-next {
-  display: none; /* Oculta los íconos por defecto */
-  position: absolute; /* Cambiado a absolute para limitarlos al contenedor */
-  top: 50%; /* Centra los íconos verticalmente */
-  transform: translateY(-150%); /* Asegura centrado vertical perfecto */
-  z-index: 10; /* Asegura que los íconos estén sobre otros elementos */
-  cursor: pointer; /* Cambia el cursor para indicar que son clickeables */
-  width: 25px; /* Ajusta el tamaño de los íconos */
-  height: 25px; /* Ajusta el tamaño de los íconos */
-}
-
-.pilars-container .slider-prev {
-  left: 10px; /* Posiciona el ícono "Anterior" a la izquierda */
-  transform: translateY(-50%); /* Ajusta la posición vertical */
-}
-
-.pilars-container .slider-next {
-  right: 10px; /* Posiciona el ícono "Siguiente" a la derecha */
-  transform: translateY(-50%); /* Ajusta la posición vertical */
-}
-
-@media (max-width: 750px) {
-  .pilars-container .slider-prev, 
-  .pilars-container .slider-next {
-    display: block; /* Solo muestra los íconos en pantallas pequeñas */
-  }
-}
-
-/*PILARS MEDIA QUERIES*/
-@media (max-width: 1024px) {
-  .pilars-container--slider {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .pilars-container--slider {
-    display: block; /* Cambia el diseño para mostrar un elemento a la vez */
-    overflow: hidden; /* Oculta los elementos que desborden el contenedor */
-  }
-
-  .pilars-container--card {
-    width: 100%; /* Asegura que cada tarjeta ocupe todo el ancho disponible */
-    display: none; /* Oculta todas las tarjetas inicialmente */
-
-  }
-
-  .slider-prev, .slider-next {
-    display: block; /* Solo muestra los íconos en pantallas pequeñas */
-  }
-}
-/*END PILARS MEDIA QUERIES*/
-
-/* members section mobile */
-
-.members-section--container {
-  position: relative;
+.mission-vision {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 850px;
-  border-top: 20px solid var(--fraterni-yellow);
+  gap: 20px;
 }
 
-.tisa-image {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 350px;
-}
-
-.responsive-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #acacac;
-  font-size: 8px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-
-.preparing-people {
-  position: relative;
+.mission, .vision {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  border-top: 20px solid var(--fraterni-yellow);
+  gap: 10px;
+  background-color:#1f3521;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.members-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
- 
-}
-
-.U-Logo{
+.mission img, .vision img {
+  width: 40px;
   height: 40px;
-  padding-bottom: 8px;
-  
 }
 
-.card-container {
-  position: relative;
-  margin: 9px;
+/* Opcional: sombra suave para efecto flotante */
+.mission, .vision {
+  transition: box-shadow 0.3s ease-in-out;
 }
 
+.mission:hover, .vision:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
-.card-fraternistas {
-  width: 250px;
-  margin: 20px 0;
+/* Estilos actualizados para mobile */
+
+/* Sección principal de los principios */
+.fraternity-principles {
+  background-color: #e4e6e9;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: var(--fraterni-green);
-  color: #fff;
-  padding-bottom: 46px;
-  padding-top: 30px;
-  position: relative;
-}
-
-.card-fraternistas h2{
-  padding-bottom: 8px;
-  font-size: var(--font-size-body);
-}
-
-.card-fraternistas p {
-  font-size: 1.4rem;
-}
-
-.card-partidarios {
-  width: 250px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #DFDFDF;
-  color: #333;
-  padding-top: 30px;
-  padding-bottom: 46px;
-  margin: 20px 0;
-  position: relative;
-}
-
-.card-partidarios h2{
-  padding-bottom: 8px;
-  font-size: var(--font-size-body);
-}
-
-.card-partidarios p {
-  font-size: 1.4rem;
-}
-.rectangle-gray {
-  position: absolute;
-  bottom: -29px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 20px;
-  background-color: #888888;
-}
-
-.rectangle-orange {
-  position: absolute;
-  bottom: -29px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 245px;
-  height: 20px;
-  background-color: #C78207;
-}
-
-/* End Members Section Mobile */
-
-/*7. Footer*/
-
-footer {
-  position: static;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 20px;
-  background: var(--fraterni-green);
-  border-top: 5px solid var(--fraterni-yellow);
+  text-align: center;
 }
 
 
-footer section {
-  padding: 0 50px;
+.fraternity-principles h1 {
+  color: var(--frat-grey);
+  font-weight: bold;
+  font-size: 4rem; /* Ajuste para mobile */
+  font-family: 'Norwester';
+  margin-bottom: 20px;
 }
 
-section.top {
-  padding-top: 25px;
+.fraternity-principles p {
+  padding: 0px 8px;
+  margin-bottom: 20px;
+  color: var(--frat-grey);
+  font-size: 1.6rem; /* Ajuste para mobile */
+  text-wrap: pretty;
+  text-wrap: balance;
+}
+
+
+.principles-grid-display {
+  width: 100%; /* Ajuste para mobile */
   margin-bottom: 15px;
 }
 
-section.top img {
-  display: block;
-  height: 30px;
-  margin: 0 0 30px;
+.principles-image-display img {
+  width: 75%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-section.top ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-section.top ul li a {
-  display: block;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-section.top h3 {
-  color: #c7c7c7;
-  font-weight: 400;
-  font-size: var(--font-size-body);
-  letter-spacing: 1px;
-}
-
-section.bottom {
-  padding-top: 5px;
-  border-top: 2px solid #d187072c;
-  color: #c7c7c7;
-  font-size: var(--font-size-body);
-}
-
-.redicon span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin-right: 7px;
-  background-position: center;
-  vertical-align: middle;
-}
-
-.facebook {
-  background-image: url('./assets/icons/Facebook.svg');
-  background-repeat: no-repeat;
-}
-
-.instagram {
-  background-image: url('./assets/icons/Vector.svg');
-  background-repeat: no-repeat;
-}
-
-.tiktok {
-  background-image: url('./assets/icons/TikTok.svg');
-  background-repeat: no-repeat;
-}
-
-.linkedin {
-  background-image: url('./assets/icons/LinkedIn.svg');
-  background-repeat: no-repeat;
-}
-
-.youtube {
-  background-image: url('./assets/icons/Youtube.svg');
-  background-repeat: no-repeat;
-}
-
-.envelope {
-  background-image: url('./assets/icons/envelope.svg');
-  background-repeat: no-repeat;
-}
-
-.conticon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
-  background-position: center;
-  vertical-align: middle;
-}
-
-.contactoFooter {
-  color: #ffffff;
-  padding-top: 10px;
-  padding-bottom: 15px;
+.principles-image-display figcaption {
+  font-size: 4rem; /* Ajuste para mobile */
+  color: var(--frat-grey);
+  margin-top: 8px;
+  font-weight: bold;
+  font-family: 'Norwester';
   text-align: center;
 }
 
+/* Botones con íconos */
+.principles-grid-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow-x: auto; /* Scroll horizontal */
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  -ms-overflow-style: none;  /* Eliminar scrollbar en IE y Edge */
+  scrollbar-width: none;  /* Eliminar scrollbar en Firefox */
+}
 
-/*End FOOTER*/
+.principles-grid-buttons::-webkit-scrollbar {
+  display: none;  /* Eliminar scrollbar en Chrome, Safari y Opera */
+}
 
-/* Was Desactive but I like it for mobile */
+.principles-grid-buttons ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Espaciado ajustado */
+  padding: 0;
+}
 
-/* .floor {
-  position: absolute;
-  min-width: 190px;
-  max-width: 300px;
-  height: 110px;
-  background: rgba(209, 136, 7, 0.90);
-  border: 3px solid var(--fraterni-yellow);
-  border-radius: 4px;
-  left: calc(50% - 95px );
-  transform-style: preserve-3d;
-  transform: rotateX(45deg);
-  margin-top: 200px;
-} */
-/* End Main Pilars Section */
+.principles-grid-buttons li {
+  list-style: none;
+}
+
+.principles-grid-buttons button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.principles-grid-buttons img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.principles-grid-buttons button:hover img,
+.principles-grid-buttons button:focus img {
+  transform: scale(1.2);
+}
+
+/* Indicadores de scroll (puntos) */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px; /* Espaciado entre los puntos */
+  width: 100%; /* Asegura que los puntos ocupen el ancho completo del contenedor */
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Hacemos el dot de la portada invisible */
+.dot.invisible {
+  visibility: hidden; /* No se mostrará el dot de la portada */
+}
+
+/* Asegurar que los puntos estén centrados */
+.carousel-indicators {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  left: -10px;
+}
