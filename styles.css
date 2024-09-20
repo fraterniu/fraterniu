@@ -230,7 +230,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 70vh;
+  height: 65vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -301,7 +301,7 @@ main {
   font-size: 5.6rem;
   font-weight: 500;
   line-height: 7rem;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 8px;
   color: #ffffff;
   z-index: 10;
@@ -403,7 +403,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 67vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 62vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
@@ -437,6 +437,7 @@ main {
   width: 100%; /* Imagen ocupa todo el ancho */
   height: auto;
   border-radius: 8px; /* Esquinas redondeadas para un toque moderno */
+  margin-top: 16px;
   mask-image: linear-gradient(
     black 90%,
     transparent
