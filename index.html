@@ -12,9 +12,9 @@
             const iconLink = document.getElementById('theme-icon');
             // Detectar si el tema del sistema es oscuro
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema oscuro
+              iconLink.href = './assets/icons/uLight.svg'; // Icono para tema oscuro
             } else {
-              iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema claro
+              iconLink.href = './assets/icons/uDark.svg'; // Icono para tema claro
             }
         }
     
@@ -186,6 +186,7 @@
             data-es=" Analiza cómo podrías mejorar tu vida en cada área:">Analyze how you might improve your life in each area:</p>
         </div>
 
+<<<<<<< HEAD
         <div class="principles-grid-display">
             <figure class="principles-image-display">
                 <!-- Imagen inicial que es la portada (Area F) -->
@@ -239,6 +240,40 @@
                     </button>
                 </li>
             </ul>
+=======
+        <div class="principles-grid-section">
+            <div class="principles-grid-display">
+                <figure class="principles-image-display">
+                    <img id="principlesdisplayImage" data-img-en="./assets/imgs/areaF-en.png" data-img-es="./assets/imgs/areaF-es.png" src="./assets/imgs/areaF-en.png" alt="Area Preview">
+                    <figcaption id="displayText" class="translatable" data-en="__________"
+                    data-es="__________">__________</figcaption>
+                </figure>
+            </div>
+        
+            <div class="principles-grid-buttons">
+                    <ul>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaM-en.png" data-img-es="./assets/imgs/areaM-es.png" data-text-en="MIND" data-text-es="MENTE">
+                                <img src="./assets/icons/mindGrey.svg" alt="Mind Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaB-en.png" data-img-es="./assets/imgs/areaB-es.png" data-text-en="BODY" data-text-es="CUERPO">
+                                <img src="./assets/icons/bodyGrey.svg" alt="Body Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li>
+                            <button data-img-en="./assets/imgs/areaR-en.png" data-img-es="./assets/imgs/areaR-es.png" data-text-en="RESOURCES" data-text-es="RECURSOS">
+                                <img src="./assets/icons/resourcesGrey.svg" alt="Resources Icon"> <!-- Ícono fijo -->
+                            </button>
+                        </li>
+                        <li><button data-img-en="./assets/imgs/areaV-en.png" data-img-es="./assets/imgs/areaV-es.png" data-text-en="VALUE" data-text-es="VALOR">
+                        <img src="./assets/icons/valorGrey.svg" alt="Value"></button></li>
+                        <li><button data-img-en="./assets/imgs/areaE-en.png" data-img-es="./assets/imgs/areaE-es.png" data-text-en="ENVIRONMENT" data-text-es="ENTORNO">
+                        <img src="./assets/icons/enviromentGrey.svg" alt="Environment"></button></li>
+                    </ul>
+            </div>
+>>>>>>> parent of 6e932c7 (beforeScroll)
         </div>
     </section>
     <script src="./js/fraterni.js"></script>
