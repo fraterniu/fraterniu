@@ -469,31 +469,24 @@ main {
 .fraternity-section strong {
   color: var(--fraterni-yellow);
   position: relative;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transición suave */
+  animation: highlight 5s ease-in-out infinite; /* Añadir animación */
 }
 
-.fraternity-section strong::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: 3px;
-  background-color: var(--fraterni-yellow);
-  transform: scaleX(0); /* Inicia sin subrayado */
-  transition: transform 0.3s ease-in-out; /* Transición suave */
-  transform-origin: left;
+@keyframes highlight {
+  0% {
+    color: var(--fraterni-yellow); /* Comienza en color amarillo */
+  }
+  50% {
+    color: #ffffff; /* Se resalta cambiando el color a blanco */
+    background-color: var(--fraterni-yellow); /* Fondo amarillo */
+    padding: 6px;
+    border-radius: 8px;
+  }
+  100% {
+    color: var(--fraterni-yellow); /* Vuelve al color original */
+    background-color: transparent; /* Fondo transparente */
+  }
 }
-
-.fraternity-section strong:hover {
-  color: #ffffff; /* Cambia el color al pasar el mouse */
-  background-color: var(--fraterni-yellow); /* Fondo amarillo */
-}
-
-.fraternity-section strong:hover::before {
-  transform: scaleX(1); /* Efecto subrayado expandiéndose */
-}
-
 
 .fraternity-image img {
   width: 100%; /* Imagen ocupa todo el ancho */
