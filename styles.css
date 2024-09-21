@@ -513,6 +513,7 @@ main {
   font-size: 16px;
   border-radius: 8px;
   background-color: #345427;
+  color: #ffffff;
 }
 
 .vuca-box {
@@ -523,6 +524,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .vuca-cards-container {
@@ -539,7 +541,7 @@ main {
   padding: 10px;
   margin: 5px;
   text-align: center;
-  width: 20%;
+  width: 25%;
   cursor: pointer;
   transition: transform 0.2s ease;
 }

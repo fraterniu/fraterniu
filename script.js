@@ -173,11 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
 let selectedWords = [];
 
 // Selecciona todas las tarjetas (cards) que contienen las palabras
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.vuca-card');
 
 // Función para actualizar la caja de selección
 function updateSelectionBox() {
-    const selectionBox = document.getElementById('selection-box');
+    const selectionBox = document.getElementById('selection-vuca-box');
     selectionBox.innerHTML = selectedWords.join(', ');  // Muestra las palabras seleccionadas
 }
 
