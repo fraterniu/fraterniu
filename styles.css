@@ -477,7 +477,7 @@ main {
     color: var(--fraterni-yellow); /* Comienza en color amarillo */
   }
   50% {
-    color: #ffffff; /* Se resalta cambiando el color a blanco */
+    color: var(--frat-grey); /* Se resalta cambiando el color a blanco */
     background-color: var(--fraterni-yellow); /* Fondo amarillo */
     padding: 6px;
     border-radius: 8px;
