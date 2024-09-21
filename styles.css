@@ -230,7 +230,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 65vh;
+  height: 75vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -304,6 +304,16 @@ main {
   padding-top: 80px;
   padding-bottom: 8px;
   color: #ffffff;
+  z-index: 10;
+}
+
+.header--portrait-container h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  padding: 0 56px 8px  56px;
+  color: #ffffff;
+  text-wrap: balance;
   z-index: 10;
 }
 
@@ -417,7 +427,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 62vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
@@ -447,11 +457,48 @@ main {
   text-align: center;
 }
 
+.fraternity-section h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.8rem;
+  padding: 24px 16px 8px 26px;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+.fraternity-section strong {
+  color: var(--fraterni-yellow);
+  position: relative;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+.fraternity-section strong::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 3px;
+  background-color: var(--fraterni-yellow);
+  transform: scaleX(0); /* Inicia sin subrayado */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+  transform-origin: left;
+}
+
+.fraternity-section strong:hover {
+  color: #ffffff; /* Cambia el color al pasar el mouse */
+  background-color: var(--fraterni-yellow); /* Fondo amarillo */
+}
+
+.fraternity-section strong:hover::before {
+  transform: scaleX(1); /* Efecto subrayado expandiéndose */
+}
+
+
 .fraternity-image img {
   width: 100%; /* Imagen ocupa todo el ancho */
   height: auto;
   border-radius: 8px; /* Esquinas redondeadas para un toque moderno */
-  margin-top: 16px;
   mask-image: linear-gradient(
     black 90%,
     transparent
@@ -641,6 +688,19 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.principles-table {
+  margin-top: 24px;
+  width: 60%; /* Ajusta el ancho de la tabla */
+  border-collapse: collapse; /* Elimina espacios entre celdas */
+}
+
+.principles-table th, 
+.principles-table td {
+  border: none; 
+  padding: 10px; /* Agrega espacio dentro de las celdas */
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
 footer {
