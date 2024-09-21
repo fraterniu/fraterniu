@@ -498,7 +498,7 @@ main {
 
 .fraternity-content h2 {
   font-family: "Nerko One";
-  font-size: 2.4rem;
+  font-size: 1.4rem;
   color: #fff;
   margin-bottom: 10px;
   padding: 0 16px 8px 16px;
@@ -580,13 +580,13 @@ main {
 }
 
 .fraternity-content img{
-  margin: -50px 0px;
   width: 320px;
   height: 200px;
 }
 
 .fraternity-content h2:nth-of-type(2){
   font-family: 'Norwester';
+  font-size: 3.2rem;
 }
 
 .fraternity-content p2 {
