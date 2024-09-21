@@ -466,7 +466,7 @@ main {
   text-wrap: balance;
 }
 
-.fraternity-section strong {
+.fraternity-image-cover strong {
   color: var(--fraterni-yellow);
   position: relative;
   animation: highlight 5s ease-in-out infinite; /* Añadir animación */
@@ -488,7 +488,7 @@ main {
   }
 }
 
-.fraternity-image img {
+.fraternity-image-cover img {
   width: 100%; /* Imagen ocupa todo el ancho */
   height: auto;
   border-radius: 8px; /* Esquinas redondeadas para un toque moderno */
@@ -507,7 +507,8 @@ main {
   font-size: 2.4rem;
   color: #fff;
   margin-bottom: 10px;
-  font-family: 'Nerko One';
+  padding: 0 16px 8px 16px;
+  font-weight: bold;
 }
 
 .fraternity-content strong{
@@ -516,7 +517,7 @@ main {
 }
 
 .fraternity-content p {
-  padding: 0px 8px;
+  padding: 0px 16px;
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 20px;
