@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--END CSS STYLES & Media Queries   -->
     <script src="./script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -134,7 +135,7 @@
 
     <section class="fraternity-section">
         <div class="fraternity-image-cover">
-            <h1 class="translatable" data-en="Do you know about <strong>VUCA?</strong> <br> Learn it and Control it with us" data-es="¿Le sabes al <strong>VICA?</strong> <br> Apréndelo y Dominalo con nosotros">Do you know about <strong>VUCA?</strong> <br> Learn it and Control it with us</h1>
+            <h1 class="translatable" data-en="DO YOU KNOW ABOUT <strong>VUCA?</strong> <br> LEARN IT AND CONTROL IT WITH US" data-es="¿LE SABES AL <strong>VICA?</strong> <br> APRÉNDELO Y DOMINALO CON NOSOTROS">DO YOU KNOW ABOUT <strong>VUCA?</strong> <br> LEARN IT AND CONTROL IT WITH US</h1>
             <picture>
                 <source srcset="./assets/imgs/fraterniStudents-small.png" media="(max-width: 600px)">
                 <source srcset="./assets/imgs/fraterniStudents.png" media="(min-width: 601px)">
@@ -144,12 +145,20 @@
         <section class="fraternity-content">
             <h2 class="translatable" data-en="WHAT DO YOU KNOW ABOUT A FRATERNITY?"
             data-es="¿QUÉ SABES DE LAS FRATERNIDADES?">WHAT DO YOU KNOW ABOUT A FRATERNITY?</h2>
-                <p class="translatable" data-en="A fraternity is a community of shared beliefs, focused on mutual growth." data-es="Una fraternidad es una comunidad de creencias compartidas, enfocada en el crecimiento mutuo.">A fraternity is a community of shared beliefs, focused on mutual growth.</p>
+            
+            <div class="vuca-box" id="selection-vuca-box"></div>
 
-                <p class="translatable" data-en="Fraternities emphasize support, development, and leadership, creating lasting friendships built on trust and respect." data-es="Las fraternidades se centran en el apoyo, desarrollo y liderazgo, creando amistades duraderas basadas en la confianza y el respeto.">Fraternities emphasize support, development, and leadership, creating lasting friendships built on trust and respect.</p>
-
-                <p class="translatable" data-en="Fraternities cultivate skills beyond the classroom, preparing members to contribute to their communities and others' well-being." data-es="Las fraternidades fomentan habilidades más allá del aula, preparando a los miembros para contribuir a sus comunidades y al bienestar de los demás.">Fraternities cultivate skills beyond the classroom, preparing members to contribute to their communities and others' well-being.</p>
-
+            <div class="vuca-cards-container">
+                <div class="vuca-card" data-en="Volatility" data-es="Volatilidad">Volatility</div>
+                <div class="vuca-card" data-en="Uncertainty" data-es="Incertidumbre">Uncertainty</div>
+                <div class="vuca-card" data-en="Complexity" data-es="Complejidad">Complexity</div>
+                <div class="vuca-card" data-en="Ambiguity" data-es="Ambigüedad">Ambiguity</div>
+                <div class="vuca-card" data-en="Certainty" data-es="Certeza">Certainty</div>
+                <div class="vuca-card" data-en="Clarity" data-es="Claridad">Clarity</div>
+                <div class="vuca-card" data-en="Simplicity" data-es="Simplicidad">Simplicity</div>
+                <div class="vuca-card" data-en="Buka" data-es="Buka">Buka</div>
+            </div>
+            
                 <img src="./assets/icons/separetor.svg" alt="streak">
 
                 <h2 class="translatable" data-en="FRATERNIU OVERVIEW" data-es="SOBRE FRATERNIU">FRATERNIU OVERVIEW</h2>

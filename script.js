@@ -166,4 +166,65 @@ document.addEventListener('DOMContentLoaded', () => {
     bubbleContainer.classList.add('bubble-container');
     bubbleSection.appendChild(bubbleContainer);
     setInterval(createBubble, Math.random() * 2000 + 3000); // Create bubbles at random intervals between 3s and 5s
+
+    // NUEVA PARTE DEL CODIGO
+
+    // Arreglo para almacenar las palabras seleccionadas
+let selectedWords = [];
+
+// Selecciona todas las tarjetas (cards) que contienen las palabras
+const cards = document.querySelectorAll('.card');
+
+// Función para actualizar la caja de selección
+function updateSelectionBox() {
+    const selectionBox = document.getElementById('selection-box');
+    selectionBox.innerHTML = selectedWords.join(', ');  // Muestra las palabras seleccionadas
+}
+
+// Función para validar la selección de palabras
+function validateSelection() {
+    // Lanza el confeti cuando se validan las palabras
+    lanzarConfeti();
+    
+    // Aquí puedes agregar la lógica de validación según las palabras seleccionadas
+    console.log('Palabras seleccionadas: ', selectedWords);
+    
+    // Restablece la selección de palabras después de la validación
+    selectedWords = [];
+    updateSelectionBox();  // Limpia la caja de selección
+}
+
+// Función para lanzar confeti desde la parte inferior central
+function lanzarConfeti() {
+    confetti({
+        particleCount: 100,  // Número de partículas
+        angle: 90,           // Ángulo de salida (90 para que vaya hacia arriba)
+        spread: 70,          // Dispersión hacia los lados
+        origin: { 
+            x: 0.5,          // Centro en el eje X (parte media de la pantalla)
+            y: 1             // Parte inferior de la pantalla
+        }
+    });
+}
+
+// Manejar los eventos para seleccionar las cartas
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        const word = card.getAttribute(`data-${currentLang}`);  // Obtiene la palabra según el idioma actual
+
+        // Verifica si la palabra ya ha sido seleccionada y si no se ha alcanzado el límite de 4 palabras
+        if (!selectedWords.includes(word) && selectedWords.length < 4) {
+            selectedWords.push(word);  // Agrega la palabra seleccionada
+            updateSelectionBox();      // Actualiza la caja de selección
+        }
+
+        // Si se seleccionan 4 palabras, se valida la selección y se lanza el confeti
+        if (selectedWords.length === 4) {
+            validateSelection();
+        }
+    });
+});
+
   });
+
+
