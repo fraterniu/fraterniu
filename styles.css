@@ -458,10 +458,10 @@ main {
 }
 
 .fraternity-section h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 2.8rem;
-  padding: 24px 16px 8px 26px;
+  padding: 24px 16px 8px 16px;
   color: #ffffff;
   text-wrap: balance;
 }
