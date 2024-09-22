@@ -512,7 +512,7 @@ main {
   margin-bottom: 20px;  /* Espacio entre la caja y las palabras */
   font-size: 16px;
   border-radius: 8px;
-  background-color: #345427;
+  background-color: #1f3521;
   color: #ffffff;
 }
 
@@ -818,7 +818,7 @@ section.bottom {
 }
 
 .facebook {
-  background-image: url('./assets/icons/facebook.svg');
+  background-image: url('./assets/icons/face.svg');
   background-repeat: no-repeat;
 }
 
