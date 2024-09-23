@@ -500,7 +500,6 @@ main {
   font-family: "Nerko One";
   font-size: 1.4rem;
   color: #fff;
-  margin-bottom: 10px;
   padding: 0 16px 8px 16px;
   font-weight: bold;
   
@@ -568,17 +567,20 @@ main {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.fraternity-content strong{
+
+
+.fraternity-content p2 strong{
   color: var(--fraterni-yellow);
   font-weight: 800;
 }
 
 .fraternity-content p {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: #fff;
-  margin-bottom: 8px;
-  text-wrap: balance;
+  margin: 16px 0;
+  padding: 0 24px;
 }
+
 
 .fraternity-content img{
   width: 320px;
@@ -590,23 +592,17 @@ main {
   font-size: 3.2rem;
 }
 
-.fraternity-content p2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fff;
-  padding: 0 16px;
-  margin-bottom: 20px;
-  text-wrap: balance;
-}
 
 .fraternity-content p2:last-child{
   padding-top: 8px;
 }
 
 .mission-vision {
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 0 32px;
 }
 
 .mission, .vision {
@@ -620,8 +616,8 @@ main {
 }
 
 .mission img, .vision img {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Opcional: sombra suave para efecto flotante */
