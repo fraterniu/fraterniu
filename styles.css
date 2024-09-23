@@ -500,7 +500,7 @@ main {
   font-family: "Nerko One";
   font-size: 1.4rem;
   color: #fff;
-  padding: 0 16px 8px 16px;
+  padding: 0 16px;
   font-weight: bold;
   
 }
@@ -567,11 +567,19 @@ main {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.fraternity-content img{
+  width: 320px;
+  height: 200px;
+}
 
+.fraternity-content h2:nth-of-type(2){
+  font-family: 'Norwester';
+  font-size: 3.2rem;
+}
 
-.fraternity-content p2 strong{
-  color: var(--fraterni-yellow);
-  font-weight: 800;
+.fraternity-content p:nth-of-type(2){
+  font-family: "Nerko One";
+  font-size: 1rem;
 }
 
 .fraternity-content p {
@@ -582,15 +590,13 @@ main {
 }
 
 
-.fraternity-content img{
-  width: 320px;
-  height: 200px;
+
+.fraternity-content p2 strong{
+  color: var(--fraterni-yellow);
+  font-weight: 800;
 }
 
-.fraternity-content h2:nth-of-type(2){
-  font-family: 'Norwester';
-  font-size: 3.2rem;
-}
+
 
 .mission-vision {
   margin-top: 24px;
@@ -628,14 +634,14 @@ main {
 
 /* Sección principal de los principios */
 .fraternity-principles {
-  background-color: #e4e6e9;
+  background-color: var(--fraterni-yellow);
   padding: 20px;
   text-align: center;
 }
 
 
 .fraternity-principles h1 {
-  color: var(--frat-grey);
+  color: #ffffff;
   font-weight: bold;
   font-size: 4rem; /* Ajuste para mobile */
   font-family: 'Norwester';
@@ -645,7 +651,7 @@ main {
 .fraternity-principles p {
   padding: 0px 8px;
   margin-bottom: 20px;
-  color: var(--frat-grey);
+  color: #ffffff;
   font-size: 1.6rem; /* Ajuste para mobile */
   text-wrap: balance;
 }
