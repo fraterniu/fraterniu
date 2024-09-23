@@ -445,7 +445,7 @@ main {
 .fraternity-section {
   background-color: #152517;
   color: #000; /* Texto blanco para contraste */
-  padding: 20px;
+  padding: 24px;
   text-align: center;
 }
 
@@ -578,7 +578,7 @@ main {
   font-size: 1.6rem;
   color: #fff;
   margin: 16px 0;
-  padding: 0 24px;
+  text-wrap: balance;
 }
 
 
@@ -592,17 +592,12 @@ main {
   font-size: 3.2rem;
 }
 
-
-.fraternity-content p2:last-child{
-  padding-top: 8px;
-}
-
 .mission-vision {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 0 32px;
+  gap: 16px;
+  padding: 0 16px;
 }
 
 .mission, .vision {
