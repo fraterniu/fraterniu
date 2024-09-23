@@ -302,7 +302,6 @@ main {
   font-weight: 500;
   line-height: 7rem;
   padding-top: 80px;
-  padding-bottom: 8px;
   color: #ffffff;
   z-index: 10;
 }
@@ -311,7 +310,7 @@ main {
   font-size: 1rem;
   font-weight: 500;
   line-height: 2.2rem;
-  padding: 0 56px 8px  56px;
+  padding: 0 16px;
   color: #ffffff;
   text-wrap: balance;
   z-index: 10;
@@ -517,6 +516,7 @@ main {
 }
 
 .fraternity-content p {
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   color: #fff;
   margin: 16px 0;
