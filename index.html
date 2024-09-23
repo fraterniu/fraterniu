@@ -95,9 +95,9 @@
     <!--2. Start Main -->
     <main>
         <!-- 2.1 Header Image Container (#findme) -->
-        <section class="header--portrait-container">
+        <section id="findus" class="header--portrait-container">
             <div class="bubble-container"></div>
-            <div id="fratercover" class="overlay">
+            <div class="overlay">
                 <h1 class="translatable" data-en="THIS IS <br> FRATERNIU" data-es="ESTO ES <br> FRATERNIU">THIS IS <br>
                     FRATERNIU</h1>
                 <div class="social-icons">
@@ -160,114 +160,58 @@
                 </div>
                 <p class="translatable" data-en="<strong>Ready to take the first step?</strong> Explore our core principles and discover how you can grow with us."
                 data-es="<strong>¿Estás listo para dar el primer paso?</strong> Explora nuestros principios y descubre cómo puedes crecer con nosotros."><strong>Ready to take the first step?</strong> Explore our core principles and follow us in ordered to discover how you can grow with us.</p>
-
-
-                    <button class="translatable" data-en="Follow Us" data-es="Síguenos"> Follow Us</button>
             </div>
+            <button onclick="location.href='#findus'" class="translatable" data-en="Follow Us" data-es="Síguenos"> Follow Us</button>
         </section>
     </section>
-    <section id="principles" class="fraternity-principles">
-        <div class="fraternity-principles-titles">
-            <h1 class="translatable" data-en="PRINCIPLES OF FRATERNIU"
-            data-es="PRINCIPIOS DE FRATERNIU">PRINCIPLES OF FRATERNIU</h1>
-            <p class="translatable" data-en="This is the philosophy that guides us:"
-            data-es="Esta es la filosofía que nos guía:">This is the philosophy that guides us:</p>
-            <p class="translatable" data-en="In order to accomplish complete growth, we focused on these <strong>five areas.</strong> Each of these areas aims to improve your capacity for decision-making, resource management, and situational flexibility."
-            data-es="Para lograr un crecimiento completo, nos centramos en estas <strong>cinco áreas</strong>. Cada una de ellas tiene como objetivo mejorar tu capacidad de toma de decisiones, gestión de recursos y flexibilidad situacional.">In order to accomplish complete growth, we focused on these <strong>five areas.</strong> Each of these areas aims to improve your capacity for decision-making, resource management, and situational flexibility.</p>
-            <p class="translatable" data-en="Analyze how you might improve your life in each area:"
-            data-es=" Analiza cómo podrías mejorar tu vida en cada área:">Analyze how you might improve your life in each area:</p>
-        </div>
-
-        <div class="principles-grid-section">
-            <div class="principles-grid-display">
-                <figure class="principles-image-display">
-                    <img id="principlesdisplayImage" data-img-en="./assets/imgs/areaF-en.png" data-img-es="./assets/imgs/areaF-es.png" src="./assets/imgs/areaF-en.png" alt="Area Preview">
-                    <figcaption id="displayText" class="translatable" data-en=""
-                    data-es=""></figcaption>
-                </figure>
-            </div>
-        
-            <div class="principles-grid-buttons">
-                    <ul>
-                        <li>
-                            <button data-img-en="./assets/imgs/areaM-en.png" data-img-es="./assets/imgs/areaM-es.png" data-text-en="MIND" data-text-es="MENTE">
-                                <img src="./assets/icons/mindGrey.svg" alt="Mind Icon"> <!-- Ícono fijo -->
-                            </button>
-                        </li>
-                        <li>
-                            <button data-img-en="./assets/imgs/areaB-en.png" data-img-es="./assets/imgs/areaB-es.png" data-text-en="BODY" data-text-es="CUERPO">
-                                <img src="./assets/icons/bodyGrey.svg" alt="Body Icon"> <!-- Ícono fijo -->
-                            </button>
-                        </li>
-                        <li>
-                            <button data-img-en="./assets/imgs/areaR-en.png" data-img-es="./assets/imgs/areaR-es.png" data-text-en="RESOURCES" data-text-es="RECURSOS">
-                                <img src="./assets/icons/resourcesGrey.svg" alt="Resources Icon"> <!-- Ícono fijo -->
-                            </button>
-                        </li>
-                        <li>
-                            <button data-img-en="./assets/imgs/areaV-en.png" data-img-es="./assets/imgs/areaV-es.png" data-text-en="VALUE" data-text-es="VALOR">
-                                <img src="./assets/icons/valorGrey.svg" alt="Value">
-                            </button>
-                        </li>
-                        <li>
-                            <button data-img-en="./assets/imgs/areaE-en.png" data-img-es="./assets/imgs/areaE-es.png" data-text-en="ENVIRONMENT" data-text-es="ENTORNO">
-                                <img src="./assets/icons/environmentGrey.svg" alt="Environment">
-                            </button>
-                        </li>
-                    </ul>
-            </div>
-        </div>
-        
-    </section>
     <!--7.  Footer -->
+    <!-- Footer -->
     <footer>
         <section class="top">
             <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
             <ul>
                 <li>
                     <a>
-                        <h3>Pilares</h3>
+                        <h3 class="translatable" data-en="Pillars" data-es="Pilares">Pillars</h3>
                     </a>
-                    <a> </a>
-                    <a>Autonomía y Autogestión</a>
-                    <a>Pensamiento crítico y Creativo</a>
-                    <a>Habilidades Sociales</a>
+                    <a></a>
+                    <a class="translatable" data-en="Autonomy and Self-Management" data-es="Autonomía y Autogestión">Autonomy and Self-Management</a>
+                    <a class="translatable" data-en="Critical and Creative Thinking" data-es="Pensamiento crítico y creativo">Critical and Creative Thinking</a>
+                    <a class="translatable" data-en="Social Skills" data-es="Habilidades sociales">Social Skills</a>
                 </li>
                 <li>
                     <a>
-                        <h3>Áreas</h3>
+                        <h3 class="translatable" data-en="Areas" data-es="Áreas">Areas</h3>
                     </a>
-                    <a> </a>
-                    <a>Mente</a>
-                    <a>Cuerpo</a>
-                    <a>Recursos</a>
-                    <a>Valor</a>
-                    <a>Entorno</a>
+                    <a></a>
+                    <a class="translatable" data-en="Mind" data-es="Mente">Mind</a>
+                    <a class="translatable" data-en="Body" data-es="Cuerpo">Body</a>
+                    <a class="translatable" data-en="Resources" data-es="Recursos">Resources</a>
+                    <a class="translatable" data-en="Value" data-es="Valor">Value</a>
+                    <a class="translatable" data-en="Environment" data-es="Entorno">Environment</a>
                 </li>
                 <li>
-                    <h3>Encuéntranos en:</h3>
-                    <a> </a>
-                    <a href="https://www.instagram.com/fraterniu/ " target="_blank" class="instagram redicon"><span
-                            class="icon-card Vector"></span>Instagram</a>
-                    <!-- <a href="" class="redicon tiktok"><span class="icon-card TikTok"></span>TikTok</a> -->
-                    <a href="" class="youtube redicon"><span class="icon-card Youtube"></span>YouTube</a>
-                    <a href="" class="facebook redicon"><span class="icon-card Facebook"></span>Facebook</a>
-                    <a href="" class="linkedin redicon"><span class="icon-card LinkedIn"></span>LinkedIn</a>
+                    <h3 class="translatable" data-en="Find us on:" data-es="Encuéntranos en:">Find us on:</h3>
+                    <a></a>
+                    <a href="https://www.instagram.com/fraterniu/" target="_blank" class="instagram redicon translatable" data-en="Instagram" data-es="Instagram"><span class="icon-card Vector"></span>Instagram</a>
+                    <a href="" class="youtube redicon translatable" data-en="YouTube" data-es="YouTube"><span class="icon-card Youtube"></span>YouTube</a>
+                    <a href="" class="facebook redicon translatable" data-en="Facebook" data-es="Facebook"><span class="icon-card Facebook"></span>Facebook</a>
+                    <a href="" class="linkedin redicon translatable" data-en="LinkedIn" data-es="LinkedIn"><span class="icon-card LinkedIn"></span>LinkedIn</a>
                 </li>
                 <li>
-                    <h3>Sobre nosotros</h3>
-                    <a> </a>
-                    <a href="">FraterniU Developers</a>
+                    <h3 class="translatable" data-en="About Us" data-es="Sobre nosotros">About Us</h3>
+                    <a></a>
+                    <a href="" class="translatable" data-en="FraterniU Developers" data-es="Desarrolladores FraterniU">FraterniU Developers</a>
                 </li>
-                <li>
             </ul>
             <section class="contactoFooter">
-                <h2><span class="envelope conticon"></span>Contáctanos:</h2><br>
-                <a>CorreoEjemplo@FraterniU.com</a>
+                <h2 class="translatable" data-en="Contact Us:" data-es="Contáctanos:"><span class="envelope conticon"></span>Contact Us:</h2><br>
+                <a class="translatable" data-en="ExampleEmail@FraterniU.com" data-es="CorreoEjemplo@FraterniU.com">ExampleEmail@FraterniU.com</a>
             </section>
         </section>
-        <section class="bottom">© 2024 FraterniU.com</section>
+        <section class="bottom translatable" data-en="© 2024 FraterniU.com" data-es="© 2024 FraterniU.com">© 2024 FraterniU.com</section>
     </footer>
+
     <!-- End Footer -->
     <script src="./js/fraterni.js"></script>
 </body>
