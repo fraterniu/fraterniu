@@ -451,7 +451,7 @@ main {
   font-family: "Nerko One";
   font-size: 1rem;
   color: #ffffff;
-  padding-top: 16px;
+  padding: 16px 8px 0 8px;
 }
 
 .fraternity-section h1 {
@@ -518,7 +518,7 @@ main {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   color: #fff;
-  margin: 16px 0;
+  padding: 16px 8px;
   text-wrap: balance;
 }
 
