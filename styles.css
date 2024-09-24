@@ -672,10 +672,34 @@ main {
 
 
 .vuca-world--container{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 
+}
+
+.vuca-world{
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  border-radius: 50%;
+  box-shadow: -40px -30px 0 0 rgba(0,0,0,.1) inset,
+              -70px -30px 0 0 rgba(0,0,0,.1) inset,
+              5px 5px 0 0 rgba(255,255,255,.2) inset;
+  background: url(./assets/imgs/mapa.png);
+  background-size: cover;
+
+  animation: earthRotate 20s linear 0s infinite;
+}
+
+@keyframes earthRotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
 }
 
 
