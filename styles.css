@@ -689,7 +689,7 @@ main {
   background: url(./assets/imgs/mapa.png);
   background-size: cover;
 
-  animation: earthRotate 30s linear 0s infinite;
+  animation: earthRotate 20s linear 0s infinite;
 }
 
 @keyframes earthRotate {
@@ -697,7 +697,7 @@ main {
     background-position: 0 0;
   }
   100% {
-    background-position: 400px 0;
+    background-position: 377px 0;
   }
 }
 
@@ -705,6 +705,7 @@ main {
   color: #808080;
   font-family: 'Nerko One';
   font-size: 2.4rem;
+  line-height: 1.8rem;
   padding: 24px 32px 0 32px;
   text-wrap: balance;
 
@@ -716,8 +717,7 @@ main {
     font-weight: 500;
     line-height: 2rem;
     color: var(--frat-grey);
-
-
+    text-wrap: balance;
 }
 
 
