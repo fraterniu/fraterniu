@@ -684,9 +684,9 @@ main {
   height: 200px;
   background: lightblue;
   border-radius: 50%;
-  box-shadow: -40px -30px 0 0 rgba(0,0,0,.1) inset,
+  /*box-shadow: -40px -30px 0 0 rgba(0,0,0,.1) inset,
               -70px -30px 0 0 rgba(0,0,0,.1) inset,
-              5px 5px 0 0 rgba(255,255,255,.2) inset;
+              5px 5px 0 0 rgba(255,255,255,.2) inset;*/
   background: url(./assets/imgs/mapa.png);
   background-size: cover;
 
