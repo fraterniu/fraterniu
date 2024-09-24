@@ -6,21 +6,6 @@
   --frat-grey: #33353a;
   
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
-    
-    /* Tamaños de fuente */
-    --font-size-base: 16px; /* Tamaño base para 1rem */
-    --font-size-heading: 3rem; /* Tamaño para encabezados */
-    --font-size-subheading: 2.4rem; /* Tamaño para subtítulos */
-    --font-size-body: 1.6rem; /* Tamaño para texto de cuerpo */
-    
-    /* Espaciado */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 32px;
-    
-    /* Bordes y sombras */
-    --border-radius: 4px; /* Radio de borde estándar */
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra estándar */
 }
 
 /*End Design Main Styles */
@@ -132,7 +117,7 @@ ul.menu li {
 }
 
 ul.menu li a {
-  font-size: 1.6rem;
+  font-size: 2.4rem;
   color: #fff;
   text-decoration: none;
 }
@@ -229,7 +214,7 @@ main {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 75vh;
+  height: 65vh;
   margin-top: 80px;
   text-align: center;
   align-self: center;
@@ -425,7 +410,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 62vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
@@ -449,17 +434,17 @@ main {
 
 .fraternity-section p{
   font-family: "Nerko One";
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #ffffff;
   padding: 16px 8px 0 8px;
 }
 
 .fraternity-section h1 {
   font-family: "Nerko One";
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 500;
-  line-height: 3rem;
-  padding: 8px 16px 8px 16px;
+  line-height: 4rem;
+  padding: 8px 0;
   color: #ffffff;
   text-wrap: balance;
 }
@@ -518,8 +503,7 @@ main {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
   color: #fff;
-  padding: 16px 8px;
-  text-wrap: balance;
+  padding: 16px 0;
 }
 
 
@@ -529,6 +513,9 @@ main {
   font-weight: 800;
 }
 
+.fraternity-content p2{
+  font-size: 1.4rem;
+}
 
 
 .mission-vision {
@@ -551,8 +538,8 @@ main {
 }
 
 .mission img, .vision img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 /* Opcional: sombra suave para efecto flotante */
