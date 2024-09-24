@@ -628,9 +628,21 @@ main {
 }
 
 .green-paper--container div {
+    width: 100%;
+    min-width: 320px;
+    height: 65px;
+    background-image: url('./assets/icons/papertracegreen.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #FEFEFE;
+}
+
+.principles-paper--container{
   width: 100%;
-  height: 200px;
-  
+  height: 500px;
+  background-color: #FEFEFE;
 }
 
 
