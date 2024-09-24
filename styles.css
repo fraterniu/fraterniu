@@ -706,13 +706,13 @@ main {
   font-family: 'Nerko One';
   font-size: 2.4rem;
   line-height: 1.8rem;
-  padding: 24px 32px 0 32px;
+  padding: 24px 32px 8px 32px;
   text-wrap: balance;
 
 }
 
 .vuca-world--text p{
-    padding: 16px 18px;
+    padding: 8px 18px;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
