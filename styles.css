@@ -672,6 +672,7 @@ main {
 
 
 .vuca-world--container{
+  padding: 8px 16px;
   width: 100%;
   display: flex;
   flex-direction: row;
