@@ -643,6 +643,14 @@ main {
   width: 100%;
   height: 500px;
   background-color: #FEFEFE;
+  text-align: center;
+}
+
+.principles-paper--container h2{
+  padding-top: 32px;
+  color: var(--fraterni-yellow);
+  font-family: 'Norwester';
+  font-size: 4rem;
 }
 
 
