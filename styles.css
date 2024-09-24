@@ -641,7 +641,6 @@ main {
 
 .principles-paper--container{
   width: 100%;
-  height: 500px;
   background-color: #FEFEFE;
   text-align: center;
 }
@@ -654,7 +653,7 @@ main {
     text-align: center;
 }
 
-.principles-paper--titles h2{
+.principles-paper--titles h1{
   padding-top: 32px;
   color: var(--fraterni-yellow);
   font-family: 'Norwester';
@@ -672,12 +671,11 @@ main {
 
 
 .vuca-world--container{
-  padding: 8px 16px;
+  padding: 8px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .vuca-world{
@@ -691,7 +689,7 @@ main {
   background: url(./assets/imgs/mapa.png);
   background-size: cover;
 
-  animation: earthRotate 20s linear 0s infinite;
+  animation: earthRotate 30s linear 0s infinite;
 }
 
 @keyframes earthRotate {
@@ -703,8 +701,24 @@ main {
   }
 }
 
+.vuca-world--text h2{
+  color: #808080;
+  font-family: 'Nerko One';
+  font-size: 2.4rem;
+  padding: 24px 32px 0 32px;
+  text-wrap: balance;
+
+}
+
+.vuca-world--text p{
+    padding: 16px 18px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--frat-grey);
 
 
+}
 
 
 
