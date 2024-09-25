@@ -720,6 +720,54 @@ main {
     text-wrap: balance;
 }
 
+.principles-paper--container img{
+  width: 250px;
+  height: 100px;
+}
+
+.principles-areas--container{
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna por fila para móviles */
+  gap: 20px; /* Espacio entre las cartas */
+  padding: 20px;
+  overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+}
+
+.area-detail--card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: var(--fraterni-yellow);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.area-content-column {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 8px;
+  color: white;
+}
+
+.icon-row img {
+  width: 40px;
+  height: 40px;
+}
+
+.area-title-row {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.area-description-row {
+  margin: 0;
+  font-size: 1.2em;
+}
 
 
 /* Footer Styles */
