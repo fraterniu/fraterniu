@@ -736,9 +736,10 @@ main {
 .area-detail--card {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: var(--fraterni-yellow);
+  background-color: #808080;
   border-radius: 10px;
   overflow: hidden;
+  border: 3px solid var(--frat-grey) ;
 }
 
 .image-column img {
@@ -752,21 +753,22 @@ main {
   grid-template-rows: 1fr 1fr 1fr;
   padding: 8px;
   color: white;
+  align-items: center;
 }
 
 .icon-row img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .area-title-row {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2.4rem;
 }
 
 .area-description-row {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.6rem;
 }
 
 
