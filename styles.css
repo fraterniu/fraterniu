@@ -761,13 +761,9 @@ main {
   height: 60px;
 }
 
-.area-title-row {
+.area-title-row, .area-description-row{
   margin: 0;
-  font-size: 2.4rem;
-}
-
-.area-description-row {
-  margin: 0;
+  padding: 8px 0;
   font-size: 1.6rem;
 }
 
