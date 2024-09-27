@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const bubbleSection = document.querySelector('.header--portrait-container');
     const maxBubbles = 25; // Limit of bubbles
     const bubbleContainer = document.createElement('div');
+    const cards = document.querySelectorAll('.area-detail--card');
+    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentIndex = 0;
 
   
     // Helper Functions
@@ -47,6 +53,61 @@ document.addEventListener('DOMContentLoaded', () => {
       // Update the displayed image based on the current language and active button
       updateMainImage(newLang);
     }
+
+      // Función para actualizar la tarjeta activa y los indicadores
+  function updateSlider(index) {
+    // Ocultar todas las tarjetas
+    cards.forEach(card => {
+        card.classList.remove('active');
+    });
+    
+    // Mostrar la tarjeta correspondiente
+    cards[index].classList.add('active');
+    
+    // Actualizar los indicadores
+    indicators.forEach((indicator, i) => {
+        if (i === index) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+  }
+
+  // Función para avanzar a la siguiente tarjeta
+  function nextCard() {
+    if (currentIndex < cards.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Volver al inicio si estamos en la última tarjeta
+    }
+    updateSlider(currentIndex);
+  }
+
+  // Función para retroceder a la tarjeta anterior
+  function prevCard() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = cards.length - 1; // Ir al final si estamos en la primera tarjeta
+    }
+    updateSlider(currentIndex);
+  }
+
+  // Event listeners para las flechas
+  nextBtn.addEventListener('click', nextCard);
+  prevBtn.addEventListener('click', prevCard);
+
+  // Event listeners para los indicadores (puntos)
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider(currentIndex);
+    });
+  });
+
+  // Inicializar el slider
+  updateSlider(currentIndex);
   
   
     // Create a floating bubble element and animate it

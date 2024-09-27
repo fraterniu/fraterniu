@@ -723,61 +723,94 @@ main {
   height: 100px;
 }
 
-.principles-areas--container{
-    padding: 8px 0 32px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.principles-areas--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 500px;
+  padding: 8px 0 32px 0;
+  overflow: hidden;
 }
 
 .area-detail--card {
-  width: 300px;
-  border-radius: 16px;
+  width: 100%;
+  max-width: 320px;
   background-color: #fff;
+  border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-  padding-top: 20px;
-  margin: 16px 0;
+  text-align: center;
+  display: none;
+  transition: transform 0.3s ease;
 }
 
-.image-column{
-  width: 100%;
-  height: 160px;
-  position: relative;
-  top: -30px; /* La imagen se "sale" del contenedor */
-  overflow: hidden;
+.area-detail--card.active {
+  display: block;
+  transform: scale(1.05);
 }
 
 .image-column img {
-  width: 300px;
-  height: 175px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 16px;
 }
 
 .area-content-column {
-  padding: 2px 24px 16px 24px;
-  text-align: center;
-}
-
-.icon-row img {
-  width: 60px;
-  height: 60px;
+  padding: 16px;
 }
 
 .area-title-row {
-  font-family: "Nerko One", cursive; /* Añade un toque de estilo "hecho a mano" */
+  font-family: "Nerko One", cursive;
   font-size: 3.2rem;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.area-description-row{
+.area-description-row {
   font-size: 1.6rem;
   color: #333;
-  margin-bottom: 10px;
 }
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn img, .next-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.indicators {
+  display: flex;
+  gap: 8px;
+  margin: 0 16px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+
 
 /* Footer Styles */
 footer {
