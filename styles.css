@@ -718,9 +718,17 @@ main {
     text-wrap: balance;
 }
 
+
+
 .principles-paper--container img{
   width: 250px;
   height: 100px;
+}
+
+.principles-areas--text h2{
+  color: var(--frat-grey);
+  font-family: 'Nerko One';
+  font-size: 3.2rem;
 }
 
 .principles-areas--container {
@@ -733,6 +741,8 @@ main {
   padding: 8px 0 32px 0;
   overflow: hidden;
 }
+
+
 
 .area-detail--card {
   width: 100%;
@@ -755,6 +765,7 @@ main {
   height: 200px;
   object-fit: cover;
   border-radius: 16px;
+  border-bottom: 3px solid var(--fraterni-yellow);
 }
 
 .area-content-column {
