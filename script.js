@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
+    const ctx = document.getElementById('areasChart');
 
     let currentIndex = 0;
 
@@ -110,6 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inicializar el slider
   updateSlider(currentIndex);
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
   
   
     // Create a floating bubble element and animate it

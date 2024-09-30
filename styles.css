@@ -699,17 +699,14 @@ main {
   }
 }
 
-.vuca-world--text h2{
+.principles-fraterni--text h2{
   color: #808080;
   font-family: 'Nerko One';
   font-size: 2.4rem;
-  line-height: 1.8rem;
-  padding: 24px 32px 8px 32px;
-  text-wrap: balance;
-
+  padding: 0 32px;
 }
 
-.vuca-world--text p{
+.principles-fraterni--text p{
     padding: 8px 18px;
     font-size: 1.6rem;
     font-weight: 500;
@@ -717,27 +714,10 @@ main {
     color: var(--frat-grey);
     text-wrap: balance;
 }
-
-
 
 .principles-paper--container img{
   width: 250px;
   height: 100px;
-}
-
-.principles-areas--text h2{
-  color: var(--frat-grey);
-  font-family: 'Nerko One';
-  font-size: 3.2rem;
-}
-
-.principles-areas--text p{
-    padding: 8px 18px;
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 2rem;
-    color: var(--frat-grey);
-    text-wrap: balance;
 }
 
 .principles-areas--container {
@@ -828,6 +808,16 @@ main {
 
 .indicator.active {
   background-color: #333;
+}
+
+.principles-graph--container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.areas-graph{
+  margin: 32px 0;
 }
 
 
