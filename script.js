@@ -144,11 +144,27 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         },
         x: {
+          ticks: {
+             display: false // Oculta las etiquetas de texto
+          },
           title: {
             display: true,
             text: 'Áreas'
           }
+      },
+      y: {
+        beginAtZero: true,
+        max: 100,
+        ticks: {
+           stepSize: 10 // Mostrar valores en pasos de 10%
+        },
+        title: {
+          display: true,
+          text: 'Tiempo (%)'
         }
+    }
+
+      
       },
       plugins: {
         // Adding the custom icons to the x-axis labels
@@ -164,9 +180,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       animation: {
-        duration: 2000, // Animation duration in milliseconds
-        easing: 'easeOutBounce' // Easing function for animation
-      }
+        duration: 5000, // Animation duration in milliseconds
+        easing: 'easeInOutQuad', // Easing function for animation
+        loop: true, // Infinite animation
+        onProgress: function(animation) {
+          const chart = animation.chart;
+          chart.data.datasets[0].data = chart.data.datasets[0].data.map(() => {
+            return Math.floor(Math.random() * 80) + 10; // Random value between 10% and 90%
+          });
+        }
+    }
+    
     }
   });
   
