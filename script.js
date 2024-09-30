@@ -14,9 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const indicators = document.querySelectorAll('.indicator');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    const ctx = document.getElementById('areasChart');
+    const ctx = document.getElementById('areasChart').getContext('2d');
 
     let currentIndex = 0;
+
+    const icons = {
+      'Mente': './assets/icons/mindlightGrey.svg',
+      'Cuerpo': './assets/icons/bodylightGrey.svg',
+      'Recursos': './assets/icons/resourceslightGrey.svg',
+      'Valor': './assets/icons/valorlightGrey.svg',
+      'Entorno': './assets/icons/enviromentlightGrey.svg'
+    };
 
   
     // Helper Functions
@@ -112,21 +120,52 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializar el slider
   updateSlider(currentIndex);
 
-  new Chart(ctx, {
+  const myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: Object.keys(icons), // Using the area names as labels
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Porcentaje',
+        data: [85, 70, 65, 50, 80], // Example data
+        backgroundColor: '#c49102',
+        borderColor: '#c49102',
         borderWidth: 1
       }]
     },
     options: {
+      responsive: true,
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          max: 100,
+          title: {
+            display: true,
+            text: 'Tiempo (%)'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Áreas'
+          }
         }
+      },
+      plugins: {
+        // Adding the custom icons to the x-axis labels
+        afterDatasetsDraw: function(chart) {
+          const ctx = chart.ctx;
+          chart.data.labels.forEach((label, index) => {
+            const image = new Image();
+            image.src = icons[label];
+            const x = chart.scales.x.getPixelForValue(index);
+            const y = chart.scales.y.top - 20;
+            ctx.drawImage(image, x - 12, y, 24, 24); // Adjust size and position of the icon
+          });
+        }
+      },
+      animation: {
+        duration: 2000, // Animation duration in milliseconds
+        easing: 'easeOutBounce' // Easing function for animation
       }
     }
   });
