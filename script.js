@@ -38,20 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const isEnglish = langIcon.src.includes('enBtn.svg');
       const newLang = isEnglish ? 'es' : 'en';
       
-      // Change flag icon and language text
+      // Cambiar el icono de la bandera y el texto del idioma
       langIcon.src = `./assets/icons/${newLang}Btn.svg`;
       currentLang.textContent = isEnglish ? 'Español' : 'English';
       
-      // Update the text content of translatable elements
+      // Actualizar el contenido de texto de los elementos traducibles
       elements.forEach(element => {
         element.innerHTML = element.getAttribute(`data-${newLang}`);
       });
-  
-      // Update the document language attribute
+
+      // Actualizar las imágenes según el idioma
+      document.querySelectorAll('.translatable-image').forEach(img => {
+        img.src = img.getAttribute(`data-${newLang}`);
+      });
+      
+      // Actualizar el atributo de idioma del documento
       document.documentElement.lang = newLang;
-  
-      // Update the displayed image based on the current language and active button
-      updateMainImage(newLang);
     }
 
       // Función para actualizar la tarjeta activa y los indicadores

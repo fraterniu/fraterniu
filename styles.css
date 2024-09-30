@@ -731,6 +731,15 @@ main {
   font-size: 3.2rem;
 }
 
+.principles-areas--text p{
+    padding: 8px 18px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--frat-grey);
+    text-wrap: balance;
+}
+
 .principles-areas--container {
   display: flex;
   flex-direction: column;
