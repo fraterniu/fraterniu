@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let resetToZero = true; // Controla si los valores deben bajar a 0 o actualizarse con nuevos valores
 
   const icons = {
-    'Mente': './assets/icons/mindlightGrey.svg',
-    'Cuerpo': './assets/icons/bodylightGrey.svg',
-    'Recursos': './assets/icons/resourceslightGrey.svg',
-    'Valor': './assets/icons/valorlightGrey.svg',
-    'Entorno': './assets/icons/enviromentlightGrey.svg'
+    'Mind': './assets/icons/mindlightGrey.svg',
+    'Body': './assets/icons/bodylightGrey.svg',
+    'Resources': './assets/icons/resourceslightGrey.svg',
+    'Value': './assets/icons/valorlightGrey.svg',
+    'Environment': './assets/icons/enviromentlightGrey.svg'
   };
 
   // Helper Functions
@@ -125,14 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializar el slider
   updateSlider(currentIndex);
 
-  // Gráfica de Áreas con Chart.js
   const areasChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: Object.keys(icons), // Using the area names as labels
+      labels: Object.keys(icons),
       datasets: [{
         label: 'Priority',
-        data: Object.keys(icons).map(() => Math.floor(Math.random() * 80) + 10), // Generar valores aleatorios
+        data: Object.keys(icons).map(label => {
+          return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
+        }), // "Mind" always between 50% and 90%
         backgroundColor: '#c49102',
         borderColor: '#c49102',
         borderWidth: 1
@@ -145,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
           beginAtZero: true,
           max: 100,
           ticks: {
-            stepSize: 10 // Mostrar valores en pasos de 10%
+            stepSize: 10
           },
           title: {
             display: true,
@@ -154,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         x: {
           ticks: {
-            display: false // Oculta las etiquetas de texto
+            display: false
           },
           title: {
             display: true,
@@ -163,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       },
       plugins: {
-        // Adding the custom icons to the x-axis labels
         afterDatasetsDraw: function(chart) {
           const ctx = chart.ctx;
           chart.data.labels.forEach((label, index) => {
@@ -172,39 +172,46 @@ document.addEventListener('DOMContentLoaded', () => {
             image.onload = function() {
               const x = chart.scales.x.getPixelForValue(index);
               const y = chart.scales.y.bottom + 10;
-              ctx.drawImage(image, x - 12, y, 24, 24); // Tamaño y posición ajustados
+              ctx.drawImage(image, x - 12, y, 24, 24);
             };
           });
         }
       },
       animation: {
-        duration: 3000, // Duración de la animación de 3 segundos
+        duration: 3000, // Display for 3 seconds
         easing: 'easeInOutQuad',
-        loop: false, // No hacer que la animación se repita sola
-      },
-      plugins: {
-        afterDraw: function(chart) {
-          if (!chart.stopUpdate) {
-            chart.stopUpdate = setInterval(() => {
-              if (resetToZero) {
-                // Fase de bajar los valores a 0
-                chart.data.datasets[0].data = chart.data.labels.map(() => 0);
-                resetToZero = false;
-              } else {
-                // Fase de actualizar con nuevos valores entre 10% y 90%
-                chart.data.datasets[0].data = chart.data.labels.map(() => {
-                  return Math.floor(Math.random() * 80) + 10; // Nuevos valores aleatorios
-                });
-                resetToZero = true;
-              }
-              chart.update(); // Actualizar el gráfico con los nuevos valores
-            }, 5000); // El ciclo completo dura 5 segundos: 3 segundos para animar y 2 de pausa
-          }
+        onComplete: function() {
+          setTimeout(() => {
+            updateChartValues();
+            areasChart.update();
+          }, 1000); // Wait 1 second before updating
         }
       }
-      
     }
   });
+
+  // Function to update the chart values
+  function updateChartValues() {
+    if (resetToZero) {
+      // Lower all values to 0 in 2 seconds
+      areasChart.options.animation.duration = 2000;
+      areasChart.data.datasets[0].data = areasChart.data.labels.map(() => 0);
+      resetToZero = false;
+    } else {
+      // New values: "Mind" always between 50% and 90%, others between 10% and 90%
+      areasChart.options.animation.duration = 3000; // Rise for 3 seconds
+      areasChart.data.datasets[0].data = areasChart.data.labels.map(label => {
+        return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
+      });
+      resetToZero = true;
+    }
+  }
+
+  // Start the update cycle every 6 seconds (3s rise, 2s fall, 1s pause)
+  setInterval(() => {
+    areasChart.update();
+  }, 6000);
+
 
   // Mobile menu toggle
   menuToggle.addEventListener('change', toggleMobileMenu);
