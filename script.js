@@ -134,32 +134,40 @@ document.addEventListener('DOMContentLoaded', () => {
         data: Object.keys(icons).map(label => {
           return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
         }), // "Mind" always between 50% and 90%
-        backgroundColor: '#c49102',
+        backgroundColor: '#fff',
         borderColor: '#c49102',
-        borderWidth: 1
+        borderWidth: 1,
+        borderRadius: 8
       }]
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       scales: {
         y: {
           beginAtZero: true,
           max: 100,
-          ticks: {
-            stepSize: 10
-          },
-          title: {
-            display: true,
-            text: 'Time (%)'
+          display: false, // Remove y-axis values
+          grid: {
+            drawBorder: true, // Keep the y-axis line
+            color: '#fff' // Set the color of the y-axis grid line to white
           }
         },
         x: {
           ticks: {
             display: false
           },
+          grid: {
+            drawBorder: true, // Keep the x-axis line
+            color: '#fff' // Set the color of the x-axis grid line to white
+          },
           title: {
             display: true,
-            text: 'Areas'
+            text: 'Areas',
+            font: {
+              size: 18
+            },
+            color: '#000'
           }
         }
       },
@@ -175,6 +183,19 @@ document.addEventListener('DOMContentLoaded', () => {
               ctx.drawImage(image, x - 12, y, 24, 24);
             };
           });
+        },
+        // Show values inside the bars
+        datalabels: {
+          display: true,
+          color: '#000',
+          anchor: 'end',
+          align: 'top',
+          formatter: function(value) {
+            return value + '%'; // Show the percentage value inside the bar
+          },
+          font: {
+            size: 14
+          }
         }
       },
       animation: {
@@ -193,12 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to update the chart values
   function updateChartValues() {
     if (resetToZero) {
-      // Lower all values to 0 in 2 seconds
       areasChart.options.animation.duration = 2000;
       areasChart.data.datasets[0].data = areasChart.data.labels.map(() => 0);
       resetToZero = false;
     } else {
-      // New values: "Mind" always between 50% and 90%, others between 10% and 90%
       areasChart.options.animation.duration = 3000; // Rise for 3 seconds
       areasChart.data.datasets[0].data = areasChart.data.labels.map(label => {
         return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
@@ -211,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     areasChart.update();
   }, 6000);
-
 
   // Mobile menu toggle
   menuToggle.addEventListener('change', toggleMobileMenu);
