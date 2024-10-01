@@ -136,8 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }), // "Mind" always between 50% and 90%
         backgroundColor: '#fff',
         borderColor: '#c49102',
-        borderWidth: 1,
-        borderRadius: 8
+        borderWidth: 1
       }]
     },
     options: {
