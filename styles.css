@@ -238,7 +238,7 @@ main {
 .bubble {
   position: absolute;
   bottom: -50px;
-  background-color:#21982c;
+  background-color:#082b0d;
   /* background-color: rgba(128, 132, 137, 0.25);  */
   /*background-color: rgba(209, 136, 7, 0.25);  Color con opacidad del 25% */
   border-radius: 50%;
