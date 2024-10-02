@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   const ctx = document.getElementById('areasChart').getContext('2d');
+  const pillars = document.querySelectorAll('.pilar-card');
 
   let currentIndex = 0;
   let resetToZero = true; // Controla si los valores deben bajar a 0 o actualizarse con nuevos valores
@@ -78,6 +79,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     areasChart.update(); // Refrescar el gráfico con los nuevos textos
   }
+
+  
+
+  pillars.forEach(pillar => {
+      pillar.addEventListener('click', () => {
+          pillars.forEach(p => p.classList.remove('active'));  // Elimina la clase activa de todos los pilares
+          pillar.classList.add('active');  // Agrega la clase activa al pilar clicado
+      });
+  });
+
 
   function createBubble() {
     if (bubbleContainer.children.length < maxBubbles) {

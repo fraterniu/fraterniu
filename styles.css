@@ -820,7 +820,71 @@ main {
 }
 
 .areas-graph{
-  margin: 32px 0;
+  margin: 32px 0 24px 0;
+}
+
+.main-pilars--container{
+  display: flex;
+  justify-content: center;
+}
+
+
+.pilar-card--container {
+  width: 280px;
+  height: 300px;
+  background: #212121;
+  display: flex;
+  gap: 2px;
+  padding: 2px;
+}
+
+.pilar-card {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: #fff;
+  border: 2px solid #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pillar-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000;
+}
+
+.pilar-card span {
+  min-width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  text-transform: uppercase;
+  color: var(--fraterni-yellow);
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.pilar-card.active {
+  flex: 4;
+}
+
+.pilar-card.active span {
+  transform: rotate(0);
+  display: none;
+}
+
+.pilar-card.active .pillar-content {
+  display: block;
 }
 
 
