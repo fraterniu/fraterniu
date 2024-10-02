@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cambiar títulos del gráfico según el idioma
     // Cambiar títulos del gráfico según el idioma
     areasChart.options.scales.y.title.text = newLang === 'es' ? 'Tiempo (%)' : 'Time (%)';
-    areasChart.data.datasets[0].label = newLang === 'es' ? 'Prioridad' : 'Priority';
+    areasChart.data.datasets[0].label = newLang === 'es' ? 'Enfoque' : 'Focus';
     areasChart.options.scales.x.title.text = newLang === 'es' ? 'Áreas' : 'Areas';
 
     // Forzar la actualización del tooltip para que muestre el nuevo idioma
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       labels: Object.keys(icons),
       datasets: [{
-        label: 'Priority',
+        label: 'Focus',
         data: Object.keys(icons).map(label => {
           return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
         }), // "Mind" always between 50% and 90%
