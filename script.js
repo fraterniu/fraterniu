@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           title: {
             display: true, // Show the title
-            text: 'Time (%)', // The title text, this will change with translation
+            text: 'Time', // The title text, this will change with translation
             font: {
               size: 18
             },
