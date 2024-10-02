@@ -79,6 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
     areasChart.update(); // Refrescar el gráfico con los nuevos textos
   }
 
+  function createBubble() {
+    if (bubbleContainer.children.length < maxBubbles) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      bubble.style.left = `${Math.random() * 100}%`;
+      const size = Math.random() * 36 + 14; // Size between 14px and 50px
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.animationDuration = `${Math.random() * 5 + 8}s`; // Animation duration between 8s and 13s
+      bubbleContainer.appendChild(bubble);
+
+      bubble.addEventListener('animationend', () => {
+        bubble.remove();
+      });
+    }
+  }
+
   // Función para actualizar la tarjeta activa y los indicadores
   function updateSlider(index) {
     cards.forEach(card => {
