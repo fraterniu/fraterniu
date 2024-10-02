@@ -70,6 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     areasChart.data.datasets[0].label = newLang === 'es' ? 'Prioridad' : 'Priority';
     areasChart.options.scales.x.title.text = newLang === 'es' ? 'Áreas' : 'Areas';
 
+    // Forzar la actualización del tooltip para que muestre el nuevo idioma
+    areasChart.options.plugins.tooltip.callbacks.title = function(context) {
+      const labels = newLang === 'es' ? ['Mente', 'Cuerpo', 'Recursos', 'Valor', 'Entorno'] : ['Mind', 'Body', 'Resources', 'Value', 'Environment'];
+      return labels[context[0].dataIndex];
+    };
+
     areasChart.update(); // Refrescar el gráfico con los nuevos textos
   }
 
@@ -146,10 +152,20 @@ document.addEventListener('DOMContentLoaded', () => {
         y: {
           beginAtZero: true,
           max: 100,
-          display: false, // Remove y-axis values
+          ticks: {
+            display: false // Hide only the ticks (values), keep the y-axis line
+          },
           grid: {
-            drawBorder: true, // Keep the y-axis line
+            drawBorder: true, // Keep the y-axis line visible
             color: '#fff' // Set the color of the y-axis grid line to white
+          },
+          title: {
+            display: true, // Show the title
+            text: 'Time (%)', // The title text, this will change with translation
+            font: {
+              size: 18
+            },
+            color: '#000'
           }
         },
         x: {
