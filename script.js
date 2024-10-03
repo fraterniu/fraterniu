@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cambiar títulos del gráfico según el idioma
     // Cambiar títulos del gráfico según el idioma
-    areasChart.options.scales.y.title.text = newLang === 'es' ? 'Tiempo (%)' : 'Time (%)';
+    areasChart.options.scales.y.title.text = newLang === 'es' ? 'Tiempo' : 'Time';
     areasChart.data.datasets[0].label = newLang === 'es' ? 'Enfoque' : 'Focus';
     areasChart.options.scales.x.title.text = newLang === 'es' ? 'Áreas' : 'Areas';
 
@@ -82,12 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
+
   pillars.forEach(pillar => {
-      pillar.addEventListener('click', () => {
-          pillars.forEach(p => p.classList.remove('active'));  // Elimina la clase activa de todos los pilares
-          pillar.classList.add('active');  // Agrega la clase activa al pilar clicado
+      pillar.addEventListener('click', (event) => {
+          event.stopPropagation(); // Evita que el clic se propague al body
+          pillars.forEach(p => {
+              if (p !== pillar) {
+                  p.classList.add('inactive');  // Oculta los pilares no seleccionados
+                  p.classList.remove('active');
+              } else {
+                  p.classList.remove('inactive');
+                  p.classList.add('active');  // Activa el pilar clicado
+              }
+          });
       });
   });
+
+// Escucha el clic en cualquier parte fuera de las tarjetas
+  document.addEventListener('click', (event) => {
+      const isClickInside = event.target.closest('.pilar-card');
+      if (!isClickInside) {
+          pillars.forEach(p => {
+              p.classList.remove('active', 'inactive');  // Quita las clases para restaurar el estado inicial
+          });
+      }
+  });
+
 
 
   function createBubble() {
@@ -168,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data: Object.keys(icons).map(label => {
           return label === 'Mind' ? Math.floor(Math.random() * 40) + 50 : Math.floor(Math.random() * 80) + 10;
         }), // "Mind" always between 50% and 90%
-        backgroundColor: '#fff',
+        backgroundColor: '#c49102',
         borderColor: '#c49102',
         borderWidth: 1
       }]

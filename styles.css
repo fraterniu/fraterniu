@@ -823,69 +823,85 @@ main {
   margin: 32px 0 24px 0;
 }
 
-.main-pilars--container{
+.main-pilars--container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 16px 8px; /* Añadimos el espacio de 8px desde los bordes */
+  height: auto; /* Permite que el contenedor ajuste su altura */
+  flex-wrap: wrap;
 }
 
-
 .pilar-card--container {
-  width: 280px;
-  height: 300px;
-  background: #212121;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
-  gap: 2px;
-  padding: 2px;
+  justify-content: space-around; /* Centra los pilares con espacio entre ellos */
+  gap: 8px; /* Espaciado entre pilares */
+  padding: 16px;
 }
 
 .pilar-card {
-  height: 100%;
-  flex: 1;
+  flex: 1 0 30%; /* Cada pilar ocupa 30% del contenedor */
+  max-width: 280px; /* Limita el tamaño máximo de los pilares */
+  height: 300px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.5s ease;
   background: #fff;
-  border: 2px solid #808080;
+  border: 4px solid var(--frat-grey);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 16px;
+}
+
+.pilar-card span{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+}
+
+.pilar-card.active {
+  flex: 1 0 100%; /* Pilar activo ocupa todo el ancho */
+  height: auto;
+}
+
+.pilar-card.inactive {
+  display: none; /* Oculta los pilares no seleccionados */
 }
 
 .pillar-content {
   display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  box-sizing: border-box;
   text-align: center;
   color: #000;
-}
-
-.pilar-card span {
-  min-width: 10rem;
-  padding: 0.5rem;
-  text-align: center;
-  transform: rotate(-90deg);
-  transition: all 0.5s;
-  text-transform: uppercase;
-  color: var(--fraterni-yellow);
-  letter-spacing: 0.1em;
-  font-weight: 900;
-}
-
-.pilar-card.active {
-  flex: 4;
-}
-
-.pilar-card.active span {
-  transform: rotate(0);
-  display: none;
+  background-color: #fff;
 }
 
 .pilar-card.active .pillar-content {
   display: block;
 }
+
+
+
+/* Ajustes de texto */
+.pillar-content h2 {
+  font-family: "Nerko One", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.pillar-content p {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+
 
 
 
