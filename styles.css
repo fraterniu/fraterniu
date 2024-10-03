@@ -45,6 +45,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Nerko One", system-ui;
+  src: url('./assets/fonts/NerkoOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @font-face  {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;
@@ -575,7 +582,7 @@ main {
   border: 2px solid #c49102;
   transition: background-color 0.3s ease;
   user-select: none;
-  font-family: "Fira Code", monospace;
+  font-family: "Nerko One";
 }
 
 .checkbox:checked + .checkbox-label {
@@ -705,7 +712,7 @@ main {
 
 .principles-fraterni--text h2{
   color: #808080;
-  font-family: "Fira Code", monospace;
+  font-family: "Nerko One";
   font-size: 2.4rem;
   padding: 0 32px;
 }
@@ -766,7 +773,7 @@ main {
 }
 
 .area-title-row {
-  font-family: "Fira Code", monospace;
+  font-family: "Nerko One";
   font-size: 3.2rem;
   color: #333;
 }
