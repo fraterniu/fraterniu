@@ -869,7 +869,7 @@ main {
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: left;
-  font-size: large;
+  font-size: smaller;
   font-weight: 800;
   color: #808080;
 }
