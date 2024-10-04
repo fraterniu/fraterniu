@@ -4,11 +4,14 @@
   --fraterni-green: #152517;
   --fraterni-yellow: #c49102;
   --frat-grey: #33353a;
+  --frat-lgrey: #808080;
   --fraterni-blank: #ffffff;
   --fraterni-black: #000000;
   --fraterni-blue: #111b21;
   --fraterni-beige: #dcba82;
   --fraterni-dbeige: #c3a374;
+  --fraterni-orange: #D18807;
+  --fraterni-lgreen: #133C18;
   --yellow-gradcolor: linear-gradient(to right, #D18807 0%, #f1c374 100%)
 }
 
@@ -75,7 +78,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 70px; /* Set the height of the navbar */
-  background-color: #152517;
+  background-color: var(--fraterni-green);
   border-bottom: 5px solid var(--fraterni-yellow);
   padding: 0 20px;
   position: fixed;
@@ -125,13 +128,13 @@ ul.menu li {
 
 ul.menu li a {
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--fraterni-blank);
   text-decoration: none;
 }
 
 ul.menu li.navbar-title {
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--fraterni-blank);
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -145,7 +148,7 @@ ul.menu li.navbar-title {
 
 #currentLang {
   margin-left: 10px;
-  color: #fff;
+  color: var(--fraterni-blank);
   font-size: 1.6rem;
 }
 
@@ -246,8 +249,6 @@ main {
   position: absolute;
   bottom: -50px;
   background-color:#082b0d;
-  /* background-color: rgba(128, 132, 137, 0.25);  */
-  /*background-color: rgba(209, 136, 7, 0.25);  Color con opacidad del 25% */
   border-radius: 50%;
   opacity: 0;
   animation: bubbleMove 10s infinite ease-in-out;
@@ -293,7 +294,7 @@ main {
   font-weight: 500;
   line-height: 7rem;
   padding-top: 80px;
-  color: #ffffff;
+  color: var(--fraterni-blank);
   z-index: 10;
 }
 
@@ -302,7 +303,7 @@ main {
   font-weight: 500;
   line-height: 2.2rem;
   padding: 0 16px;
-  color: #ffffff;
+  color: var(--fraterni-blank);
   text-wrap: balance;
   z-index: 10;
 }
@@ -366,31 +367,26 @@ main {
 
 .social-icons .social-link1:hover {
   background-color: var(--fraterni-yellow);
-  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link2:hover {
   background-color:var(--fraterni-yellow);
-  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link3:hover {
   background-color: var(--fraterni-yellow);
-  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link4:hover {
   background-color: var(--fraterni-yellow);
-  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
 .social-icons .social-link5:hover {
   background-color: var(--fraterni-yellow);
-  /* background-color: #808489; */
   animation: bounce_613 0.4s linear;
 }
 
@@ -420,7 +416,7 @@ main {
   top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
-  color: #fff;
+  color: var(--fraterni-blank);
   font-family: 'Norwester';
   text-decoration: none;
   border-radius: 8px;
@@ -433,7 +429,7 @@ main {
 
 /* Mobile First Styling */
 .fraternity-section {
-  background-color: #152517;
+  background-color: var(--fraterni-green);
   color: #000; /* Texto blanco para contraste */
   padding: 24px;
   text-align: center;
@@ -441,7 +437,7 @@ main {
 
 .fraternity-section p{
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--fraterni-blank);
   padding: 16px 8px 0 8px;
   text-wrap: balance;
 }
@@ -451,7 +447,7 @@ main {
   font-weight: 700;
   line-height: 4rem;
   padding: 8px 0;
-  color: #ffffff;
+  color: var(--fraterni-blank);
   text-wrap: balance;
 }
 
@@ -466,7 +462,7 @@ main {
     color: var(--fraterni-yellow); /* Comienza en color amarillo */
   }
   50% {
-    color: #ffffff; /* Se resalta cambiando el color a blanco */
+    color: var(--fraterni-blank); /* Se resalta cambiando el color a blanco */
     background-color: var(--fraterni-yellow); /* Fondo amarillo */
     padding: 6px;
     border-radius: 8px;
@@ -489,13 +485,13 @@ main {
 
 .fraternity-content {
   margin-top: 20px;
-  color: #ffffff;
+  color: var(--fraterni-blank);
 }
 
 .fraternity-content h2 {
   font-family: 'Norwester';
   font-size: 3.2rem;
-  color: #fff;
+  color: var(--fraterni-blank);
   padding: 0 16px;
   font-weight: bold;
 }
@@ -508,7 +504,7 @@ main {
 .fraternity-content p {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--fraterni-blank);
   padding: 16px 0;
   text-wrap: balance;
 }
@@ -573,19 +569,19 @@ main {
   display: inline-block;
   cursor: pointer;
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--fraterni-blank);
   background-color: #1f3521;
   padding: 10px 20px;
   border-radius: 8px;
   position: relative;
-  border: 2px solid #c49102;
+  border: 2px solid var(--fraterni-yellow);
   transition: background-color 0.3s ease;
   user-select: none;
   font-family: "Nerko One";
 }
 
 .checkbox:checked + .checkbox-label {
-  background-color: #c49102; /* Cambia el color cuando está activado */
+  background-color: var(--fraterni-yellow); /* Cambia el color cuando está activado */
 }
 
 .checkbox-label::before {
@@ -710,7 +706,7 @@ main {
 }
 
 .principles-fraterni--text h2{
-  color: #808080;
+  color: var(--frat-lgrey);
   font-family: "Nerko One";
   font-size: 2.4rem;
   padding: 0 32px;
@@ -750,7 +746,7 @@ main {
 .area-detail--card {
   width: 100%;
   max-width: 320px;
-  background-color: #fff;
+  background-color: var(--fraterni-blank);
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -778,12 +774,12 @@ main {
 .area-title-row {
   font-family: "Nerko One";
   font-size: 3.2rem;
-  color: #333;
+  color: var(--frat-grey);
 }
 
 .area-description-row {
   font-size: 1.6rem;
-  color: #333;
+  color: var(--frat-grey);
 }
 
 .slider-controls {
@@ -815,13 +811,13 @@ main {
 .indicator {
   width: 12px;
   height: 12px;
-  background-color: #ccc;
+  background-color: var(--fraterni-orange);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .indicator.active {
-  background-color: #333;
+  background-color: var(--frat-grey);
 }
 
 .principles-graph--container{
@@ -876,7 +872,7 @@ main {
   text-align: left;
   font-size: smaller;
   font-weight: 800;
-  color: #808080;
+  color: var(--frat-lgrey);
 }
 
 .pilar-card.active {
@@ -895,7 +891,7 @@ main {
   padding: 16px;
   box-sizing: border-box;
   text-align: center;
-  color: #000;
+  color: var(--fraterni-black);
   background-image: url('./assets/imgs/marmol.png');
   background-size: cover;
   background-position: center;
@@ -927,7 +923,7 @@ main {
 
 /* Footer Styles */
 footer {
-  background-color: #152517; /* Fondo del footer acorde con la paleta de colores */
+  background-color: var(--fraterni-green); /* Fondo del footer acorde con la paleta de colores */
   padding: 20px 0;
   text-align: center;
   border-top: 5px solid var(--fraterni-yellow); /* Borde superior acorde al estilo */
