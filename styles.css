@@ -867,7 +867,7 @@ main {
 
 .pilar-card span{
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  text-orientation: upright;
   text-align: center;
   font-size: large;
   font-weight: 800;
