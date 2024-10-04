@@ -412,7 +412,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 73.5vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: #fff;
