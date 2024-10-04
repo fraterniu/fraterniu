@@ -853,8 +853,11 @@ main {
   height: 300px;
   overflow: hidden;
   cursor: pointer;
-  background: #fff;
-  border: 5px solid var(--frat-grey);
+  background-image: url('./assets/imgs/marmol.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #808080;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -888,7 +891,10 @@ main {
   box-sizing: border-box;
   text-align: center;
   color: #000;
-  background-color: #fff;
+  background-image: url('./assets/imgs/marmol.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pilar-card.active .pillar-content {
