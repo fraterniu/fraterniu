@@ -964,6 +964,203 @@ main {
   opacity: 1; /* Efecto al pasar por encima del logo */
 }
 
+.main-plans-container {
+  width: 100%;
+  min-width: 320px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.plans--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.plans--title h2{
+  padding-top: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--fraterni-blank);
+  margin-bottom: 50px;
+}
+
+.plans--title p{
+  padding-top: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--fraterni-blank);
+}
+
+.plans-container--slider {
+  display: flex;
+  /*gap: 50px; Se puede usar pero el profe dio otra alt*/
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+
+.plans-container--card {
+  position: relative;
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 190px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px 5px 0;
+  padding: 0 15px;
+  background-color: var(--just-white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89,73,30, 0.16);
+}
+
+.recomendado {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  background-color: var(--bitcoin-orange);
+  border-radius: 8px;
+  color: var(--fraterni-blank);
+}
+
+.basic {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  background-color: var(--secondary-blue);
+  border-radius: 8px;
+  color: var(--fraterni-blank);
+}
+
+.premium {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  background-color: #371f76;
+  border-radius: 8px;
+  color: var(--fraterni-blank);
+}
+
+
+.plan-card--title {
+  padding-top: 30px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--price {
+  padding: 5px 0;
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 5.3rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--price sup{
+  font-size: 1.2rem;
+  font-weight: 300;
+  /*vertical-align: text-top;*/
+  vertical-align: 30px;
+}
+
+.plan-card-saving {
+  font-size: 1.2rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--cta {
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #faf8f7;
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--cta span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./assets/icons/orange-right-arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+}
+
+.plan-card--cta--blue {
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #faf8f7;
+  border: 2px solid var(--secondary-blue);
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--cta--blue span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./assets/icons/blue-right-arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+}
+
+.plan-card--cta--purple {
+  width: 150px;
+  height: 48px;
+  margin-top: 20px;
+  background-color: #faf8f7;
+  border: 2px solid #371f76;
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--fraterni-blank);
+}
+
+.plan-card--cta--purple span{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./assets/icons/purple-right-arrow.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: text-bottom;
+}
+
 
 
 /* Footer Styles */
