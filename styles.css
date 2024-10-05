@@ -978,7 +978,7 @@ main {
 }
 
 .activities-titles h2{
-  padding-top: 50px;
+  padding-top: 8px;
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 2.6rem;
@@ -986,6 +986,11 @@ main {
   margin-bottom: 50px;
 }
 
+.activities-titles p{
+  padding-top: 50px;
+  font-size: 1.2rem;
+  color: var(--fraterni-blank);
+}
 
 .activities-container{
   display: flex;
@@ -1004,7 +1009,7 @@ main {
   display: flex;
   border-radius: 8px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .activities-image--container{
@@ -1026,7 +1031,9 @@ main {
 }
 
 .activities-info{
-  text-align: left;
+    width: 100%; /* El texto ocupa el 30% */
+    padding: 16px; /* Padding para separar el texto del borde */
+    text-align: left; /* Texto alineado a la izquierda */
 }
 
 .activity-title{
@@ -1043,13 +1050,13 @@ main {
 .activity-link{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #fff;
   color: #145A30;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.7rem;
   border-radius: 20px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
