@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.next-btn');
   const ctx = document.getElementById('areasChart').getContext('2d');
   const pillars = document.querySelectorAll('.pilar-card');
+  const track = document.querySelector('.carousel-track');
 
   let currentIndex = 0;
   let resetToZero = true; // Controla si los valores deben bajar a 0 o actualizarse con nuevos valores
@@ -293,6 +294,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     areasChart.update();
   }, 6000);
+
+  
+
+  track.addEventListener('mouseover', () => {
+    track.style.animationPlayState = 'paused';
+  });
+
+  track.addEventListener('mouseout', () => {
+    track.style.animationPlayState = 'running';
+  });
+
 
   // Mobile menu toggle
   menuToggle.addEventListener('change', toggleMobileMenu);

@@ -913,6 +913,46 @@ main {
   color: var(--fraterni-blank);
 }
 
+.brand-carousel {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--frat-grey); /* Color de fondo */
+}
+
+.carousel-container {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.carousel-track img {
+  height: 70px; /* Ajusta la altura de los logos */
+  padding: 0 2rem; /* Espaciado entre logos */
+  opacity: 0.8; /* Transparencia para el efecto */
+  transition: opacity 0.3s ease;
+}
+
+.carousel-track img:hover {
+  opacity: 1; /* Efecto al pasar por encima del logo */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 
 
 
