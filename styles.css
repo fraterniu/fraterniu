@@ -998,8 +998,7 @@ main {
 }
 
 .activities-card{
-  width: 70%;
-  max-width: 300px;
+  min-width: 300px;
   background-color: #1f3521; /* Fondo más oscuro */
   overflow: hidden;
   display: flex;
