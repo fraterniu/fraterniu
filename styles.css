@@ -591,7 +591,7 @@ main {
   left: -10px;
   width: 0;
   height: 2px;
-  background: #fff;
+  background: var(--fraterni-blank);
   transform: rotate(-10deg);
   transition: width 0.5s ease;
 }
@@ -603,7 +603,7 @@ main {
   left: -10px;
   width: 0;
   height: 2px;
-  background: #fff;
+  background: var(--fraterni-blank);
   transform: rotate(10deg);
   transition: width 0.5s ease;
 }
@@ -736,7 +736,7 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 450px;
+    height: 500px;
     padding-bottom: 120px;
     overflow: hidden;
 }
@@ -746,7 +746,7 @@ main {
 .area-detail--card {
   width: 100%;
   max-width: 320px;
-  background-color: #1c5f23;
+  background-color: var(--fraterni-green);
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -854,11 +854,10 @@ main {
   height: 300px;
   overflow: hidden;
   cursor: pointer;
-  background-image: url('./assets/imgs/marmol.png');
+  background-image: url('./assets/icons/Pilar.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 2px solid var(--frat-lgrey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -872,7 +871,7 @@ main {
   text-align: left;
   font-size: smaller;
   font-weight: 800;
-  color: var(--frat-lgrey);
+  color: var(--fraterni-yellow);
 }
 
 .pilar-card.active {
@@ -891,11 +890,8 @@ main {
   padding: 16px;
   box-sizing: border-box;
   text-align: center;
-  color: var(--fraterni-black);
-  background-image: url('./assets/imgs/marmol.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: var(--fraterni-blank);
+  background-color: var(--fraterni-lgreen);
 }
 
 .pilar-card.active .pillar-content {
@@ -910,11 +906,13 @@ main {
   text-transform: uppercase;
   font-size: 2.4rem;
   margin-bottom: 16px;
+  color: var(--fraterni-yellow);
 }
 
 .pillar-content p {
   font-size: 1.4rem;
   margin-bottom: 16px;
+  color: var(--fraterni-blank);
 }
 
 
