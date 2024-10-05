@@ -639,12 +639,12 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    background-color: var(--fraterni-lgreen);
+    background-color: var(--fraterni-blank);
 }
 
 .principles-paper--container{
   width: 100%;
-  background-color: var(--fraterni-lgreen);
+  background-color: var(--fraterni-blank);
   text-align: center;
 }
 
@@ -658,7 +658,7 @@ main {
 
 .principles-paper--titles h1{
   padding-top: 32px;
-  color: var(--fraterni-blank);
+  color: var(--fraterni-orange);
   font-family: "Norwester";
   font-size: 4.8rem;
   padding-bottom: 24px;
@@ -669,7 +669,7 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
-    color: var(--fraterni-blank);
+    color: var(--fraterni-black);
     text-wrap: balance;
 }
 
@@ -706,7 +706,7 @@ main {
 }
 
 .principles-fraterni--text h2{
-  color: var(--fraterni-blank);
+  color: var(--frat-grey);
   font-family: "Nerko One";
   font-size: 2.4rem;
   padding: 0 32px;
@@ -717,7 +717,7 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
-    color: var(--fraterni-blank);
+    color: var(--fraterni-black);
     text-wrap: balance;
 }
 
@@ -746,7 +746,7 @@ main {
 .area-detail--card {
   width: 100%;
   max-width: 320px;
-  background-color: var(--fraterni-green);
+  background-color: var(--fraterni-blank);
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -774,12 +774,12 @@ main {
 .area-title-row {
   font-family: "Nerko One";
   font-size: 3.2rem;
-  color: var(--fraterni-blank);
+  color: var(--fraterni-black);
 }
 
 .area-description-row {
   font-size: 1.6rem;
-  color: var(--fraterni-blank);
+  color: var(--frat-grey);
 }
 
 .slider-controls {
@@ -811,7 +811,7 @@ main {
 .indicator {
   width: 12px;
   height: 12px;
-  background-color: var(--fraterni-blank);
+  background-color: var(--frat-lgrey);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -854,7 +854,7 @@ main {
   height: 300px;
   overflow: hidden;
   cursor: pointer;
-  background-image: url('./assets/icons/Pilar.svg');
+  background-image: url('./assets/icons/pilar.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -871,7 +871,7 @@ main {
   text-align: left;
   font-size: smaller;
   font-weight: 800;
-  color: var(--fraterni-yellow);
+  color: var(--fraterni-blank);
 }
 
 .pilar-card.active {
@@ -891,7 +891,7 @@ main {
   box-sizing: border-box;
   text-align: center;
   color: var(--fraterni-blank);
-  background-color: var(--fraterni-lgreen);
+  background-color: var(--frat-grey);
 }
 
 .pilar-card.active .pillar-content {
