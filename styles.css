@@ -852,7 +852,7 @@ main {
   height: 300px;
   overflow: hidden;
   cursor: pointer;
-  background-image: url('./assets/icons/pilar.svg');
+  background-image: url('./assets/icons/pilarSmall.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
