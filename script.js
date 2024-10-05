@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           grid: {
             drawBorder: true, // Keep the y-axis line visible
-            color: '#fff' // Set the color of the y-axis grid line to white
+            color: '#133c18' // Set the color of the y-axis grid line to white
           },
           title: {
             display: true, // Show the title
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
             font: {
               size: 18
             },
-            color: '#000'
+            color: '#fff'
           }
         },
         x: {
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           grid: {
             drawBorder: true, // Keep the x-axis line
-            color: '#fff' // Set the color of the x-axis grid line to white
+            color: '#133c18' // Set the color of the x-axis grid line to white
           },
           title: {
             display: true,
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
             font: {
               size: 18
             },
-            color: '#000'
+            color: '#fff'
           }
         }
       },

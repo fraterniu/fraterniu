@@ -639,12 +639,12 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    background-color: #FEFEFE;
+    background-color: var(--fraterni-lgreen);
 }
 
 .principles-paper--container{
   width: 100%;
-  background-color: #FEFEFE;
+  background-color: var(--fraterni-lgreen);
   text-align: center;
 }
 
@@ -658,7 +658,7 @@ main {
 
 .principles-paper--titles h1{
   padding-top: 32px;
-  color: var(--fraterni-yellow);
+  color: var(--fraterni-blank);
   font-family: "Norwester";
   font-size: 4.8rem;
   padding-bottom: 24px;
@@ -669,7 +669,7 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
-    color: var(--frat-grey);
+    color: var(--fraterni-blank);
     text-wrap: balance;
 }
 
@@ -706,7 +706,7 @@ main {
 }
 
 .principles-fraterni--text h2{
-  color: var(--frat-lgrey);
+  color: var(--fraterni-blank);
   font-family: "Nerko One";
   font-size: 2.4rem;
   padding: 0 32px;
@@ -717,7 +717,7 @@ main {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 2rem;
-    color: var(--frat-grey);
+    color: var(--fraterni-blank);
     text-wrap: balance;
 }
 
@@ -737,7 +737,7 @@ main {
     justify-content: center;
     position: relative;
     height: 450px;
-    padding: 0 0 36px 0;
+    padding-bottom: 120px;
     overflow: hidden;
 }
 
@@ -746,7 +746,7 @@ main {
 .area-detail--card {
   width: 100%;
   max-width: 320px;
-  background-color: var(--fraterni-blank);
+  background-color: #1c5f23;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -774,12 +774,12 @@ main {
 .area-title-row {
   font-family: "Nerko One";
   font-size: 3.2rem;
-  color: var(--frat-grey);
+  color: var(--fraterni-blank);
 }
 
 .area-description-row {
   font-size: 1.6rem;
-  color: var(--frat-grey);
+  color: var(--fraterni-blank);
 }
 
 .slider-controls {
@@ -811,13 +811,13 @@ main {
 .indicator {
   width: 12px;
   height: 12px;
-  background-color: var(--fraterni-orange);
+  background-color: var(--fraterni-blank);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .indicator.active {
-  background-color: var(--frat-grey);
+  background-color: var(--fraterni-yellow);
 }
 
 .principles-graph--container{
@@ -858,7 +858,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 2px solid #808080;
+  border: 2px solid var(--frat-lgrey);
   display: flex;
   justify-content: center;
   align-items: center;
