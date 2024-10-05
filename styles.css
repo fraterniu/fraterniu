@@ -1014,7 +1014,7 @@ main {
   height: 250px;
   margin: 50px 5px 0;
   padding: 0 15px;
-  background-color: var(--just-white);
+  background-color: var(--fraterni-lgreen);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(89,73,30, 0.16);
 }
@@ -1027,7 +1027,7 @@ main {
   top: -15px;
   left: calc(50% - 60px);
   font-size: 1.2rem;
-  background-color: var(--bitcoin-orange);
+  background-color: var(--fraterni-yellow);
   border-radius: 8px;
   color: var(--fraterni-blank);
 }
@@ -1040,7 +1040,7 @@ main {
   top: -15px;
   left: calc(50% - 60px);
   font-size: 1.2rem;
-  background-color: var(--secondary-blue);
+  background-color: var(--fraterni-yellow);
   border-radius: 8px;
   color: var(--fraterni-blank);
 }
@@ -1053,7 +1053,7 @@ main {
   top: -15px;
   left: calc(50% - 60px);
   font-size: 1.2rem;
-  background-color: #371f76;
+  background-color: var(--fraterni-yellow);
   border-radius: 8px;
   color: var(--fraterni-blank);
 }
@@ -1091,13 +1091,13 @@ main {
   height: 48px;
   margin-top: 20px;
   background-color: #faf8f7;
-  border: 2px solid var(--bitcoin-orange);
+  border: 2px solid var(--fraterni-yellow);
   border-radius: 4px;
   font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.8rem;
-  color: var(--fraterni-blank);
+  color: var(--fraterni-yellow);
 }
 
 .plan-card--cta span{
@@ -1116,13 +1116,13 @@ main {
   height: 48px;
   margin-top: 20px;
   background-color: #faf8f7;
-  border: 2px solid var(--secondary-blue);
+  border: 2px solid var(--fraterni-yellow);
   border-radius: 4px;
   font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.8rem;
-  color: var(--fraterni-blank);
+  color: var(--fraterni-yellow);
 }
 
 .plan-card--cta--blue span{
@@ -1141,13 +1141,13 @@ main {
   height: 48px;
   margin-top: 20px;
   background-color: #faf8f7;
-  border: 2px solid #371f76;
+  border: 2px solid var(--fraterni-yellow);
   border-radius: 4px;
   font-family: "DM Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.8rem;
-  color: var(--fraterni-blank);
+  color: var(--fraterni-yellow);
 }
 
 .plan-card--cta--purple span{
