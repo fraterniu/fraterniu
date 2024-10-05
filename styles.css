@@ -964,21 +964,20 @@ main {
   opacity: 1; /* Efecto al pasar por encima del logo */
 }
 
-.main-plans-container {
-  width: 100%;
-  min-width: 320px;
-  padding-bottom: 70px;
+.activities-section--slider{
+  background-color: var(--fraterni-green); /* Fondo verde */
+  color: #fff;
   text-align: center;
 }
 
-.plans--title {
+.activities-titles {
   width: 90%;
   min-width: 288px;
   height: auto;
   margin: 0 auto;
 }
 
-.plans--title h2{
+.activities-titles h2{
   padding-top: 50px;
   font-size: 2.4rem;
   font-weight: bold;
@@ -987,181 +986,66 @@ main {
   margin-bottom: 50px;
 }
 
-.plans--title p{
-  padding-top: 30px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.8rem;
-  color: var(--fraterni-blank);
-}
 
-.plans-container--slider {
+.activities-container{
   display: flex;
-  /*gap: 50px; Se puede usar pero el profe dio otra alt*/
-  height: 316px;
+  height: 400px;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
+  gap: 24px;
 }
 
-
-.plans-container--card {
-  position: relative;
-  scroll-snap-align: center;
+.activities-card{
   width: 70%;
-  min-width: 190px;
-  max-width: 300px;
-  height: 250px;
-  margin: 50px 5px 0;
-  padding: 0 15px;
-  background-color: var(--fraterni-lgreen);
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(89,73,30, 0.16);
-}
-
-.recomendado {
-  position: absolute;
-  width: 120px;
-  height: 31px;
-  padding: 6px;
-  top: -15px;
-  left: calc(50% - 60px);
-  font-size: 1.2rem;
-  background-color: var(--fraterni-yellow);
+  min-width: 300px;
+  max-width: 500px;
+  background-color: #1f3521; /* Fondo más oscuro */
+  overflow: hidden;
+  display: flex;
   border-radius: 8px;
-  color: var(--fraterni-blank);
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-.basic {
-  position: absolute;
-  width: 120px;
-  height: 31px;
-  padding: 6px;
-  top: -15px;
-  left: calc(50% - 60px);
+.activities-image{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.activity-title{
   font-size: 1.2rem;
-  background-color: var(--fraterni-yellow);
-  border-radius: 8px;
-  color: var(--fraterni-blank);
+  margin-bottom: 0.5rem;
 }
 
-.premium {
-  position: absolute;
-  width: 120px;
-  height: 31px;
-  padding: 6px;
-  top: -15px;
-  left: calc(50% - 60px);
-  font-size: 1.2rem;
-  background-color: var(--fraterni-yellow);
-  border-radius: 8px;
-  color: var(--fraterni-blank);
+.activity-role{
+  font-size: 0.9rem;
+  color: #d4d4d4;
+  margin-bottom: 1rem;
 }
 
-
-.plan-card--title {
-  padding-top: 30px;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  color: var(--fraterni-blank);
-}
-
-.plan-card--price {
-  padding: 5px 0;
-  font-size: 5.2rem;
+.activity-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #145A30;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
   font-weight: bold;
-  line-height: 5.3rem;
-  color: var(--fraterni-blank);
 }
 
-.plan-card--price sup{
-  font-size: 1.2rem;
-  font-weight: 300;
-  /*vertical-align: text-top;*/
-  vertical-align: 30px;
+.activity-link:hover {
+  background-color: #f4f4f4;
 }
 
-.plan-card-saving {
-  font-size: 1.2rem;
-  color: var(--fraterni-blank);
+.activity-icon {
+  margin-right: 0.5rem;
 }
-
-.plan-card--cta {
-  width: 150px;
-  height: 48px;
-  margin-top: 20px;
-  background-color: #faf8f7;
-  border: 2px solid var(--fraterni-yellow);
-  border-radius: 4px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 1.8rem;
-  color: var(--fraterni-yellow);
-}
-
-.plan-card--cta span{
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-image: url("./assets/icons/orange-right-arrow.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: text-bottom;
-}
-
-.plan-card--cta--blue {
-  width: 150px;
-  height: 48px;
-  margin-top: 20px;
-  background-color: #faf8f7;
-  border: 2px solid var(--fraterni-yellow);
-  border-radius: 4px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 1.8rem;
-  color: var(--fraterni-yellow);
-}
-
-.plan-card--cta--blue span{
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-image: url("./assets/icons/blue-right-arrow.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: text-bottom;
-}
-
-.plan-card--cta--purple {
-  width: 150px;
-  height: 48px;
-  margin-top: 20px;
-  background-color: #faf8f7;
-  border: 2px solid var(--fraterni-yellow);
-  border-radius: 4px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 1.8rem;
-  color: var(--fraterni-yellow);
-}
-
-.plan-card--cta--purple span{
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  background-image: url("./assets/icons/purple-right-arrow.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  vertical-align: text-bottom;
-}
-
-
 
 /* Footer Styles */
 footer {
