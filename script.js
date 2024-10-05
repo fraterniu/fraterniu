@@ -17,9 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const ctx = document.getElementById('areasChart').getContext('2d');
   const pillars = document.querySelectorAll('.pilar-card');
   const track = document.querySelector('.carousel-track');
+  const logos = [...document.querySelectorAll('.carousel-track img')]; // Usamos array para manipular con más facilidad
+
 
   let currentIndex = 0;
   let resetToZero = true; // Controla si los valores deben bajar a 0 o actualizarse con nuevos valores
+  let scrollPosition = 0;
+  let speed = 0.5; // Ajusta este valor para controlar la velocidad
+
+
 
   const icons = {
     'Mind': './assets/icons/mindlightGrey.svg',
@@ -305,6 +311,31 @@ document.addEventListener('DOMContentLoaded', () => {
     track.style.animationPlayState = 'running';
   });
 
+// Duplicamos el contenido para asegurar que siempre haya suficientes logos visibles en el track
+const cloneLogos = () => {
+  logos.forEach(logo => {
+    const clonedLogo = logo.cloneNode(true);
+    track.appendChild(clonedLogo);
+  });
+};
+
+// Función para mover el carrusel
+const moveLogos = () => {
+  scrollPosition -= speed;
+
+  // Si se desplaza un logo fuera de la vista, lo movemos al final
+  if (Math.abs(scrollPosition) >= logos[0].offsetWidth) {
+    scrollPosition = 0;
+    track.appendChild(track.firstElementChild); // Mueve el primer logo al final del track
+  }
+  
+  track.style.transform = `translateX(${scrollPosition}px)`;
+  requestAnimationFrame(moveLogos); // Sigue animando
+};
+
+// Inicializa el carrusel
+cloneLogos(); // Duplicamos logos para hacer el track más largo
+moveLogos();  // Inicia la animación
 
   // Mobile menu toggle
   menuToggle.addEventListener('change', toggleMobileMenu);

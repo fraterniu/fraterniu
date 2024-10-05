@@ -951,27 +951,17 @@ main {
 
 .carousel-track {
   display: flex;
-  animation: scroll 30s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .carousel-track img {
   height: 70px; /* Ajusta la altura de los logos */
   padding: 0 2rem; /* Espaciado entre logos */
   opacity: 0.8; /* Transparencia para el efecto */
-  transition: opacity 0.3s ease;
 }
 
 .carousel-track img:hover {
   opacity: 1; /* Efecto al pasar por encima del logo */
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
 
 
