@@ -340,7 +340,7 @@ main {
 
 /* Texto promocional */
 .fpromo-text {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
   color: #f1f1f1;
@@ -367,7 +367,7 @@ main {
   }
   
   .fpromo-text {
-      font-size: 2rem;
+      font-size: 1.4rem;
   }
 }
 
