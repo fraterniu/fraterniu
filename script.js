@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const pillars = document.querySelectorAll('.pilar-card');
   const track = document.querySelector('.carousel-track');
   const logos = [...document.querySelectorAll('.carousel-track img')]; // Usamos array para manipular con más facilidad
-
+  const promoBox = document.getElementById('frater-promo--box');
+  const closeButton = document.getElementById('fpromoclose-btn');
 
   let currentIndex = 0;
   let resetToZero = true; // Controla si los valores deben bajar a 0 o actualizarse con nuevos valores
@@ -86,6 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     areasChart.update(); // Refrescar el gráfico con los nuevos textos
   }
+
+  // Comportamiento al hacer clic en la X (Cerrar caja)
+      closeButton.addEventListener('click', function () {
+        promoBox.style.display = 'none';
+    });
+
+    // Comportamiento al hacer scroll (desaparece la caja)
+    window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollY > 100) { // Cambiar el valor de scroll según el comportamiento deseado
+            promoBox.style.display = 'none';
+        }
+    });
 
   
 
