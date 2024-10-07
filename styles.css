@@ -310,13 +310,13 @@ main {
 
 .fpromo-box {
   position: fixed;
-  bottom: 28vh; /* Ajuste desde el borde inferior */
+  bottom: 26vh; /* Ajuste desde el borde inferior */
   left: 50%;
   transform: translateX(-50%);
-  width: 80vw; /* Tamaño flexible basado en View Width (vw) */
+  width: 60vw; /* Tamaño flexible basado en View Width (vw) */
   max-width: 600px;
   min-width: 280px;
-  height: 40vh; /* Basado en View Height */
+  height: 15vh; /* Basado en View Height */
   background-color: #1f3521; /* Fondo semi-transparente */
   border-radius: 8px;
   padding: 8px;
@@ -340,7 +340,7 @@ main {
 
 /* Texto promocional */
 .fpromo-text {
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
   text-align: center;
   color: #f1f1f1;
@@ -362,8 +362,8 @@ main {
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
   .fpromo-box {
-      width: 80vw; /* Caja más ancha en pantallas pequeñas */
-      height: 20vh; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
+      width: 60vw; /* Caja más ancha en pantallas pequeñas */
+      height: 15vh; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
   }
   
   .fpromo-text {
