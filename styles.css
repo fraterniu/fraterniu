@@ -342,7 +342,7 @@ main {
 .fpromo-text {
   font-size: 2.4rem;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   color: #f1f1f1;
   margin: 0 8px;
   text-wrap: balance;
@@ -367,7 +367,7 @@ main {
   }
   
   .fpromo-text {
-      font-size: 1.6rem;
+      font-size: 2rem;
   }
 }
 
