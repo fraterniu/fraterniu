@@ -320,6 +320,7 @@ main {
   color: var(--fraterni-blank);
   margin: 16px 8px;
   text-wrap: balance;
+  z-index: 10;
 }
 
 /* Enlace promocional */
@@ -423,7 +424,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 70vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 71.5vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: var(--fraterni-blank);
