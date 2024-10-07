@@ -312,9 +312,9 @@ main {
 
 /* Texto promocional */
 .fpromo-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   line-height: 1.5;
   text-align: center;
   color: var(--fraterni-blank);
