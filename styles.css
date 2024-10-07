@@ -344,7 +344,8 @@ main {
   line-height: 1.5;
   text-align: left;
   color: #f1f1f1;
-  margin-right: 8px;
+  margin: 0 8px;
+  text-wrap: balance;
 }
 
 /* Enlace promocional */
