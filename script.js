@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.next-btn');
   const ctx = document.getElementById('areasChart').getContext('2d');
   const pillars = document.querySelectorAll('.pilar-card');
+  const lines = document.querySelectorAll('.line');
+  const viewedPillars = new Set(); // Usamos un conjunto para almacenar los índices de los pilares visualizados
   const track = document.querySelector('.carousel-track');
   const logos = [...document.querySelectorAll('.carousel-track img')]; // Usamos array para manipular con más facilidad
   const promoBox = document.getElementById('frater-promo--box');
@@ -99,30 +101,43 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
 
-  pillars.forEach(pillar => {
-      pillar.addEventListener('click', (event) => {
-          event.stopPropagation(); // Evita que el clic se propague al body
-          pillars.forEach(p => {
-              if (p !== pillar) {
-                  p.classList.add('inactive');  // Oculta los pilares no seleccionados
-                  p.classList.remove('active');
-              } else {
-                  p.classList.remove('inactive');
-                  p.classList.add('active');  // Activa el pilar clicado
-              }
-          });
-      });
-  });
-
-// Escucha el clic en cualquier parte fuera de las tarjetas
-  document.addEventListener('click', (event) => {
-      const isClickInside = event.target.closest('.pilar-card');
-      if (!isClickInside) {
-          pillars.forEach(p => {
-              p.classList.remove('active', 'inactive');  // Quita las clases para restaurar el estado inicial
-          });
-      }
-  });
+  
+    pillars.forEach((pillar, index) => {
+        pillar.addEventListener('click', (event) => {
+            event.stopPropagation(); // Evita que el clic se propague al body
+            
+            pillars.forEach((p, i) => {
+                if (p !== pillar) {
+                    p.classList.add('inactive');  // Oculta los pilares no seleccionados
+                    p.classList.remove('active');
+                } else {
+                    p.classList.remove('inactive');
+                    p.classList.add('active');  // Activa el pilar clicado
+                    viewedPillars.add(index); // Agrega el índice del pilar visualizado
+                }
+            });
+    
+            // Actualiza el color de las líneas
+            lines.forEach((line, i) => {
+                if (viewedPillars.has(i)) {
+                    line.classList.add('active'); // Mantiene la línea verde si el pilar ha sido visualizado
+                } else {
+                    line.classList.remove('active'); // Quita la clase activa si no ha sido visualizado
+                }
+            });
+        });
+    });
+    
+    // Escucha el clic en cualquier parte fuera de las tarjetas
+    document.addEventListener('click', (event) => {
+        const isClickInside = event.target.closest('.pilar-card');
+        if (!isClickInside) {
+            pillars.forEach((p) => {
+                p.classList.remove('active', 'inactive');  // Quita las clases para restaurar el estado inicial
+            });
+        }
+    });
+    
 
 
 
