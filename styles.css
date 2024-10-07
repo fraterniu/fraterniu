@@ -310,14 +310,14 @@ main {
 
 .fpromo-box {
   position: fixed;
-  bottom: 30vh; /* Ajuste desde el borde inferior */
+  bottom: 28vh; /* Ajuste desde el borde inferior */
   left: 50%;
   transform: translateX(-50%);
-  width: 50vw; /* Tamaño flexible basado en View Width (vw) */
+  width: 80vw; /* Tamaño flexible basado en View Width (vw) */
   max-width: 600px;
   min-width: 280px;
   height: 40vh; /* Basado en View Height */
-  background-color: var(--fraterni-green); /* Fondo semi-transparente */
+  background-color: #1f3521; /* Fondo semi-transparente */
   border-radius: 8px;
   padding: 8px;
   display: flex;
@@ -358,27 +358,12 @@ main {
   text-decoration: underline;
 }
 
-/* Botón de cierre */
-.fpromo-close-btn {
-  position: absolute;
-  top: 0.5rem;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-.fpromo-close-bt:hover {
-  color: var(--fraterni-orange);
-}
 
 /* Media queries para pantallas más pequeñas */
 @media (max-width: 768px) {
   .fpromo-box {
       width: 80vw; /* Caja más ancha en pantallas pequeñas */
-      height: auto; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
+      height: 40vh; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
   }
   
   .fpromo-text {
