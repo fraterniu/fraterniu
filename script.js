@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', function () {
         const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollY > 100) { // Cambiar el valor de scroll según el comportamiento deseado
+        if (scrollY > 50) { // Cambiar el valor de scroll según el comportamiento deseado
             promoBox.style.display = 'none';
         }
     });
