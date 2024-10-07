@@ -363,7 +363,7 @@ main {
 @media (max-width: 768px) {
   .fpromo-box {
       width: 80vw; /* Caja más ancha en pantallas pequeñas */
-      height: 40vh; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
+      height: 20vh; /* Para evitar que se sobrecargue el espacio en dispositivos pequeños */
   }
   
   .fpromo-text {
@@ -810,8 +810,7 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: auto;
-    padding-bottom: 80px;
+    height: 480px;
     overflow: hidden;
 }
 
@@ -860,8 +859,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 20px;
+  position: relative;
   width: 100%;
 }
 
@@ -905,26 +903,20 @@ main {
 }
 
 .main-pilars--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 8px; /* Añadimos el espacio de 8px desde los bordes */
-  height: auto; /* Permite que el contenedor ajuste su altura */
-  flex-wrap: wrap;
+  height: 350px;
+  padding: 16px 8px;
 }
 
 .pilar-card--container {
-  width: 100%;
-  max-width: 1200px;
   display: flex;
-  justify-content: space-around; /* Centra los pilares con espacio entre ellos */
-  gap: 8px; /* Espaciado entre pilares */
-  padding: 16px;
+  justify-content: space-around; 
+  gap: 8px; 
+  padding: 0 16px;
 }
 
 .pilar-card {
-  flex: 1 0 30%; /* Cada pilar ocupa 30% del contenedor */
-  max-width: 280px; /* Limita el tamaño máximo de los pilares */
+  flex: 1 0 30%; 
+  max-width: 280px; 
   height: 300px;
   overflow: hidden;
   cursor: pointer;
@@ -939,7 +931,7 @@ main {
   padding: 16px;
 }
 
-.pilar-card span{
+.pilar-card span {
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: left;
@@ -949,12 +941,13 @@ main {
 }
 
 .pilar-card.active {
-  flex: 1 0 100%; /* Pilar activo ocupa todo el ancho */
-  height: auto;
+  flex: 1 0 100%;
+  height: 300px;
+  background: none;
 }
 
 .pilar-card.inactive {
-  display: none; /* Oculta los pilares no seleccionados */
+  display: none; 
 }
 
 .pillar-content {
@@ -972,6 +965,40 @@ main {
   display: block;
 }
 
+/* Estilo para las líneas */
+.lines-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.line {
+  width: 25%;
+  height: 4px; /* Altura de las líneas */
+  background-color: var(--frat-grey); /* Color por defecto */
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+/* Estilo para líneas activas */
+.line.active {
+  background-color: var(--fraterni-yellow); /* Color cuando el pilar es activo */
+}
+
+/* Ajustes de texto */
+.pillar-content h2 {
+  font-family: "Nerko One";
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: var(--fraterni-yellow);
+}
+
+.pillar-content p {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--fraterni-blank);
+}
 
 
 /* Ajustes de texto */
