@@ -316,10 +316,10 @@ main {
   width: 50vw; /* Tamaño flexible basado en View Width (vw) */
   max-width: 600px;
   min-width: 280px;
-  height: 12vh; /* Basado en View Height */
+  height: 25vh; /* Basado en View Height */
   background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,7 +340,7 @@ main {
 
 /* Texto promocional */
 .fpromo-text {
-  font-size: 1rem;
+  font-size: 2.4rem;
   line-height: 1.5;
   text-align: left;
   color: #f1f1f1;
@@ -369,7 +369,7 @@ main {
 }
 
 .fpromo-close-bt:hover {
-  color: #ffd700;
+  color: var(--fraterni-orange);
 }
 
 /* Media queries para pantallas más pequeñas */
@@ -380,7 +380,7 @@ main {
   }
   
   .fpromo-text {
-      font-size: 0.9rem;
+      font-size: 1.6rem;
   }
 }
 
