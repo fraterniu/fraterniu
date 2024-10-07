@@ -418,6 +418,7 @@ main {
   background-color: var(--fraterni-yellow);
   color: var(--fraterni-blank);
   font-family: 'Norwester';
+  text-transform: uppercase;
   text-decoration: none;
   border-radius: 8px;
   letter-spacing: 0.07rem;
