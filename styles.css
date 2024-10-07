@@ -310,7 +310,7 @@ main {
 
 .fpromo-box {
   position: fixed;
-  bottom: 5vh; /* Ajuste desde el borde inferior */
+  bottom: 15vh; /* Ajuste desde el borde inferior */
   left: 50%;
   transform: translateX(-50%);
   width: 50vw; /* Tamaño flexible basado en View Width (vw) */
@@ -491,7 +491,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 72vh; /* Ajusta según sea necesario para que esté entre las secciones */
+  top: 70vh; /* Ajusta según sea necesario para que esté entre las secciones */
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: var(--fraterni-blank);
