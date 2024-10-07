@@ -310,7 +310,7 @@ main {
 
 .fpromo-box {
   position: fixed;
-  bottom: 45vh; /* Ajuste desde el borde inferior */
+  bottom: 30vh; /* Ajuste desde el borde inferior */
   left: 50%;
   transform: translateX(-50%);
   width: 50vw; /* Tamaño flexible basado en View Width (vw) */
