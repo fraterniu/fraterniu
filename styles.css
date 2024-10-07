@@ -423,6 +423,17 @@ main {
   border-radius: 8px;
   letter-spacing: 0.07rem;
   z-index: 3; /* Asegura que el botón esté por encima de todo */
+  transition: 0.2s;
+  box-shadow: var(--fraterni-orange) 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.header--portrait-container .header--button:hover {
+  opacity: 1;
+}
+
+.header--portrait-container .header--button:active {
+  top: 72.5vh;
+  box-shadow: var(--fraterni-orange) 0px 3px 2px,#000 0px 3px 5px;
 }
 
 /* 3.1 Fraternity? Container -
