@@ -451,7 +451,7 @@ main {
 .fraternity-section p{
   font-size: 1.2rem;
   color: var(--fraterni-blank);
-  padding: 16px 8px 0 8px;
+  padding: 32px 8px 0 8px;
   text-wrap: balance;
 }
 
