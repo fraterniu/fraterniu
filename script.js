@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Elements and Variables
-  const menuToggle = document.querySelector('#checkbox');
+  const menuToggle = document.querySelector('#checkboxMobilemenu');
   const mobileMenu = document.querySelector('.mobile-menu-container');
   const body = document.body;
   const languageToggle = document.querySelector('#languageToggle');
