@@ -91,6 +91,14 @@ body {
   height: 30px; /* Logo size */
 }
 
+.menu-container{
+  display: none;
+}
+
+.menu-container--corner{
+  display: none;
+}
+
 .mobile-menu-container--image {
   cursor: pointer;
 }
@@ -123,6 +131,8 @@ ul.menu {
 }
 
 ul.menu li {
+  display: flex;
+  align-items: center;
   margin: 20px 0;
 }
 
