@@ -1086,15 +1086,16 @@ main {
     width: 100%; /* El texto ocupa el 30% */
     padding: 16px; /* Padding para separar el texto del borde */
     text-align: left; /* Texto alineado a la izquierda */
+    height: 30%;
 }
 
 .activity-title{
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
 .activity-role{
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #d4d4d4;
   margin-bottom: 1rem;
 }
