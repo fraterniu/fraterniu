@@ -1100,26 +1100,24 @@ main {
   margin-bottom: 1rem;
 }
 
-.activity-link{
+.activity-link--container{
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  background-color: #fff;
-  color: #145A30;
-  padding: 0.3rem 0.7rem;
-  margin: 0.5rem 10rem;
-  border-radius: 20px;
+  justify-content: flex-end;
+}
+
+.activity-link{
+  background-color: var(--fraterni-lgreen);
+  color:var(--fraterni-blank);
+  padding: 8px 10px;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 .activity-link:hover {
-  background-color: #f4f4f4;
-}
-
-.activity-icon {
-  margin-right: 0.5rem;
+  background-color: var(--fraterni-orange);
 }
 
 /* Footer Styles */
