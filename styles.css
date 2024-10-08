@@ -1089,7 +1089,7 @@ main {
   text-align: left;
   height: 30%;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .activity-title{
