@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.querySelector('.mobile-menu-container');
   const body = document.body;
   const languageToggle = document.querySelector('#languageToggle');
+  const langBicon = document.querySelector('#langBicon'); // Icono de la bandera
   const elements = document.querySelectorAll('.translatable');
   const langIcon = document.querySelector('#langIcon');
   const currentLang = document.querySelector('#currentLang');
@@ -55,19 +56,25 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const isEnglish = langIcon.src.includes('enBtn.svg');
     const newLang = isEnglish ? 'es' : 'en';
+    const isLanguageEnglish = langBicon.src.includes('enBtn.svg'); // Cambié a isLanguageEnglish para evitar conflicto
+    const newBlang = isLanguageEnglish ? 'es' : 'en';
+
 
     // Cambiar el icono de la bandera y el texto del idioma
     langIcon.src = `./assets/icons/${newLang}Btn.svg`;
+    langBicon.src = `./assets/icons/${newBlang}Btn.svg`;
     currentLang.textContent = isEnglish ? 'Español' : 'English';
 
     // Actualizar el contenido de texto de los elementos traducibles
     elements.forEach(element => {
       element.innerHTML = element.getAttribute(`data-${newLang}`);
+      element.innerHTML = element.getAttribute(`data-${newBlang}`);
     });
 
     // Actualizar las imágenes según el idioma
     document.querySelectorAll('.translatable-image').forEach(img => {
       img.src = img.getAttribute(`data-${newLang}`);
+      img.src = img.getAttribute(`data-${newBlang}`);
     });
 
     // Actualizar el atributo de idioma del documento
@@ -357,6 +364,7 @@ moveLogos();  // Inicia la animación
 
   // Language toggle
   languageToggle.addEventListener('click', switchLanguage);
+  langBicon.addEventListener('click', switchLanguage);
 
   // Bubble animation
   bubbleContainer.classList.add('bubble-container');
