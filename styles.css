@@ -572,6 +572,7 @@ main {
   align-items: center;
   gap: 10px;
   background-color:#1f3521;
+  max-width: 400px;
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -869,6 +870,8 @@ main {
 
 .pilar-card--container {
   display: flex;
+  min-width: 320px;
+  max-width: 530px;
   justify-content: space-around; 
   gap: 8px; 
   padding: 0 16px;
