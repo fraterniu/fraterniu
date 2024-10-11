@@ -798,7 +798,7 @@ main {
   height: 200px;
   object-fit: cover;
   border-radius: 16px;
-  border-bottom: 3px solid var(--fraterni-yellow);
+  border-bottom: 3px solid #000000;
 }
 
 .area-content-column {
