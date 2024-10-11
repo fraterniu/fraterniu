@@ -987,7 +987,7 @@ main {
   width: 100%;
   height: 70px;
   overflow: hidden;
-  background-color: var(--frat-lgrey); /* Color de fondo */
+  background-color: var(--frat-grey); /* Color de fondo */
 }
 
 .carousel-container {
@@ -1010,12 +1010,12 @@ main {
 
 .carousel-container::before {
   left: 0;
-  background: linear-gradient(to right, #808080, transparent);
+  background: linear-gradient(to right, var(--frat-grey), transparent);
 }
 
 .carousel-container::after {
   right: 0;
-  background: linear-gradient(to left, #808080, transparent);
+  background: linear-gradient(to left, var(--frat-grey), transparent);
 }
 
 .carousel-track {
