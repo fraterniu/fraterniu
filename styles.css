@@ -679,6 +679,14 @@ main {
     background-color: var(--fraterni-blank);
 }
 
+@media (min-width: 500px) {
+  .green-paper--container div {
+      background-image: url('./assets/icons/paper5racegreen.svg');
+  }
+}
+
+
+
 .principles-paper--container{
   width: 100%;
   background-color: var(--fraterni-blank);
