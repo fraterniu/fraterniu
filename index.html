@@ -7,7 +7,7 @@
     <meta name="google" content="notranslate">
     <head>
         <!-- Icono por defecto -->
-        <link id="theme-icon" rel="icon" href="./assets/icons/uLight.svg" type="image/x-icon">
+        <link id="theme-icon" rel="icon" href="./assets/icons/FULogo.svg" type="image/x-icon">
         <script>
         function updateFavicon() {
             const iconLink = document.getElementById('theme-icon');
@@ -15,7 +15,7 @@
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
               iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema oscuro
             } else {
-              iconLink.href = './assets/icons/FULogo.svg'; // Icono para tema claro
+              iconLink.href = './assets/icons/FULogoGreen.svg'; // Icono para tema claro
             }
         }
     
@@ -40,6 +40,9 @@
     <!-- CSS STYLES & Media Queries   -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 710px)">
+
+                        <!-- PARA PC INICIA EN 1024px -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--END CSS STYLES & Media Queries   -->
     <script src="./script.js" defer></script>
@@ -349,7 +352,8 @@
                     <div class="line" id="line2"></div>
                     <div class="line" id="line3"></div>
                 </div>
-            </section>            
+            </section>    
+                 
     </section>
     <section id="vservices" class="brand-carousel">
         <div class="carousel-container">
