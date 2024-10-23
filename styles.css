@@ -685,7 +685,12 @@ main {
   }
 }
 
-
+.tenets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 
 .principles-paper--container{
   width: 100%;

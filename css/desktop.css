@@ -148,6 +148,23 @@
   mask-image: linear-gradient(black 90%, transparent);
 }
 
+/*tenets*/
+.tenets {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide la sección en dos columnas */
+    align-items: center;
+    gap: 2rem;
+    padding: 48px 64px 48px 64px;
+}
+
+.principles-paper--titles {
+    grid-column: 1 / 2; /* Coloca los títulos en la primera columna */
+}
+
+.vuca-world--container,
+img {
+    grid-column: 2 / 3; /* Coloca la imagen y el contenido en la segunda columna */
+}
 
 /* scroll de areas */
 .area-detail--card.active {
@@ -155,29 +172,33 @@
 }
 
 .principles-areas--container {
-  overflow-x: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
- 
+    
+    justify-items: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Alinea las tarjetas al inicio verticalmente */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .slider-wrapper {
+    width: 15 0%;
 }
 
 .slider {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  transition: none;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 2rem; /* Espacio entre las tarjetas */
+    justify-items: center; /* Centra las tarjetas horizontalmente */
+    align-items: stretch;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 .area-detail--card {
-  display: block; /* Asegura que se muestren todas las tarjetas */
-  width: 300px; /* Ajusta el tamaño de las tarjetas si es necesario */
-  flex-shrink: 0; /* Previene que las tarjetas se reduzcan con el scroll */
-  transform: none; /* Elimina transformaciones del slider */
-  transition: none; /* Elimina transiciones en pantallas grandes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+
 }
 
 .slider-controls {
@@ -209,3 +230,26 @@
   max-width: 718px;
   padding-top: 8px;
 }
+/*Fin pilares*/
+
+/*mision y vision cards*/
+.mission-vision {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /*tenets of fraterni*/
+  .tenets--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el espacio en dos columnas */
+    align-items: start;
+  }
+
+  .tenets--titles {
+    grid-column: 1 / 2; /* Mueve el título hacia la izquierda */
+  }
+
+  .vuca-world--container,
+  img {
+    grid-column: 2 / 3; /* Mueve el resto de la sección hacia la derecha */
+  }
