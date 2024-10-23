@@ -155,6 +155,7 @@
     align-items: center;
     gap: 2rem;
     padding: 48px 64px 48px 64px;
+    width: 100%;
 }
 
 .principles-paper--titles {
@@ -177,6 +178,7 @@ img {
     align-items: center; /* Alinea las tarjetas al inicio verticalmente */
     overflow: hidden; /* Asegura que el contenido no se desborde */
     height: auto; /* Ajusta la altura automáticamente */
+    justify-content: center;
   }
 
   .slider-wrapper {
@@ -187,9 +189,11 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 2rem; /* Espacio entre las tarjetas */
-    justify-items: center; /* Centra las tarjetas horizontalmente */
+    justify-items: start;
     align-items: stretch;
     width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .area-detail--card {
