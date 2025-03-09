@@ -81,189 +81,131 @@
   }
 /*Header End*/
 
-/*Header Container*/
-.header--title-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+/*Tamaños de letra*/
+.fraternity-section p {
+  font-size: 1.8rem;
+  color: var(--fraterni-blank);
+  padding: 32px 8px 0 8px;
+  text-wrap: balance;
+}
+
+.fraternity-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--fraterni-blank);
+    padding: 16px 0;
+    text-wrap: balance;
+}
+
+/*fin tamaños letra*/
+
+.header--portrait-container {
+  position: relative;
+  width: 100%;
+  min-width: 288px;
+  height: 50vh;
+  min-height: 450px;
+  margin-top: 80px;
   text-align: center;
-  margin-top: 4rem;
+  align-self: center;
+  background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
+  z-index: 1;
 }
 
-.header--title-container .text-content {
-  flex: 1;
-  margin-right: 2rem; /* Espacio entre texto e imagen */
-}
-
-
-
-.header--title-container h1 {
-  font-size: 3.4rem;
-  font-weight: 900;
-  line-height: 3.6rem;
-  width: 600px;
-  align-items: left;
-}
-
-.header--title-container p {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2.4rem;
-  width: 600px;
-  align-items: left;
-}
-
-.header--title-container br {
-  display: none;
-}
-/*Header Container End*/
-
-/*lo q hizo jaime(llamen esto como quieran)*/
-.header--title-container {
-  height: 700px;
-}
-
-.wrapper {
-  margin: 2em auto;
-}
-@media screen and (min-width: 980px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1%;
-  }
-  .first--cover-img{
-    width: auto;
-    padding-top: 50px;
-  }
-}
-
-.header--title-container .header--button {
-  top: 350px;
-}
-
-/*lo q hizo jaime(llamen esto como quieran) End*/
-
-/*Members Section (Esta es la nueva seccion */
-.members-section--container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 560px;
-  border-top: 20px solid var(--fraterni-yellow);
-}
-
-
-.tisa-image {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-}
-
-.responsive-image {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.overlay-text {
+.header--portrait-container .header--button {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #414141;
-  font-size: 2.4vw;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
+  transform: translateX(-50%);
+  top: 47.5vh;
+  padding: 16px 24px;
+  background-color: var(--fraterni-yellow);
+  color: var(--fraterni-blank);
+  font-family: 'Norwester';
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.07rem;
+  z-index: 3;
+  transition: 0.2s;
+  box-shadow: var(--fraterni-orange) 0px 7px 2px, #000 0px 8px 5px;
+}
+
+/* Esto es para evitar que el botón se suba mas de la altura mínima del fondo verde */
+@media (max-height: 900px) {
+  .header--portrait-container .header--button  {
+    top: 425px;
+  }
+}
+
+/* imagen */
+.fraternity-image-cover img {
+  width: 80%;
+  margin-top: 20px;
+  height: auto;
+  border-radius: 8px;
+  mask-image: linear-gradient(black 90%, transparent);
 }
 
 
-.preparing-people {
-  position: relative;
+/* scroll de areas */
+.area-detail--card.active {
+  transform: scale(1);
+}
+
+.principles-areas--container {
+  overflow-x: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 100vh;
-  border-top: 20px solid var(--fraterni-yellow);
+  justify-content: flex-start;
+ 
 }
 
-.members-container {
+.slider {
   display: flex;
+  flex-direction: row;
+  gap: 48px;
+  transition: none;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.area-detail--card {
+  display: block; /* Asegura que se muestren todas las tarjetas */
+  width: 300px; /* Ajusta el tamaño de las tarjetas si es necesario */
+  flex-shrink: 0; /* Previene que las tarjetas se reduzcan con el scroll */
+  transform: none; /* Elimina transformaciones del slider */
+  transition: none; /* Elimina transiciones en pantallas grandes */
+}
+
+.slider-controls {
+  display: none
+}
+
+/* Gráfica de áreas */
+.areas-graph {
+  display: block;
+  box-sizing: border-box;  /* LA IDEA ES ESCALAR LA GRÁFICA, NO SE POR QÚE NO FUNCIONA */
+  height: 250px;
+  width: 400px;
+}
+
+/* Pilares */
+.pilar-card--container {
+  display: flex;
+  min-width: 420px;
+  max-width: 110px;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 450px;
-  flex-direction: row;
+  gap: 100px;
+
 }
 
-.card-container {
+.lines-container {
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Alinea los elementos horizontalmente */
-  margin: 40px; /* Espaciado entre cada card-container */
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 718px;
+  padding-top: 8px;
 }
-
-.card-fraternistas {
-  width: 250px;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: var(--fraterni-green);
-  color: #fff;
-  padding-bottom: 61px;
-  padding-top: 30px;
-  position: relative;
-}
-
-
-.card-partidarios {
-  width: 250px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #DFDFDF;
-  color: #333;
-  padding-top: 30px;
-  padding-bottom: 61px;
-  margin: 20px 0;
-  position: relative;
-  padding-bottom: -10px;
-}
-
-.rectangle-gray {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 20px;
-  background-color: #888888;
-}
-
-.rectangle-orange {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 245px;
-  height: 20px;
-  background-color: #C78207;
-}
-
-/*Members Section End*/
-
-/*Footer*/
-
-section.top ul {
-  grid-template-columns: repeat(4, 1fr);
-  padding-right: 0;
-}
-
-/*Footer End*/
