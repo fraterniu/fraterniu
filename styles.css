@@ -214,33 +214,33 @@ main {
 }
 #star-3 {
   position: absolute;
-  left: 300px;
+  left: -30px;
   top: 90px;
   animation: twinkling 4s infinite;
 }
 #star-4 {
   position: absolute;
   left: 200px;
-  top: 290px;
+  top: 180px;
   animation: twinkling 3s infinite;
 }
 #star-5 {
   position: absolute;
-  left: 50px;
-  top: 270px;
+  left: 10px;
+  top: 200px;
   animation: twinkling 1.5s infinite;
 }
 
 #star-6 {
   position: absolute;
-  left: 250px;
-  top: -50px;
+  left: 200px;
+  top: -30px;
   animation: twinkling 4s infinite;
 }
 #star-7 {
   position: absolute;
-  left: 290px;
-  top: 60px;
+  left: 220px;
+  top: 10px;
   animation: twinkling 2s infinite;
 }
 
@@ -251,14 +251,14 @@ main {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2.4rem;
   text-align: center;
   background-color: #080f09;
 }
 
 /* 2. Cabeceras H2: tamaño, color y animación */
 .hero-header--ms h2 {
-  font-size: 2rem;
+  font-size: 3.4rem;
   line-height: 1.3;
   color: var(--blankc);
   opacity: 0;
