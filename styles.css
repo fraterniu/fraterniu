@@ -123,7 +123,7 @@ main {
               5px 5px 0 0 rgba(255,255,255,.2) inset;
   background: url(./assets/imgs/mapa2.jpeg);
   background-size: cover;
-  animation: earthRotate 60s linear 0s infinite;
+  animation: earthRotate 45s linear 0s infinite;
 }
 
 @keyframes earthRotate {
@@ -247,7 +247,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   padding: 2.4rem;
   text-align: center;
   background-color: #080f09;
@@ -282,7 +281,7 @@ main {
 /* 5. Rotación lenta de la palabra “gira” */
 .rotate {
   display: inline-block;
-  animation: rotate-slow 10s linear infinite;
+  animation: rotate-slow 45s linear infinite;
   transform-origin: center center;
 }
 
