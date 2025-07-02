@@ -305,13 +305,13 @@ main {
 /* 7. Botón estilo simple */
 .hero-header--ms button {
   margin-top: 2rem;
-  padding: 1.6rem 2.4rem;
-  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   background-color: var(--fraterni-yellow);
   color: var(--blankc);
   border: none;
-  border-radius: 16px;
+  border-radius: 8px;
   cursor: pointer;
   opacity: 0;
   transform: translateY(20px);
