@@ -25,419 +25,120 @@
           // Escuchar cambios en el tema del sistema
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
         </script>
-    
-          // Actualizar el favicon al cargar la página
-        updateFavicon();
-    
-          // Escuchar cambios en el tema del sistema
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
-        </script>
     </head>
     
-    <title>FraterniU</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-
+    <title>Fraterni</title>
     <!-- CSS STYLES & Media Queries   -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 710px)">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--END CSS STYLES & Media Queries   -->
     <script src="./script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
-    <!-- Start Visual Content -->
-    <section class="header--container">
-        <!-- 1. Header -->
-        <header class="header">
-            <!-- 1.1. Logo -->
-            <div class="logo">
-                <img src="./assets/icons/FraterniLogoM.svg" alt="Logo de FraterniU">
-            </div>
-            <!-- End logo -->
 
-            <!--1.2. Menu -->
-        <nav class="menu-container">
-            <ul class="menu">
-                <li><a href="#" class="translatable" data-en="OVERVIEW" data-es="GENERAL">OVERVIEW</a></li>
-                <li><a href="#" class="translatable" data-en="MEDIA" data-es="MEDIOS">MEDIA</a></li>
-                <li><a href="#" class="translatable" data-en="FEATURES" data-es="CARACTERÍSTICAS">FEATURES</a></li>
-                <li><a href="#" class="translatable" data-en="ABOUT" data-es="NOSOTROS">ABOUT</a></li>
-                <li><a href="#" class="translatable" data-en="SHOP" data-es="TIENDA">SHOP</a></li>
-            </ul>
-        </nav>
-
-            <div class="menu-container--corner">
-                <div class="menu-container--cta">
-                    <button id="langToggle">
-                        <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langBicon" class="language-icon">
-                    </button>
-                    <button class="translatable" data-en="GET INVOLVED" data-es="Involúcrate">GET INVOLVED</button>
-                </div>
-
-                
-            </div>
-        <!--End Menu -->
-
-            <!-- 1.2. Mobile Menu Icon -->
-            <div id="menuToggle" class="mobile-menu-container--image">
-                <input id="checkboxMobilemenu" type="checkbox">
-                <label class="toggle" for="checkboxMobilemenu">
-                    <div class="bar bar--top"></div>
-                    <div class="bar bar--middle"></div>
-                    <div class="bar bar--bottom"></div>
-                </label>
-            </div>
-        </header>
-
-        <!-- Mobile Navbar -->
-        <nav class="mobile-menu-container" id="mobileNavbar">
-            <!-- Language Toggle Icon in Navbar -->
-            <ul class="menu">
-                <li id="languageToggle">
-                    <img src="./assets/icons/enBtn.svg" alt="Language Button" id="langIcon" class="language-icon">
-                    <span id="currentLang">English</span>
-                </li>
-
-                <!-- More Options -->
-                <li class="navbar-title"><a href="#" class="translatable" data-en="MORE" data-es="MÁS">MORE</a></li>
-                <li><a href="#" class="translatable" data-en="OVERVIEW" data-es="GENERAL">OVERVIEW</a></li>
-                <li><a href="#" class="translatable" data-en="MEDIA" data-es="MEDIOS">MEDIA</a></li>
-                <li><a href="#" class="translatable" data-en="FEATURES" data-es="CARACTERÍSTICAS">FEATURES</a></li>
-                <li><a href="#" class="translatable" data-en="ABOUT" data-es="SOBRE NOSOTROS">ABOUT</a></li>
-                <li><a href="#" class="translatable" data-en="SHOP" data-es="TIENDA">SHOP</a></li>
-
-            </ul>
-        </nav>
-        </header>
-        <!--End Mobile Menu -->
-        <!--1. Header End -->
-    </section>
-
-    <!--2. Start Main -->
     <main>
-        <!-- 2.1 Header Image Container (#findus) -->
-        <section id="findus" class="header--portrait-container">
-            <div class="bubble-container"></div>
-            <div class="overlay">
-                <h1 class="translatable" data-en="THIS IS <br> FRATERNIU" data-es="ESTO ES <br> FRATERNIU">THIS IS <br>
-                    FRATERNIU</h1>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com" class="social-icon social-link1"><img
-                            src="./assets/icons/Facebook.svg" alt="Facebook"></a>
-                    <a href="https://discord.com" class="social-icon social-link2"><img src="./assets/icons/Discord.svg"
-                            alt="Discord"></a>
-                    <a href="https://www.instagram.com/fraterniu/" class="social-icon social-link3"><img
-                            src="./assets/icons/instagram.svg" alt="Instagram"></a>
-                    <a href="https://tiktok.com" class="social-icon social-link4"><img src="./assets/icons/TikTok.svg"
-                            alt="Youtube"></a>
-                    <a href="https://youtube.com" class="social-icon social-link5"><img src="./assets/icons/yt.svg"
-                            alt="Youtube"></a>
-                </div>
-                <h2 class="translatable" data-en="Community of Personal Development" data-es="Comunidad de Desarrollo Personal">Community of Personal Development</h2>
-            </div>
-
-                <div class="fpromo-content">
-                    <p class="fpromo-text translatable" data-en="<strong>Discover</strong> content and activities that boosts your personal and professional development." data-es="<strong>Descubre</strong> contenidos y actividades que impulsan tu desarrollo personal y profesional.">
-                        <strong>Discover</strong> content and activities that boosts your personal and professional development. 
-                    </p>
-                </div>
-
-            <a href="#vservices" class="header--button translatable" data-en="Our Activities"
-                data-es="Nuestras Actividadess">Our Activities</a>
-            </a>
+        <section class="hero-header--brand">
+            <p>Created by:</p>
+            <img src="./assets/icons/fraterni.svg" alt="Fraterni Logo">
         </section>
-        <!-- End Header Image Container -->
-    </main>
-    <!-- 3.1 Fraternity? Container -->
-    <!-- 2.1.1 Why a Fraternity? Container -->
-    <section class="fraternity-section">
-        <div class="fraternity-image-cover">
-            <p class="translatable" data-en="Inspired by the original fraternities mission." data-es="Inspirados en la misión original de las fraternidades." >Inspired by the original fraternities mission.</p>
-            <h1 class="translatable" data-en="DO YOU KNOW ABOUT <strong>FRATERNITIES?</strong>" data-es="¿LE SABES A LAS <strong>FRATERNIDADES?</strong>">DO YOU KNOW ABOUT <strong>FRATERNITIES?</strong> <br></h1>
-            <picture>
-                <source srcset="./assets/imgs/fraterniStudents-small.png" media="(max-width: 600px)">
-                <source srcset="./assets/imgs/fraterniStudents.png" media="(min-width: 601px)">
-                <img src="./assets/imgs/fraterniStudents.png" alt="Partners in a Fraternity">
-            </picture>
-        </div>        
-        <section class="fraternity-content">
-            <p class="translatable" data-en="Fraternities rose to meet intense academic challenges, shaping leaders and building social skills." data-es="Las fraternidades surgieron para enfrentar intensos desafíos académicos, formando líderes y desarrollando habilidades sociales.">Fraternities rose to meet intense academic challenges, shaping leaders and building social skills.</p>
-            
-            <p class="translatable" data-en="Nowdays we’re swamped by distractions—social media, technology, and bad habits—all stalling our growth." data-es="Hoy en día estamos inundados de distracciones (redes sociales, tecnología y malos hábitos), que frenan nuestro crecimiento.">Nowdays we’re swamped by distractions—social media, technology, and bad habits—all stalling our growth.</p>
-
-            <img src="./assets/icons/separetor.svg" alt="streak">
-
-                <h2 class="translatable" data-en="FRATERNI PURPOSE" data-es="SOBRE FRATERNI">FRATERNI PURPOSE</h2>
-                
-                
-                <p class="translatable" data-en="We provide tools to help you prioritize, make smart decisions, and grow long-term." data-es="Proporcionamos herramientas para ayudarle a priorizar, tomar decisiones inteligentes y crecer a largo plazo.">We provide tools to help you prioritize, make smart decisions, and grow long-term.</p>
-                
-                <p class="translatable" data-en="Our tenets focus on what truly matters, offering life skills that are often overlooked. Whether you’re a member or not, we guide you to live with purpose and confidence." data-es="Nuestros principios se centran en lo que realmente importa y ofrecen habilidades para la vida que a menudo se pasan por alto. Seas miembro o no, te guiamos para que vivas con propósito y confianza.">Our tenets focus on what truly matters, offering life skills that are often overlooked. Whether you’re a member or not, we guide you to live with purpose and confidence.</p>
-
-                <p class="translatable" data-en="We think that everyone looking to advance in the dynamic world of today has a similar goal." data-es="Creemos que todos los que buscan avanzar en el dinámico mundo de hoy tienen un objetivo similar.">We think that everyone looking to advance in the dynamic world of today has a similar goal.</p>
-
-            <div class="mission-vision">
-                <div class="mission">
-                    <img src="./assets/icons/missionF.svg" alt="Misión">
-                    <p2 class="translatable" data-en="<strong>Evaluate</strong> the actions, promote unity, and nurture sustainable human development." data-es="<strong>Evalúa</strong> las acciones, promover la unidad y fomentar el desarrollo humano sostenible."><strong>Evaluate</strong> actions, promote unity, and support sustainable human growth.</p2>
+        <section class="earth-header--container">
+            <section class="hero-header--earth">
+                <!-- From Uiverse.io by Lakshay-art --> 
+                <div class="section-banner">
+                <div id="star-1">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
                 </div>
-                <div class="vision">
-                    <img src="./assets/icons/vision.svg" alt="Visión">
-                    <p2 class="translatable" data-en="<strong>Analyze</strong> complex challenges to build ethical, resilient communities for the future." data-es="<strong>Analizar</strong> desafíos complejos para construir comunidades éticas y resilientes para el futuro."><strong>Analyze</strong> challenges to build ethical, resilient communities.</p2>
-                </div>
-                <p class="translatable" data-en=" <strong>Take the first step.</strong> Explore our values and start growing with us."
-                data-es="<strong>Da el primer paso.</strong> Explora nuestros valores y comienza a crecer con nosotros."><strong>Take the first step.</strong> Explore our values and start growing with us.</p>
-            </div>
-            <!-- Checkbox para activar la visualización de los íconos sociales -->
-            <div class="toggle-socials">
-                <input type="checkbox" id="show-socials" class="checkbox">
-                <label for="show-socials" class="checkbox-label translatable" data-en="Follow us" data-es="Síguenos">Follow us</label>
-            
-                <!-- Sección oculta que se mostrará al activar el checkbox -->
-                <div class="socials-section">
-                    <a href="https://www.facebook.com" class="social-check-icon"><img
-                                src="./assets/icons/Facebook.svg" alt="Facebook"></a>
-                    <a href="https://discord.com" class="social-check-icon"><img src="./assets/icons/Discord.svg"
-                                alt="Discord"></a>
-                    <a href="https://www.instagram.com/fraterniu/" class="social-check-icon"><img
-                                src="./assets/icons/instagram.svg" alt="Instagram"></a>
-                    <a href="https://tiktok.com" class="social-check-icon"><img src="./assets/icons/TikTok.svg"
-                                alt="Youtube"></a>
-                    <a href="https://youtube.com" class="social-check-icon"><img src="./assets/icons/yt.svg"
-                                alt="Youtube"></a>
-                </div>
-            </div>
-        </section>
-    </section>
-    <section class="green-paper--container">
-        <div></div>
-    </section>
 
-    <section class="principles-paper--container">
-        
-        <div class="principles-paper--titles">
-            <h1 class="translatable" data-en="TENETS <br> OF FRATERNI" data-es="PRINCIPIOS <br> DE FRATERNI">TENETS <br> OF FRATERNI</h1>
-            <p class="translatable" data-en="Our world today is shaped by the VUCA concept—Volatile, Uncertain, Complex, and Ambiguous. To thrive, we embrace guiding principles that foster adaptability, balance, and purposeful action within our community." data-es="Nuestro mundo actual está moldeado por el concepto VUCA: volátil, incierto, complejo y ambiguo. Para prosperar, adoptamos principios rectores que fomentan la adaptabilidad, el equilibrio y la acción decidida dentro de nuestra comunidad.">Our world today is shaped by the VUCA concept—Volatile, Uncertain, Complex, and Ambiguous. To thrive, we embrace guiding principles that foster adaptability, balance, and purposeful action within our community.</p>
-        </div>
-        <section class="vuca-world--container">
-            <div class="vuca-world">
-            
-            </div>
-        </section>
-        <img src="./assets/icons/lineTrace.svg" alt="streak">
-        <div class="principles-fraterni--text">
-            <h2 class="translatable" data-en="Key Areas" data-es="Áreas Clave">Key Areas</h2>
-            <p class="translatable" data-en="We emphasize on the five main areas of life. Although everyone might prioritize them in a different order, time investment in all is essential for key growths in our lives." data-es="Hacemos hincapié en las cinco áreas principales de la vida. Aunque cada uno puede priorizarlos en un orden diferente, invertir tiempo en todos es esencial para crecimientos clave en nuestras vidas.">We emphasize on the five main areas of life. Although everyone might prioritize them in a different order, time investment in all is essential for key growths in our lives.</p>
-            <p class="translatable" data-en="We focus on these five areas to get ready for life's challenges:" data-es="Nos enfocamos en estas cinco áreas para prepararnos para los desafíos de la vida:">We focus on these five areas to get ready for life's challenges:</p>
-        </div>
-            <section class="principles-areas--container">
-                <div class="slider-wrapper">
-                <div class="slider">
-                    <article class="area-detail--card">
-                    <figure class="image-column">
-                        <img class="translatable-image" data-en="./assets/imgs/areaMindpic.png" data-es="./assets/imgs/areaMindpic-es.png" src="./assets/imgs/areaMindpic.png" alt="Mind Image">
-                    </figure>
-                    <section class="area-content-column">
-                        <h2 class="area-title-row translatable" data-en="MIND" data-es="MENTE">MIND</h2>
-                        <p class="area-description-row translatable" data-en="This area focuses on expanding cognitive and emotional capacities through learning, critical thinking, and creativity, empowering individuals to make sound, ethical decisions." data-es="Esta área se enfoca en expandir las capacidades cognitivas y emocionales a través del aprendizaje, el pensamiento crítico y la creatividad, empoderando a las personas para tomar decisiones éticas y acertadas.">This area focuses on expanding cognitive and emotional capacities through learning, critical thinking, and creativity, empowering individuals to make sound, ethical decisions.</p>
-                    </section>
-                    </article>
-            
-                    <article class="area-detail--card">
-                    <figure class="image-column">
-                        <img  class="translatable-image" data-en="./assets/imgs/areaBodypic.png" data-es="./assets/imgs/areaBodypic-es.png" src="./assets/imgs/areaBodypic.png" alt="Body Image">
-                    </figure>
-                    <section class="area-content-column">
-                        <h2 class="area-title-row translatable" data-en="BODY" data-es="CUERPO">BODY</h2>
-                        <p class="area-description-row translatable" data-en="This area focuses on maintaining physical health through exercise, nutrition, and rest, ensuring individuals have the energy and balance to meet life’s demands." data-es="Esta área se enfoca en mantener la salud física a través del ejercicio, la nutrición y el descanso, asegurando que las personas tengan la energía y el equilibrio para satisfacer las demandas de la vida.">This area focuses on maintaining physical health through exercise, nutrition, and rest, ensuring individuals have the energy and balance to meet life’s demands.</p>
-                    </section>
-                    </article>
-            
-                    <article class="area-detail--card">
-                    <figure class="image-column">
-                        <img  class="translatable-image" data-en="./assets/imgs/areaResourcespic.png" data-es="./assets/imgs/areaResourcespic-es.png" src="./assets/imgs/areaResourcespic.png" alt="Resources Image">
-                    </figure>
-                    <section class="area-content-column">
-                        <h2 class="area-title-row translatable" data-en="RESOURCES" data-es="RECURSOS">RESOURCES</h2>
-                        <p class="area-description-row translatable" data-en="This area focuses on mastering the management of time, tools, and natural resources. It emphasizes understanding how to efficiently use what we’ve created and what the Earth provides for sustainable growth." data-es="Esta área se enfoca en dominar la gestión del tiempo, las herramientas y los recursos naturales. Hace hincapié en comprender cómo utilizar eficientemente lo que hemos creado y lo que la Tierra proporciona para un crecimiento sostenible.">This area focuses on mastering the management of time, tools, and natural resources. It emphasizes understanding how to efficiently use what we’ve created and what the Earth provides for sustainable growth.</p>
-                    </section>
-                    </article>
-            
-                    <article class="area-detail--card">
-                    <figure class="image-column">
-                        <img  class="translatable-image" data-en="./assets/imgs/areaValuepic.png" data-es="./assets/imgs/areaValuepic-es.png" src="./assets/imgs/areaValuepic.png" alt="Value Image">
-                    </figure>
-                    <section class="area-content-column">
-                        <h2 class="area-title-row translatable" data-en="VALUE" data-es="VALOR">VALUE</h2>
-                        <p class="area-description-row translatable" data-en="This area focuses on understanding the dynamics of prosperity—financial literacy, personal branding, and self-worth. It’s not just about money, but also about how individuals create and preserve their personal value and leverage opportunities for growth." data-es="Esta área se centra en comprender la dinámica de la prosperidad: conocimientos financieros, marca personal y autoestima. No se trata sólo de dinero, sino también de cómo las personas crean y preservan su valor personal y aprovechan las oportunidades de crecimiento.">This area focuses on understanding the dynamics of prosperity—financial literacy, personal branding, and self-worth. It’s not just about money, but also about how individuals create and preserve their personal value and leverage opportunities for growth.</p>
-                    </section>
-                    </article>
-            
-                    <article class="area-detail--card">
-                    <figure class="image-column">
-                        <img  class="translatable-image" data-en="./assets/imgs/areaEnvironmentpic.png" data-es="./assets/imgs/areaEnvironmentpic-es.png" src="./assets/imgs/areaEnvironmentpic.png" alt="Environment Image">
-                    </figure>
-                    <section class="area-content-column">
-                        <h2 class="area-title-row translatable" data-en="ENVIRONMENT" data-es="ENTORNO">ENVIRONMENT</h2>
-                        <p class="area-description-row translatable" data-en="This area focuses on cultivating a healthy relationship with the natural and social environment, promoting sustainability, respect, and harmony in everyday interactions and spaces." data-es="Esta área se enfoca en cultivar una relación saludable con el entorno natural y social, promoviendo la sostenibilidad, el respeto y la armonía en las interacciones y espacios cotidianos.">This area focuses on cultivating a healthy relationship with the natural and social environment, promoting sustainability, respect, and harmony in everyday interactions and spaces.</p>
-                    </section>
-                    </article>
+                <div id="star-2">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
                 </div>
+
+                <div id="star-3">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-4">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-5">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                <div id="star-6">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                    </div>
+                </div>
+
+                    <div id="star-7">
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-bottomright"></div>
+                        <div id="curved-corner-bottomleft"></div>
+                        </div>
+                        <div class="curved-corner-star">
+                        <div id="curved-corner-topright"></div>
+                        <div id="curved-corner-topleft"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="slider-controls">
-                <button class="prev-btn">
-                    <img src="./assets/icons/prevArrow.svg" alt="Prev">
-                </button>
-                <div class="indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-                <button class="next-btn">
-                    <img src="./assets/icons/nextArrow.svg" alt="Next">
-                </button>
-            </section>
-            <section class="principles-graph--container">
-                <div class="principles-fraterni--text">
-                    <p class="translatable" data-en="An engineer, for instance, must take value, body, and the environment areas into consideration in addition to mind and resources that may be their normal focus areas." data-es="Un ingeniero, por ejemplo, debe tener en cuenta las áreas de valor, el cuerpo y el medio ambiente, además de la mente y los recursos, que pueden ser sus áreas de enfoque habituales.">An engineer, for instance, must take value, body, and the environment areas into consideration in addition to mind and resources that may be their normal focus areas.</p>
+            <section class="hero-header--ms">
+                <div>
+                    <h2>Nada es fijo.</h2>
+                    <h2>Todo <span class="rotate">gira</span>.</h2>
+                    <h2>Tu vida también.</h2>
+                    <h2>Imagina una herramienta que<br>evoluciona contigo…</h2>
+                    <h2>pero si no la usas,<br>nunca sabrás hasta dónde puede llevarte.</h2>
                 </div>
                 <div>
-                    <canvas id="areasChart" class="areas-graph"></canvas>
-                </div>
-                <div class="principles-fraterni--text">
-                    <p class="translatable" data-en="We cannot get into every detail here, but our community examines a number of ideas meant to encourage full development." data-es="No podemos entrar en todos los detalles aquí, pero nuestra comunidad examina una serie de ideas destinadas a fomentar el pleno desarrollo.">We cannot get into every detail here, but our community examines a number of ideas meant to encourage full development.</p>
+                    <button>Quieres descubrirla?</button>
                 </div>
             </section>
-            <img src="./assets/icons/columnsSep.svg" alt="Pilar Separator">
+        </section>
 
-            <div class="principles-fraterni--text">
-                <h2 class="translatable" data-en="Main Pilars" data-es="Pilares Principales">MAIN PILARS</h2>
-                <p class="translatable" data-en="Our pillars—Whole Person Development, purposeful actions, and connectedness—require balance." data-es="Nuestros pilares (desarrollo integral de la persona, acciones decididas y conexión) requieren equilibrio.">Our pillars—Whole Person Development, purposeful actions, and connectedness—require balance.</p>
-                <p class="translatable" data-en="These lead us to develop as individuals and have a better comprehension of the world in which we live." data-es="Estos nos llevan a desarrollarnos como individuos y tener una mejor comprensión del mundo en el que vivimos.">These lead us to develop as individuals and have a better comprehension of the world in which we live.</p>
-            </div>
-            <section class="main-pilars--container">
-                <div class="pilar-card--container">
-                    <div class="pilar-card" id="pillar1">
-                        <span></span>
-                        <div class="pillar-content">
-                            <h2 class="translatable" data-en="Whole Person Development" data-es="Desarrollo Integral de la Persona">Whole Person Development</h2>
-                            <p class="translatable" data-en="This pillar focuses on the continuous development of mind, body, and spirit. It encourages members to pursue knowledge, maintain physical health, and seek spiritual meaning, ensuring a well-rounded growth." data-es="Este pilar se centra en el desarrollo continuo de la mente, el cuerpo y el espíritu. Alienta a los miembros a buscar conocimientos, mantener la salud física y buscar significado espiritual, asegurando un crecimiento integral.">This pillar focuses on the continuous development of mind, body, and spirit. It encourages members to pursue knowledge, maintain physical health, and seek spiritual meaning, ensuring a well-rounded growth.</p>
-                        </div>
-                    </div>
-                    <div class="pilar-card" id="pillar2">
-                        <span></span>
-                        <div class="pillar-content">
-                            <h2 class="translatable" data-en="Purposeful Actions" data-es="Acciones con Propósito">Purposeful Actions</h2>
-                            <p class="translatable" data-en="This pillar emphasizes intention and mindfulness in every action. It encourages members to align their activities with their core values and goals, fostering a sense of purpose and fulfillment." data-es="Este pilar enfatiza la intención y la atención plena en cada acción. Alienta a los miembros a alinear sus actividades con sus valores y objetivos fundamentales, fomentando un sentido de propósito y realización.">This pillar emphasizes intention and mindfulness in every action. It encourages members to align their activities with their core values and goals, fostering a sense of purpose and fulfillment.</p>
-                        </div>
-                    </div>
-                    <div class="pilar-card" id="pillar3">
-                        <span></span>
-                        <div class="pillar-content">
-                            <h2 class="translatable" data-en="Connectedness" data-es="Conectividad">Connectedness</h2>
-                            <p class="translatable" data-en="This pillar is about building meaningful relationships and contributing to the community. It underlines the importance of social skills, empathy, and collaboration, recognizing that personal growth is intertwined with the well-being of others." data-es="Este pilar trata de construir relaciones significativas y contribuir a la comunidad. Subraya la importancia de las habilidades sociales, la empatía y la colaboración, reconociendo que el crecimiento personal está entrelazado con el bienestar de los demás.">This pillar is about building meaningful relationships and contributing to the community. It underlines the importance of social skills, empathy, and collaboration, recognizing that personal growth is intertwined with the well-being of others.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="lines-container">
-                    <div class="line" id="line1"></div>
-                    <div class="line" id="line2"></div>
-                    <div class="line" id="line3"></div>
-                </div>
-            </section>            
-    </section>
-    <section id="vservices" class="brand-carousel">
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <img src="./assets/sponsors/letbe.svg" alt="Letbe Logo">
-                <img src="./assets/sponsors/recvid.svg" alt="Recvid Logo">
-                <img src="./assets/sponsors/ayalaShots.svg" alt="Recvid Logo">
-                <img src="./assets/sponsors/monsterTrack.svg" alt="monsterTrack Logo">
-            </div>
-        </div>
-    </section>
-    <section class="activities-section--slider">
-        <div class="activities-titles">
-            <p class="translatable" data-en="Build your path, leave your mark" data-es="Construye tu Camino, Deja tu Huella">Build your Path, Leave your Mark</p>
-            <h2 class="translatable" data-en="Grow with Us" data-es="Crece con Nosotros">Grow with Us</h2>
-        </div>
-        <div class="activities-container">
-            <article class="activities-card">
-                <div class="activities-image--container">
-                    <img src="./assets/imgs/developers.png" alt="Foto de Carli Florida" class="activities-image">
-                </div>
-                    <div class="activities-info">
-                    <h3 class="activity-title translatable" data-en="Growth Masterclasesses" data-es="Masterclases de Crecimiento">Growth Masterclasesses</h3>
-                    <p class="activity-role" data-en="Workshops designed to boost your mindset and personal growth. Step up with a community that drives you to be your best." data-es="Talleres para mejorar tu mentalidad y crecimiento personal. Avanza junto a una comunidad que te impulsa a ser tu mejor versión.">Workshops designed to boost your mindset and personal growth. Step up with a community that drives you to be your best.</p>
-                    <div class="activity-link--container">
-                        <a href="#" class="activity-link translatable" data-en="Know More" data-es="Conoce más">
-                            Know More
-                        </a>
-                    </div>
-                </div>
-            </article>
-    
-            <article class="activities-card">
-                <div class="activities-image--container">
-                    <img src="./assets/imgs/marketing.png" alt="Foto de Carli Florida" class="activities-image">
-                </div>
-                <div class="activities-info">
-                    <h3 class="activity-title translatable" data-en="Power Sessions" data-es="Reuniones de Poder">Power Sessions</h3>
-                    <p class="activity-role translatable" data-en="High-energy group workouts that strengthen both body and mind. Face challenges with the support of a united community." data-es="Entrenamientos grupales llenos de energía que fortalecen cuerpo y mente. Enfrenta desafíos con el apoyo de una comunidad unida.">High-energy group workouts that strengthen both body and mind. Face challenges with the support of a united community.</p>
-                    <div class="activity-link--container">
-                        <a href="#" class="activity-link translatable" data-en="Know More" data-es="Conoce más">
-                            Know More
-                        </a>
-                    </div>
-                </div>
-            </article>
-    
-            <article class="activities-card">
-                <div class="activities-image--container">
-                    <img src="./assets/imgs/personalTraining.png" alt="Foto de Carli Florida" class="activities-image">
-                </div>
-                <div class="activities-info">
-                    <h3 class="activity-title translatable" data-en="Challenge Yourself" data-es="Rétate a Ti Mismo">Challenge Yourself</h3>
-                    <p class="activity-role translatable" data-en="Monthly challenges that push you beyond your limits. Build discipline and confidence with like-minded individuals" data-es="Desafíos mensuales que te llevan más allá de tus límites. Construye disciplina y confianza con personas afines.">Monthly challenges that push you beyond your limits. Build discipline and confidence with like-minded individuals</p>
-                    <div class="activity-link--container">
-                        <a href="#" class="activity-link translatable" data-en="Know More" data-es="Conoce más">
-                            Know More
-                        </a>
-                    </div>
-                </div>
-            </article>
-    
-            <article class="activities-card">
-                <div class="activities-image--container">
-                    <img src="./assets/imgs/community.png" alt="Foto de Carli Florida" class="activities-image">
-                </div>
-                <div class="activities-info">
-                    <h3 class="activity-title translatable" data-en="Fraterni Moments" data-es="Momentos Fraterni">Fraterni Moments</h3>
-                    <p class="activity-role translatable" data-en="Special moments where we gather to share experiences and support each other, growing stronger as a fraternity." data-es="Momentos especiales donde nos reunimos para compartir y apoyarnos, creciendo juntos como fraternidad.">Special moments where we gather to share experiences and support each other, growing stronger as a fraternity.</p>
-                    <div class="activity-link--container">
-                        <a href="#" class="activity-link translatable" data-en="Know More" data-es="Conoce más">
-                            Know More
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-    
-    
-
+    </main>
     
     <!--7.  Footer -->
         <footer>
@@ -449,7 +150,7 @@
             
             <!-- Copyright -->
             <div class="footer-copyright">
-                <p>© 2024 fraterniu.com</p>
+                <p>© 2025 fraterni.com</p>
             </div>
             </div>
         </footer>
