@@ -214,7 +214,7 @@ main {
 }
 #star-3 {
   position: absolute;
-  left: 350px;
+  left: 300px;
   top: 90px;
   animation: twinkling 4s infinite;
 }
