@@ -57,7 +57,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 100vh;
+    height: 700px;
     background-color: #080f09;
 }
 
@@ -268,7 +268,7 @@ main {
 
 .hero-header--ms h3 {
   font-size: 1.6rem;
-  line-height: 0.5;
+  line-height: 1.5;
   font-weight: 300;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
@@ -303,26 +303,41 @@ main {
 }
 
 /* 7. Botón estilo simple */
-.hero-header--ms button {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  background-color: var(--fraterni-yellow);
-  color: var(--blankc);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-  animation-delay: 1.2s;
+.hero-header--ms .header--button {
+    position: absolute;
+    left: calc(50% - 115px);
+    top: 545px;
+    display: block;
+    margin-top: 130px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--fraterni-yellow);
+    
+    /* Sombra */
+    box-shadow: 0px 5px 0 #A66C05;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
 }
 
-/* 8. Efecto hover en botón */
-.hero-header--ms button:hover {
-  background-color: var(--fraterni-orange);
+.header--button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/whitearrow.svg');
 }
+
+.header--button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+    background-color: var(--fraterni-orange);
+}
+
 
 /* 9. Ajustes de responsividad (si quieres afinar) */
 @media (min-width: 710px) {
@@ -334,6 +349,14 @@ main {
   }
 }
 
+.main-context-details{
+  position: inherit;
+    width: 100%;
+    min-width: 320px;
+    height: 200px;
+    padding: 20px 10px;
+    background-color: var(--blankc);
+}
 
 
 
