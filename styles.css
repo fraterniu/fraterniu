@@ -57,7 +57,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 700px;
+    height: 680px;
     background-color: #080f09;
 }
 
@@ -371,6 +371,13 @@ body {
   font-size: 2rem;
   line-height: 1;
   text-align: center;
+}
+
+.main-context-details--text h3{
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: center;
+  color: var(--blackc);
 }
 
 
