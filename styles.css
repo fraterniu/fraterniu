@@ -664,8 +664,8 @@ body {
     max-width: 200px;
     height: 48px;
     margin: 20px auto 0;
-    background-color: var(--fraterni-orange);
-    border: 2px solid var(--fraterni-yellow);
+    background-color: var(--fraterni-yellow);
+    border: 2px solid var(--fraterni-orange);
     color: var(--blankc);
     border-radius: 4px;
     font-weight: bold;
