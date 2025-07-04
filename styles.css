@@ -596,7 +596,7 @@ body {
     font-size: 1rem;
     letter-spacing: 2px;
     background-color: var(--fraterni-yellow);
-    border-radius: 8px;
+    border-radius: 4px;
     color: var(--blankc);
 }
 
@@ -646,7 +646,7 @@ body {
     justify-content: center;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--blackc);
+    color: var(--blankc);
     padding: 0 10px;
     margin-top: 115px;
 }
