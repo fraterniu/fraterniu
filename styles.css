@@ -677,8 +677,8 @@ body {
 /* Botón alternativo */
 .plan-card--cta.alt {
     background-color: transparent;
-    color: var(--fraterni-orange);
-    border: 2px dashed var(--fraterni-orange);
+    color: var(--fraterni-yellow);
+    border: 2px dashed var(--fraterni-yellow);
 }
 
 /* Separador “o” */
