@@ -583,7 +583,7 @@ body {
 
 /* Tarjetas verticales */
 .plans-container--card {
-    width: 68%;
+    width: 75%;
     max-width: 320px;
     padding: 20px 15px 30px;
     background-color: var(--blankc);
