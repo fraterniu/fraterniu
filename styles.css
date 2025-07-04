@@ -371,6 +371,7 @@ body {
   font-size: 2rem;
   line-height: 1;
   text-align: center;
+  text-wrap: balance;
 }
 
 .main-context-details--text :nth-child(3){
