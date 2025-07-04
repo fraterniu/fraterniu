@@ -536,6 +536,33 @@ body {
   }
 }
 
+.main-product-info{
+  position: inherit;
+  width: 100%;
+  min-width: 320px;
+  height: 600px;
+  padding: 20px 10px;
+  background-color: var(--fraterni-green);
+}
+
+.main-product-info--text h2{
+  font-size: 4rem;
+  font-family: 'Norwester', sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--blankc);
+  padding-bottom: 32px;
+}
+
+.main-product-info--text h4{
+  font-size: 1.6rem;
+  line-height: 1;
+  text-wrap: balance;
+  color: var(--blankc);
+  padding: 0 32px 8px 8px ;
+}
+
 
 
 
