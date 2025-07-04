@@ -583,7 +583,7 @@ body {
 
 /* Tarjetas verticales */
 .plans-container--card {
-    width: 90%;
+    width: 50%;
     max-width: 320px;
     padding: 20px 15px 30px;
     background-color: var(--blankc);
@@ -602,8 +602,7 @@ body {
     background-color: var(--fraterni-yellow);
     color: var(--blankc);
     font-family: 'NORWESTER', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 2px;
+    font-size: 1.2rem;
     border-radius: 4px;
 }
 
@@ -684,7 +683,7 @@ body {
 
 /* Separador “o” */
 .plan-separator {
-    font-size: 1.6rem;
+    font-size: 4rem;
     font-weight: bold;
     color: var(--blankc);
     text-align: center;
