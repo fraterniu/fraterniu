@@ -599,7 +599,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     padding: 6px 12px;
-    background-color: var(--fraterni-yellow);
+    background-color: var(--fraterni-orange);
     color: var(--blankc);
     font-family: 'NORWESTER', sans-serif;
     font-size: 1.6rem;
