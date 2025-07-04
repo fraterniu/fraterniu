@@ -564,6 +564,83 @@ body {
 }
 
 
+.plans-container--slider {
+    display: flex;
+    height: 316px;
+    justify-content: center;
+}
+
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 250px;
+    height: 250px;
+    margin: 50px 5px 0;
+    padding: 0 15px;
+    background-color: var(--blankc);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89,73,30, 0.16);
+}
+
+.basic {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    padding: 6px;
+    top: -15px;
+    left: calc(50% - 60px);
+    text-align: center;
+    font-family: 'NORWESTER', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    background-color: var(--fraterni-yellow);
+    border-radius: 8px;
+    color: var(--blankc);
+}
+
+
+.plans-container--card h2 {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--blackc);
+    text-align: center;
+}
+
+.plan-card--price {
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: var(--blackc);
+    text-align: center;
+}
+
+.plan-card--price sup{
+    font-size: 1.2rem;
+    font-weight: 300;
+    /*vertical-align: text-top;*/
+    vertical-align: 30px;
+}
+
+.plan-card--cta {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--fraterni-orange);
+    border: 2px solid var(--fraterni-yellow);
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--blankc);
+    margin-left: calc(50% - 80px);
+}
+
 
 
 /* Footer Styles */
