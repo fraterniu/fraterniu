@@ -373,8 +373,13 @@ body {
   text-align: center;
 }
 
+.main-context-details--text :nth-child(3){
+  padding: 8px 0;
+}
+
 .main-context-details--text h4{
   font-size: 1.6rem;
+  padding-top: 8px;
   line-height: 1;
   text-align: center;
 }
