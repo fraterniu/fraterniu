@@ -373,11 +373,10 @@ body {
   text-align: center;
 }
 
-.main-context-details--text h3{
+.main-context-details--text h4{
   font-size: 1.6rem;
   line-height: 1;
   text-align: center;
-  color: var(--blackc);
 }
 
 
