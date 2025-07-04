@@ -593,7 +593,7 @@ body {
     left: calc(50% - 60px);
     text-align: center;
     font-family: 'NORWESTER', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     background-color: var(--fraterni-yellow);
     border-radius: 4px;
