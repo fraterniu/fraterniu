@@ -690,6 +690,203 @@ body {
     padding: 0.5rem 0;
 }
 
+.header--portrait-container {
+  position: relative;
+  width: 100%;
+  min-width: 288px;
+  height: 75vh;
+  margin-top: 80px;
+  text-align: center;
+  align-self: center;
+  background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
+  z-index: 1;
+}
+
+/* Contenedor de burbujas */
+.bubble-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Colocamos las burbujas detrás del contenido */
+  pointer-events: none;
+}
+
+/* Estilo de las burbujas */
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  background-color:#082b0d;
+  border-radius: 50%;
+  opacity: 0;
+  animation: bubbleMove 10s infinite ease-in-out;
+}
+
+/* Animación de movimiento y desvanecimiento de las burbujas */
+@keyframes bubbleMove {
+  0% {
+    transform: translateY(0) scale(0.25); /* Reducido tamaño al 25% */
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-300px) scale(0.7); /* Ajuste del tamaño y movimiento */
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  80% {
+    transform: translateY(-450px) scale(0.5);
+    opacity: 0.1; /* Fade out para evitar obstrucción del título */
+  }
+  100% {
+    transform: translateY(-600px) scale(0.4);
+    opacity: 0;
+  }
+}
+
+.header--portrait-container .overlay, 
+.header--portrait-container .social-icons, .header--portrait-container .professional-info {
+  position: relative;
+  z-index: 2; /* Aseguramos que el texto y los íconos estén sobre las burbujas */
+}
+
+
+.header--portrait-container h1 {
+  font-family: 'Norwester', sans-serif;
+  font-size: 5.6rem;
+  font-weight: 500;
+  line-height: 7rem;
+  padding-top: 80px;
+  color: var(--fraterni-blank);
+  z-index: 10;
+}
+
+.header--portrait-container h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  padding: 0 16px;
+  color: var(--fraterni-blank);
+  text-wrap: balance;
+  z-index: 10;
+}
+
+
+/* Texto promocional */
+.fpromo-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  /*text-transform: uppercase;*/
+  line-height: 1.5;
+  text-align: center;
+  color: var(--fraterni-blank);
+  margin: 16px 8px;
+  text-wrap: balance;
+  z-index: 10;
+}
+
+/* Enlace promocional */
+.fpromo-text strong{
+  color: var(--fraterni-yellow); /* Amarillo dorado */
+  font-weight: bold;
+}
+
+.fpromo-text strong:hover {
+  text-decoration: underline;
+}
+
+/* 2.1.2 Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center; /* Centra los iconos verticalmente */
+  height: 55px;
+  width: 100%; /* Asegúrate de que el contenedor ocupe el 100% del ancho disponible */
+  margin: 0 auto; /* Centra el contenedor dentro de su sección padre */
+}
+
+.social-icons .social-link1,
+.social-icons .social-link2,
+.social-icons .social-link3,
+.social-icons .social-link4, 
+.social-icons .social-link5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Asegúrate de que los enlaces tengan suficiente espacio */
+  height: 50px; /* Ajusta la altura para que sean círculos perfectos */
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50%; /* Haz que los iconos sean completamente redondos */
+  overflow: hidden; /* Evita que el contenido sobresalga */
+  z-index: 3;
+}
+
+.social-icon img {
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  padding: 0.25rem;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.social-icons .social-link1:hover {
+  background-color: var(--fraterni-yellow);
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link2:hover {
+  background-color:var(--fraterni-yellow);
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link3:hover {
+  background-color: var(--fraterni-yellow);
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link4:hover {
+  background-color: var(--fraterni-yellow);
+  animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link5:hover {
+  background-color: var(--fraterni-yellow);
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+      transform: scale(1.4);
+  }
+
+  60% {
+      transform: scale(0.8);
+  }
+
+  80% {
+      transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
 /* Footer Styles */
 footer {
   background-color: var(--fraterni-green); /* Fondo del footer acorde con la paleta de colores */
