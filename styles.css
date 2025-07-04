@@ -353,7 +353,7 @@ body {
   position: inherit;
     width: 100%;
     min-width: 320px;
-    height: 500px;
+    height: 550px;
     padding: 20px 10px;
     background-color: var(--blankc);
 }
