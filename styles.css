@@ -391,8 +391,8 @@ body {
 .solar-system-container {
   perspective: 1500px;
   width: 200px;
-  height: 200px;
-  margin: 4px auto;
+  height: 150px;
+  margin: 0 auto;
 }
 
 .solar-system {
