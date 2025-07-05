@@ -766,7 +766,6 @@ body {
   font-size: 5.6rem;
   font-weight: 500;
   line-height: 7rem;
-  padding-top: 80px;
   color: var(--blankc);
   z-index: 10;
 }
