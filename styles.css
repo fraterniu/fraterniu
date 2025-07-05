@@ -690,6 +690,10 @@ body {
     padding: 0.5rem 0;
 }
 
+.findus-container-section{
+  background: linear-gradient(0deg,#062d08  0%,#152517 100%);
+}
+
 .header--portrait-container {
   position: relative;
   width: 100%;
@@ -763,7 +767,7 @@ body {
   font-weight: 500;
   line-height: 7rem;
   padding-top: 80px;
-  color: var(--fraterni-blank);
+  color: var(--blankc);
   z-index: 10;
 }
 
@@ -772,7 +776,7 @@ body {
   font-weight: 500;
   line-height: 2.2rem;
   padding: 0 16px;
-  color: var(--fraterni-blank);
+  color: var(--blankc);
   text-wrap: balance;
   z-index: 10;
 }
@@ -785,7 +789,7 @@ body {
   /*text-transform: uppercase;*/
   line-height: 1.5;
   text-align: center;
-  color: var(--fraterni-blank);
+  color: var(--blankc);
   margin: 16px 8px;
   text-wrap: balance;
   z-index: 10;
