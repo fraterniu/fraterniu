@@ -698,12 +698,10 @@ body {
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 75vh;
-  margin-top: 80px;
+  height: 250px;
   text-align: center;
   align-self: center;
   background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
-  z-index: 1;
 }
 
 /* Contenedor de burbujas */
@@ -778,30 +776,6 @@ body {
   color: var(--blankc);
   text-wrap: balance;
   z-index: 10;
-}
-
-
-/* Texto promocional */
-.fpromo-text {
-  font-size: 1.4rem;
-  font-style: italic;
-  /*text-transform: uppercase;*/
-  line-height: 1.5;
-  text-align: center;
-  color: var(--blankc);
-  margin: 16px 8px;
-  text-wrap: balance;
-  z-index: 10;
-}
-
-/* Enlace promocional */
-.fpromo-text strong{
-  color: var(--fraterni-yellow); /* Amarillo dorado */
-  font-weight: bold;
-}
-
-.fpromo-text strong:hover {
-  text-decoration: underline;
 }
 
 /* 2.1.2 Social Icons */
