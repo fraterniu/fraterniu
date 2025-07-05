@@ -762,22 +762,13 @@ body {
 
 .header--portrait-container h1 {
   font-family: 'Norwester', sans-serif;
-  font-size: 5.6rem;
+  font-size: 4rem;
   font-weight: 500;
-  line-height: 7rem;
+  line-height: 4.5rem;
   color: var(--blankc);
   z-index: 10;
 }
 
-.header--portrait-container h2 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 2.2rem;
-  padding: 0 16px;
-  color: var(--blankc);
-  text-wrap: balance;
-  z-index: 10;
-}
 
 /* 2.1.2 Social Icons */
 .social-icons {
@@ -812,7 +803,7 @@ body {
 .social-icon img {
   position: absolute;
   display: flex;
-  width: 25px;
+  width: 30px;
   height: auto;
   opacity: 1;
   transition: opacity 0.25s;
