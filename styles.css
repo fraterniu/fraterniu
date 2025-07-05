@@ -57,7 +57,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 680px;
+    min-height: 680px;
     background-color: #080f09;
 }
 
@@ -308,7 +308,7 @@ body {
     left: calc(50% - 115px);
     top: 520px;
     display: block;
-    margin-top: 130px;
+    margin-top: 180px;
     padding: 15px;
     width: 229px;
     height: 48px;
@@ -353,7 +353,7 @@ body {
   position: inherit;
     width: 100%;
     min-width: 320px;
-    height: 600px;
+    min-height: 400px;
     padding: 20px 10px;
     background-color: var(--blankc);
 }
@@ -540,7 +540,7 @@ body {
   position: inherit;
   width: 100%;
   min-width: 320px;
-  height: 1050px;
+  min-height: 1050px;
   padding: 20px 10px;
   background-color: var(--fraterni-green);
 }
@@ -692,6 +692,9 @@ body {
 
 .findus-container-section{
   background: linear-gradient(0deg,#062d08  0%,#152517 100%);
+  width: 100%;
+  height: auto;
+  padding-top: 4rem;
 }
 
 .header--portrait-container {
