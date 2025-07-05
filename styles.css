@@ -123,15 +123,15 @@ body {
               5px 5px 0 0 rgba(255,255,255,.2) inset;
   background: url(./assets/imgs/mapa.png);
   background-size: cover;
-  animation: earthRotate 10s linear 0s infinite;
+  animation: earthRotate 20s linear 0s infinite;
 }
 
 @keyframes earthRotate {
   0% {
-    background-position: 0;
+    background-position: 0 0;
   }
   100% {
-    background-position: -1920px;
+    background-position: 377px 0;
   }
 }
 
