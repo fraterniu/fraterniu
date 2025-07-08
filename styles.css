@@ -327,7 +327,7 @@ animation: twinkling 2s infinite;
 .hero-header--ms .header--button {
     position: absolute;
     left: calc(50% - 115px);
-    top: 730px;
+    top: 735px;
     display: block;
     padding: 15px;
     width: 229px;
