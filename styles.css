@@ -578,20 +578,25 @@ animation: twinkling 2s infinite;
   font-size: 1.6rem;
   line-height: 1.2;
   color: var(--blankc);
-  padding: 0 40px 8px 8px ;
+  padding: 0 16px 24px 24px;
 }
 
 .main-product-info--text h5{
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.3;
   color: var(--blankc);
-  padding: 0 8px ;
-  margin-bottom: 24px;
+  padding: 0 24px ;
+  text-wrap: balance;
+}
+
+.main-product-info--text h5:nth-of-type(1){
+  padding-bottom: 16px;
 }
 
 
 .plans-container--slider {
+  margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -724,54 +729,6 @@ animation: twinkling 2s infinite;
   text-align: center;
   align-self: center;
   background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
-}
-
-/* Contenedor de burbujas */
-.bubble-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1; /* Colocamos las burbujas detrás del contenido */
-  pointer-events: none;
-}
-
-/* Estilo de las burbujas */
-.bubble {
-  position: absolute;
-  bottom: -50px;
-  background-color:#082b0d;
-  border-radius: 50%;
-  opacity: 0;
-  animation: bubbleMove 10s infinite ease-in-out;
-}
-
-/* Animación de movimiento y desvanecimiento de las burbujas */
-@keyframes bubbleMove {
-  0% {
-    transform: translateY(0) scale(0.25); /* Reducido tamaño al 25% */
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  50% {
-    transform: translateY(-300px) scale(0.7); /* Ajuste del tamaño y movimiento */
-    opacity: 0.1;
-  }
-  70% {
-    opacity: 0.2;
-  }
-  80% {
-    transform: translateY(-450px) scale(0.5);
-    opacity: 0.1; /* Fade out para evitar obstrucción del título */
-  }
-  100% {
-    transform: translateY(-600px) scale(0.4);
-    opacity: 0;
-  }
 }
 
 .header--portrait-container .overlay, 
