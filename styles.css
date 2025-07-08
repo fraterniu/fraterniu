@@ -283,17 +283,14 @@ body {
   padding-bottom: 16px;
 }
 
-.hero-header--ms h3:nth-of-type(4) {
+.hero-header--ms h3:nth-of-type(3) {
   font-size: 1.4rem;
 }
 
-.hero-header--ms h3:nth-of-type(4) strong {
+.hero-header--ms h3:nth-of-type(3) strong {
 animation: twinkling 2s infinite;
 }
 
-.header--button strong{
-  font-weight: 800;
-}
 
 /* 3. Retraso en cascada */
 .hero-header--ms h2:nth-of-type(1) { animation-delay: 0.2s; }
@@ -328,10 +325,10 @@ animation: twinkling 2s infinite;
 .hero-header--bcontainer .header--button {
     position: absolute;
     left: calc(50% - 115px);
-    top: 740px;
+    top: 715px;
     display: block;
-    padding: 15px 15px 15px 48px;
-    width: 229px;
+    padding: 16px 16px 16px 24px;
+    width: 224px;
     height: 48px;
     background-color: var(--fraterni-orange);
     box-shadow: 0px 5px 0 var(--fraterni-yellow);
@@ -347,7 +344,7 @@ animation: twinkling 2s infinite;
     display: inline-block;
     width: 13px;
     height: 8px;
-    margin-left: 12px;
+    margin-left: 14px;
     background-image: url('./assets/icons/whitearrow.svg');
 }
 
