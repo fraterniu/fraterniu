@@ -275,6 +275,18 @@ body {
   padding: 0 8px;
 }
 
+.hero-header--ms h3:nth-of-type(2) {
+  padding: 16px 0;
+}
+
+.hero-header--ms h3:nth-of-type(3) {
+  padding-bottom: 16px;
+}
+
+.hero-header--ms h3:nth-of-type(4) {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
 
 .header--button strong{
   font-weight: 800;
@@ -312,7 +324,7 @@ body {
 .hero-header--ms .header--button {
     position: absolute;
     left: calc(50% - 115px);
-    top: 705px;
+    top: 795px;
     display: block;
     padding: 15px;
     width: 229px;
