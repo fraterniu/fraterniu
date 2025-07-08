@@ -272,11 +272,9 @@ body {
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
   text-wrap: balance;
+  padding: 0 8px;
 }
 
-.justu{
-  color: var(--fraterni-yellow);
-}
 
 .header--button strong{
   font-weight: 800;
