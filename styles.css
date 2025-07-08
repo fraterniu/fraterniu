@@ -274,8 +274,12 @@ body {
   text-wrap: balance;
 }
 
-.hero-header--ms strong:nth-child(1) {
+.justu{
   color: var(--fraterni-yellow);
+}
+
+.header--button strong{
+  font-weight: 800;
 }
 
 /* 3. Retraso en cascada */
