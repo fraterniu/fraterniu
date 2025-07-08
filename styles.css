@@ -271,6 +271,11 @@ body {
   font-weight: 300;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
+  text-wrap: balance;
+}
+
+.hero-header--ms strong:nth-child(1) {
+  color: var(--fraterni-yellow);
 }
 
 /* 3. Retraso en cascada */
@@ -305,7 +310,7 @@ body {
 .hero-header--ms .header--button {
     position: absolute;
     left: calc(50% - 115px);
-    top: 640px;
+    top: 705px;
     display: block;
     padding: 15px;
     width: 229px;
