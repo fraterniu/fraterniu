@@ -557,13 +557,12 @@ animation: twinkling 2s infinite;
   width: 100%;
   min-width: 320px;
   min-height: 450px;
-  padding: 20px 10px;
+  padding: 20px 10px 0 10px;
   background-color: var(--fraterni-green);
 }
 
 .main-product-info--text{
   padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -601,6 +600,37 @@ animation: twinkling 2s infinite;
   padding-bottom: 16px;
 }
 
+/* From Uiverse.io by JkHuger */ 
+
+.main-product-info--image{
+
+}
+
+
+#loader {
+  animation: loaderColor 5s infinite ease;
+}
+
+
+
+@keyframes loaderColor {
+  0% {
+    fill: #c4d8c2;
+  }
+
+  33% {
+    fill: #9abd98;
+  }
+
+  66% {
+    fill: #6b9c6b;
+  }
+
+  100% {
+    fill: #4b7e4d;
+  }
+}
+
 .findus-container-section{
   background: linear-gradient(0deg,#062d08  0%,#152517 100%);
   width: 100%;
@@ -611,7 +641,7 @@ animation: twinkling 2s infinite;
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 250px;
+  height: 200px;
   text-align: center;
   align-self: center;
   background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
@@ -626,9 +656,9 @@ animation: twinkling 2s infinite;
 
 .header--portrait-container h1 {
   font-family: 'Norwester', sans-serif;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 500;
-  line-height: 4.5rem;
+  line-height: 4rem;
   color: var(--blankc);
   z-index: 10;
 }
