@@ -307,12 +307,6 @@ animation: twinkling 2s infinite;
   }
 }
 
-/* 5. Rotación lenta de la palabra “gira” */
-.rotate {
-  display: inline-block;
-  animation: rotate-slow 45s linear infinite;
-  transform-origin: center center;
-}
 
 /* 6. Keyframes para la rotación */
 @keyframes rotate-slow {
