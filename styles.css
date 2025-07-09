@@ -121,7 +121,7 @@ body {
   box-shadow: -40px -30px 0 0 rgba(0,0,0,.1) inset,
               -70px -30px 0 0 rgba(0,0,0,.1) inset,
               5px 5px 0 0 rgba(255,255,255,.2) inset;
-  background: url(./assets/imgs/mapaTiny.png);
+  background: url(./assets/imgs/mapaMoreTiny.png);
   background-size: cover;
   animation: earthRotate 45s linear 0s infinite;
 }
