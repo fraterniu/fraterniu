@@ -871,6 +871,19 @@ animation: twinkling 2s infinite;
   transform: scale(1);
 }
 
+.social-icons .social-link3 img{
+  position: absolute;
+  display: flex;
+  width: 18px;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  padding: 0.25rem;
+  cursor: pointer;
+  transform: scale(1);
+}
+
 .social-icons .social-link1:hover {
   background-color: var(--fraterni-yellow);
   animation: bounce_613 0.4s linear;
