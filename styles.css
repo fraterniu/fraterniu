@@ -556,9 +556,19 @@ animation: twinkling 2s infinite;
   position: inherit;
   width: 100%;
   min-width: 320px;
-  min-height: 1050px;
+  min-height: 450px;
   padding: 20px 10px;
   background-color: var(--fraterni-green);
+}
+
+.main-product-info--text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .main-product-info--text h2{
@@ -579,7 +589,7 @@ animation: twinkling 2s infinite;
 }
 
 .main-product-info--text h5{
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.3;
   color: var(--blankc);
@@ -591,131 +601,10 @@ animation: twinkling 2s infinite;
   padding-bottom: 16px;
 }
 
-
-.plans-container--slider {
-  margin-top: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 1.6rem 0 3rem;
-    overflow-x: hidden; /* Evita scroll horizontal innecesario */
-}
-
-/* Tarjetas verticales */
-.plans-container--card {
-    width: 75%;
-    max-width: 320px;
-    padding: 20px 15px 30px;
-    background-color: var(--blankc);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
-    position: relative;
-}
-
-/* Etiqueta superior */
-.basic {
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 6px 12px;
-    background-color: var(--fraterni-yellow);
-    color: var(--blankc);
-    font-family: 'NORWESTER', sans-serif;
-    font-size: 1.6rem;
-    border-radius: 4px;
-}
-
-/* Títulos */
-.plans-container--card h2 {
-    padding-top: 30px;
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--blackc);
-}
-
-/* Precio */
-.plan-card--price {
-    font-size: 4.2rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--blackc);
-    margin: 10px 0;
-}
-
-.plan-card--price sup {
-    font-size: 1.2rem;
-    font-weight: 300;
-    vertical-align: 30px;
-}
-
-/* Beneficios */
-.plan-checklist {
-    list-style: none;
-    margin: 15px 0 0;
-    padding: 0;
-    font-size: 0.95rem;
-    color: var(--blackc);
-    line-height: 1.6rem;
-}
-
-.plan-checklist li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 6px;
-}
-
-.plan-checklist li::before {
-    content: "✔";
-    color: var(--fraterni-orange);
-    font-weight: bold;
-    margin-right: 8px;
-}
-
-.plan-checklist .disclaimer {
-    font-size: 0.8rem;
-    font-style: italic;
-    color: gray;
-}
-
-/* Botón */
-.plan-card--cta {
-    width: 100%;
-    max-width: 200px;
-    height: 48px;
-    margin: 20px auto 0;
-    background-color: var(--fraterni-yellow);
-    border: 2px solid var(--fraterni-yellow);
-    color: var(--blankc);
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    display: block;
-}
-
-/* Botón alternativo */
-.plan-card--cta.alt {
-    background-color: transparent;
-    color: var(--fraterni-yellow);
-    border: 2px dashed var(--fraterni-yellow);
-}
-
-/* Separador “o” */
-.plan-separator {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--blankc);
-    text-align: center;
-    padding: 0.5rem 0;
-}
-
 .findus-container-section{
   background: linear-gradient(0deg,#062d08  0%,#152517 100%);
   width: 100%;
   height: auto;
-  padding-top: 4rem;
 }
 
 .header--portrait-container {
