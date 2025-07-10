@@ -332,37 +332,47 @@ animation: twinkling 2s infinite;
 
 /* 7. Botón estilo simple */
 
+.hero-header--bcontainer {
+  position: relative;
+  width: 230px;
+  height: 0;
+}
+
 .hero-header--bcontainer .header--button {
-    position: absolute;
-    left: calc(50% - 115px);
-    top: 715px;
-    display: block;
-    padding: 16px 16px 16px 24px;
-    width: 224px;
-    height: 48px;
-    background-color: var(--fraterni-orange);
-    box-shadow: 0px 5px 0 var(--fraterni-yellow);
-    border: none;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translateX(-50%);
+  padding: 16px 24px;
+  background-color: var(--fraterni-orange);
+  box-shadow: 0px 5px 0 var(--fraterni-yellow);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 4px solid var(--fraterni-green); /* <-- Aquí el truco visual */
 }
 
-.header--button span{
-    display: inline-block;
-    width: 13px;
-    height: 8px;
-    margin-left: 14px;
-    background-image: url('./assets/icons/whitearrow.svg');
+
+.header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 14px;
+  background-image: url('./assets/icons/whitearrow.svg');
 }
 
-.header--button:active{
-    box-shadow: none;
-    transform: translateY(5px);
-    background-color: var(--fraterni-orange);
+.header--button:active {
+  box-shadow: none;
+  transform: translateX(-50%) translateY(5px); /* importante mantener el centrado + animación */
+  background-color: var(--fraterni-orange);
 }
+
 
 
 /* 9. Ajustes de responsividad (si quieres afinar) */
