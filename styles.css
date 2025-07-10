@@ -276,7 +276,7 @@ body {
 
 .hero-header--ms h2 {
   font-size: 4rem;
-  line-height: 1.5;
+  line-height: 1.2;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
 }
