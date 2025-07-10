@@ -830,7 +830,7 @@ animation: twinkling 2s infinite;
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 200px;
+  height: 220px;
   padding-top: 24px;
   text-align: center;
   align-self: center;
@@ -955,6 +955,7 @@ animation: twinkling 2s infinite;
 
 /* Footer Styles */
 footer {
+  padding-top: 24px;
   background-color: var(--fraterni-green); /* Fondo del footer acorde con la paleta de colores */
   padding: 20px 0;
   text-align: center;
