@@ -355,7 +355,7 @@ animation: twinkling 2s infinite;
   color: #fff;
   z-index: 10;
   transition: all 0.2s ease-in-out;
-  border-bottom: 4px solid var(--fraterni-green); /* <-- Aquí el truco visual */
+  border-bottom: 4px solid #a26b06; /* <-- Aquí el truco visual */
 }
 
 
@@ -363,7 +363,7 @@ animation: twinkling 2s infinite;
   display: inline-block;
   width: 13px;
   height: 8px;
-  margin-left: 14px;
+  margin-left: 12px;
   background-image: url('./assets/icons/whitearrow.svg');
 }
 
@@ -861,7 +861,7 @@ animation: twinkling 2s infinite;
   align-items: center; /* Centra los iconos verticalmente */
   height: 55px;
   width: 100%; /* Asegúrate de que el contenedor ocupe el 100% del ancho disponible */
-  margin: 0 auto; /* Centra el contenedor dentro de su sección padre */
+  margin: 16px auto; /* Centra el contenedor dentro de su sección padre */
 }
 
 .social-icons .social-link1,
