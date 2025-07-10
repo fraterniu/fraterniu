@@ -30,6 +30,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Start Visual Content */
+#translateBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px; 
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#translateBtn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 body {
   margin: 0;
   padding: 0;
