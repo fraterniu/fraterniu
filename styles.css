@@ -391,7 +391,7 @@ animation: twinkling 2s infinite;
     min-width: 320px;
     min-height: 400px;
     padding: 20px 10px;
-    background-color: var(--blankc);
+    background-color: var(--blackc);
 }
 
 .main-context-details--text{
@@ -408,6 +408,7 @@ animation: twinkling 2s infinite;
   line-height: 1.5;
   text-align: center;
   text-wrap: balance;
+  color: var(--blankc);
 }
 
 .main-context-details--text :nth-child(3){
@@ -420,6 +421,7 @@ animation: twinkling 2s infinite;
   padding-top: 8px;
   line-height: 1;
   text-align: center;
+  color: var(--blankc);
 }
 
 
