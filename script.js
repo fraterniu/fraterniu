@@ -16,3 +16,17 @@ document.getElementById('translateBtn').addEventListener('click', function() {
     // Actualizar el idioma en el atributo lang del documento
     document.documentElement.lang = newLang;
 });
+
+// Detectar clics en botones deshabilitados
+document.querySelectorAll('.social-icon[data-disabled="true"]').forEach(button => {
+  button.addEventListener('click', function (event) {
+    event.preventDefault(); // Evita que intente navegar
+
+    const currentLang = document.documentElement.lang;
+    const message = currentLang === 'en'
+      ? 'This option is not available yet. Please check back soon!'
+      : 'Esta opción aún no está disponible. ¡Vuelve pronto!';
+
+    alert(message); // Puedes reemplazar por un toast moderno si quieres
+  });
+});
