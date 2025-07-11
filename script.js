@@ -18,6 +18,7 @@ document.getElementById('translateBtn').addEventListener('click', function() {
 });
 
 // Botones deshabilitados con mensaje divertido
+// Botones deshabilitados con mensaje divertido
 document.querySelectorAll('.social-icon[data-disabled="true"]').forEach(button => {
   button.addEventListener('click', function (event) {
     event.preventDefault();
@@ -27,12 +28,16 @@ document.querySelectorAll('.social-icon[data-disabled="true"]').forEach(button =
       es: [
         "¡Oops! Aún estamos decorando esta red 🤭",
         "¡Tranquilo! Pronto estaremos allí también 📱",
-        "Este botón está en vacaciones... vuelve pronto ☀️"
+        "Este botón está en vacaciones... vuelve pronto ☀️",
+        "Estamos cargando buena vibra... paciencia ✨",
+        "¡Shh! Es secreto... por ahora 😎"
       ],
       en: [
         "Oops! We're still decorating this network 🤭",
         "Hang tight! We’ll be there soon 📱",
-        "This button is on vacation... check back later ☀️"
+        "This button is on vacation... check back later ☀️",
+        "Loading good vibes... please wait ✨",
+        "Shh! It’s a secret... for now 😎"
       ]
     };
 
@@ -44,7 +49,6 @@ document.querySelectorAll('.social-icon[data-disabled="true"]').forEach(button =
 
 // Función para mostrar el toast
 function showToast(message) {
-  // Evitar duplicados
   if (document.querySelector('.toast-message')) return;
 
   const toast = document.createElement('div');
@@ -53,7 +57,6 @@ function showToast(message) {
 
   document.body.appendChild(toast);
 
-  // Eliminar después de 3s
   setTimeout(() => {
     toast.remove();
   }, 3000);
