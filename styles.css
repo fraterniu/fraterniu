@@ -1,13 +1,13 @@
 /* Design Main Styles */
 :root {
   /*Colores*/
-  --fraterni-green: #152517;
+  --fraterni-green: #080f09;
   --fraterni-yellow: #c49102;
   --blankc: #ffffff;
   --blackc: #000000;
   --fraterni-blue: #111b21;
   --fraterni-orange: #D18807;
-  --fraterni-lgreen: #133C18;
+  --fraterni-lgreen: #2a452d;
 }
 
 /*End Design Main Styles */
@@ -73,7 +73,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 650px;
+    min-height: 850px;
     background-color: #080f09;
     border-bottom: #2A2D32  4px solid;
 }
@@ -302,12 +302,12 @@ body {
 
 .hero-header--ms h3:nth-of-type(3) {
   font-size: 1.4rem;
+  padding-bottom: 8px;
 }
 
-.hero-header--ms h3:nth-of-type(3) strong {
-animation: twinkling 2s infinite;
+.hero-header--ms h3:nth-of-type(4) {
+  padding-bottom: 16px;
 }
-
 
 /* 3. Retraso en cascada */
 .hero-header--ms h2:nth-of-type(1) { animation-delay: 0.2s; }
@@ -343,7 +343,7 @@ animation: twinkling 2s infinite;
   width: 100%;
   position: absolute;
   left: 50%;
-  bottom: -40px;
+  bottom: -55px;
   transform: translateX(-50%);
   padding: 16px 24px;
   background-color: var(--fraterni-orange);
@@ -597,7 +597,7 @@ animation: twinkling 2s infinite;
 .main-product-info--text h2{
   font-size: 4rem;
   font-family: 'Norwester', sans-serif;
-  line-height: 1;
+  line-height: 1.2;
   text-align: center;
   text-wrap: balance;
   color: var(--blankc);
@@ -606,7 +606,7 @@ animation: twinkling 2s infinite;
 
 .main-product-info--text h4{
   font-size: 1.6rem;
-  line-height: 1.2;
+  line-height: 1.5;
   color: var(--blankc);
   padding: 0 16px 24px 24px;
 }
@@ -642,6 +642,7 @@ animation: twinkling 2s infinite;
   display: block;
   width: 10em;
   height: 10em;
+  margin-top: 16px;
 }
 
 .pencil__body1,
@@ -838,7 +839,7 @@ animation: twinkling 2s infinite;
   padding-top: 24px;
   text-align: center;
   align-self: center;
-  background: linear-gradient(to top, rgba(21, 37, 23, 1) 0%, rgba(37, 64, 39, 0.5) 1%, rgba(37, 64, 39, 0) 3%);
+  background: var(--fraterni-green);
 }
 
 .header--portrait-container .overlay, 
