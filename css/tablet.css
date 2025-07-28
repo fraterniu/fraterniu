@@ -104,7 +104,7 @@
   position: relative;
   width: 100%;
   min-width: 288px;
-  height: 220px;
+  height: 230px;
   text-align: center;
   align-self: center;
   background: var(--fraterni-green);
@@ -115,7 +115,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 47.5vh;
+  top: 80vh;
   padding: 16px 24px;
   background-color: var(--fraterni-yellow);
   color: var(--fraterni-blank);

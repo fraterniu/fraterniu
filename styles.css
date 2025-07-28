@@ -594,6 +594,10 @@ body {
   text-align: center;
 }
 
+.main-product-info--text strong {
+animation: twinkling 2s infinite;
+}
+
 .main-product-info--text h2{
   font-size: 4rem;
   font-family: 'Norwester', sans-serif;
